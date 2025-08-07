@@ -1,0 +1,34 @@
+% Program Start (LifePINLetter.jdt)
+
+% record definition
+
+%------------------ record definition --------------------
+
+define letter
+    grp		pic x(6)
+    printdate	pic x(25)
+    name		pic x(50)
+    pin		pic x(10)
+    addr1		pic x(50)
+    addr2		pic x(50)
+    addr3		pic x(50)
+    addr4		pic x(50)
+end
+
+%-------------------------- configuration ---------------------------
+
+delimiter "|"
+form path "c:\ctrsys"
+DUPLEX DISABLE
+MEDIA "legal:a4:white:80"
+
+%------------------------------- main -----------------------------------
+
+WHILE NOT EOF()		
+	READ letter
+	%PAGE ORIENT IPORT	
+	%FORM USE ,,"LifePINLetter"
+	FORM USE "LifePINLetter"
+	SEGMENT USE "letter" by letter
+WEND	
+

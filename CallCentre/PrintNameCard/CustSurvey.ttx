@@ -1,0 +1,16 @@
+; Field definition file for table: ADORecordset
+cswppp_cid	number		14115836
+cswppp_pid	string	16	string sample value
+cswpuw_infor_date	date		Jan 5, 1994
+usechiind	string	1	string sample value
+cusname	string	62	string sample value
+emailaddr	string	50	string sample value
+addressline1	string	52	string sample value
+addressline2	string	52	string sample value
+addressline3	string	52	string sample value
+addresscity	string	52	string sample value
+phonenumber1	string	16	string sample value
+addresstypecode	string	2	string sample value
+codeorder	long		1
+agname	string	51	string sample value
+locationcode	string	5	string sample value

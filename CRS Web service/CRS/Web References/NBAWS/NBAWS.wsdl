@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ing.com.hk/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.ing.com.hk/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ing.com.hk/">
+      <s:element name="GetUWSysInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUWSysInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUWSysInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComSOAPHeader" type="tns:ComSOAPHeader" />
+      <s:complexType name="ComSOAPHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectAlias" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LibraryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnvironmentUse" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetUnitTranHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsTransHist">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dteStartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dteEndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitTranHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUnitTranHistoryResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsTransHist">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUWInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSrc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUWInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUWInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSrc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetASIResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUWInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSrc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUWInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveUWInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNBSysInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNBSysInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNBSysInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSrc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPropInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitPropRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSrc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitPropRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubmitPropRequestResult" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessPropRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dblTransId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUWAdvicePrintingInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUWAdvicePrintingInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUWAdvicePrintingInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintUWAdviceInBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintUWAdviceInBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrintUWAdviceInBatchResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAuthority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserAuthorityResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUwWorksheetPrtInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUwWorksheetPrtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUwWorksheetPrtInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferLetterPrtInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferLetterPrtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOfferLetterPrtInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoadingExclusionPrtInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoadingExclusionPrtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLoadingExclusionPrtInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstYearComRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iPlanCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iChannel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAge" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="iTerm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="oCommRate" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsRate">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstYearComRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFirstYearComRateResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="oCommRate" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsRate">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProposalFYCInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCommission">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProposalFYCInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetProposalFYCInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCommission">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSysBusinessDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSysBusinessDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSysBusinessDateResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUWAuthority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUWAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkUWAuthorityResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUWSysInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUWSysInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUWSysInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUWSysInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUWSysInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitTranHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitTranHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitTranHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitTranHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitTranHistoryComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUWInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUWInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUWInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUWInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUWInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetASISoapIn">
+    <wsdl:part name="parameters" element="tns:GetASI" />
+  </wsdl:message>
+  <wsdl:message name="GetASISoapOut">
+    <wsdl:part name="parameters" element="tns:GetASIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetASIComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="SaveUWInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUWInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveUWInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUWInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUWInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetNBSysInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNBSysInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetNBSysInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNBSysInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNBSysInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPropInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPropInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPropRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitPropRequest" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPropRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitPropRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPropRequestComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPropRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessPropRequest" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPropRequestComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUWAdvicePrintingInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUWAdvicePrintingInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUWAdvicePrintingInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUWAdvicePrintingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUWAdvicePrintingInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="PrintUWAdviceInBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintUWAdviceInBatch" />
+  </wsdl:message>
+  <wsdl:message name="PrintUWAdviceInBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintUWAdviceInBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintUWAdviceInBatchComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAuthority" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAuthorityComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUwWorksheetPrtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUwWorksheetPrtInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUwWorksheetPrtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUwWorksheetPrtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUwWorksheetPrtInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferLetterPrtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOfferLetterPrtInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferLetterPrtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOfferLetterPrtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferLetterPrtInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadingExclusionPrtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoadingExclusionPrtInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadingExclusionPrtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoadingExclusionPrtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadingExclusionPrtInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstYearComRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirstYearComRate" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstYearComRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirstYearComRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstYearComRateComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetProposalFYCInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProposalFYCInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetProposalFYCInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProposalFYCInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProposalFYCInfoComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSysBusinessDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSysBusinessDate" />
+  </wsdl:message>
+  <wsdl:message name="GetSysBusinessDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSysBusinessDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSysBusinessDateComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="checkUWAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:checkUWAuthority" />
+  </wsdl:message>
+  <wsdl:message name="checkUWAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:checkUWAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkUWAuthorityComSOAPHeader">
+    <wsdl:part name="ComSOAPHeader" element="tns:ComSOAPHeader" />
+  </wsdl:message>
+  <wsdl:portType name="NBAWSSoap">
+    <wsdl:operation name="GetUWSysInfo">
+      <wsdl:input message="tns:GetUWSysInfoSoapIn" />
+      <wsdl:output message="tns:GetUWSysInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitTranHistory">
+      <wsdl:input message="tns:GetUnitTranHistorySoapIn" />
+      <wsdl:output message="tns:GetUnitTranHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUWInfo">
+      <wsdl:input message="tns:GetUWInfoSoapIn" />
+      <wsdl:output message="tns:GetUWInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetASI">
+      <wsdl:input message="tns:GetASISoapIn" />
+      <wsdl:output message="tns:GetASISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUWInfo">
+      <wsdl:input message="tns:SaveUWInfoSoapIn" />
+      <wsdl:output message="tns:SaveUWInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNBSysInfo">
+      <wsdl:input message="tns:GetNBSysInfoSoapIn" />
+      <wsdl:output message="tns:GetNBSysInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropInfo">
+      <wsdl:input message="tns:GetPropInfoSoapIn" />
+      <wsdl:output message="tns:GetPropInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPropRequest">
+      <wsdl:input message="tns:SubmitPropRequestSoapIn" />
+      <wsdl:output message="tns:SubmitPropRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPropRequest">
+      <wsdl:input message="tns:ProcessPropRequestSoapIn" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUWAdvicePrintingInfo">
+      <wsdl:input message="tns:GetUWAdvicePrintingInfoSoapIn" />
+      <wsdl:output message="tns:GetUWAdvicePrintingInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintUWAdviceInBatch">
+      <wsdl:input message="tns:PrintUWAdviceInBatchSoapIn" />
+      <wsdl:output message="tns:PrintUWAdviceInBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAuthority">
+      <wsdl:input message="tns:GetUserAuthoritySoapIn" />
+      <wsdl:output message="tns:GetUserAuthoritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUwWorksheetPrtInfo">
+      <wsdl:input message="tns:GetUwWorksheetPrtInfoSoapIn" />
+      <wsdl:output message="tns:GetUwWorksheetPrtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferLetterPrtInfo">
+      <wsdl:input message="tns:GetOfferLetterPrtInfoSoapIn" />
+      <wsdl:output message="tns:GetOfferLetterPrtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadingExclusionPrtInfo">
+      <wsdl:input message="tns:GetLoadingExclusionPrtInfoSoapIn" />
+      <wsdl:output message="tns:GetLoadingExclusionPrtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstYearComRate">
+      <wsdl:input message="tns:GetFirstYearComRateSoapIn" />
+      <wsdl:output message="tns:GetFirstYearComRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalFYCInfo">
+      <wsdl:input message="tns:GetProposalFYCInfoSoapIn" />
+      <wsdl:output message="tns:GetProposalFYCInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSysBusinessDate">
+      <wsdl:input message="tns:GetSysBusinessDateSoapIn" />
+      <wsdl:output message="tns:GetSysBusinessDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUWAuthority">
+      <wsdl:input message="tns:checkUWAuthoritySoapIn" />
+      <wsdl:output message="tns:checkUWAuthoritySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NBAWSSoap" type="tns:NBAWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUWSysInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUWSysInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUWSysInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitTranHistory">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUnitTranHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUnitTranHistoryComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUWInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUWInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUWInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASI">
+      <soap:operation soapAction="http://www.ing.com.hk/GetASI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetASIComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUWInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/SaveUWInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveUWInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNBSysInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetNBSysInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetNBSysInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetPropInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPropInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPropRequest">
+      <soap:operation soapAction="http://www.ing.com.hk/SubmitPropRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitPropRequestComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPropRequest">
+      <soap:operation soapAction="http://www.ing.com.hk/ProcessPropRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ProcessPropRequestComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetUWAdvicePrintingInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUWAdvicePrintingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUWAdvicePrintingInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintUWAdviceInBatch">
+      <soap:operation soapAction="http://www.ing.com.hk/PrintUWAdviceInBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PrintUWAdviceInBatchComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAuthority">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUserAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserAuthorityComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUwWorksheetPrtInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetUwWorksheetPrtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUwWorksheetPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferLetterPrtInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetOfferLetterPrtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetOfferLetterPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadingExclusionPrtInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetLoadingExclusionPrtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLoadingExclusionPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstYearComRate">
+      <soap:operation soapAction="http://www.ing.com.hk/GetFirstYearComRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFirstYearComRateComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalFYCInfo">
+      <soap:operation soapAction="http://www.ing.com.hk/GetProposalFYCInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetProposalFYCInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysBusinessDate">
+      <soap:operation soapAction="http://www.ing.com.hk/GetSysBusinessDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSysBusinessDateComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUWAuthority">
+      <soap:operation soapAction="http://www.ing.com.hk/checkUWAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:checkUWAuthorityComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NBAWSSoap12" type="tns:NBAWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUWSysInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUWSysInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUWSysInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitTranHistory">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUnitTranHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUnitTranHistoryComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUWInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUWInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUWInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASI">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetASI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetASIComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUWInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/SaveUWInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveUWInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNBSysInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetNBSysInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetNBSysInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetPropInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPropInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPropRequest">
+      <soap12:operation soapAction="http://www.ing.com.hk/SubmitPropRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitPropRequestComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPropRequest">
+      <soap12:operation soapAction="http://www.ing.com.hk/ProcessPropRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ProcessPropRequestComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetUWAdvicePrintingInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUWAdvicePrintingInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUWAdvicePrintingInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintUWAdviceInBatch">
+      <soap12:operation soapAction="http://www.ing.com.hk/PrintUWAdviceInBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PrintUWAdviceInBatchComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAuthority">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUserAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserAuthorityComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUwWorksheetPrtInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetUwWorksheetPrtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUwWorksheetPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferLetterPrtInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetOfferLetterPrtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetOfferLetterPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadingExclusionPrtInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetLoadingExclusionPrtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLoadingExclusionPrtInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstYearComRate">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetFirstYearComRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFirstYearComRateComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalFYCInfo">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetProposalFYCInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetProposalFYCInfoComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysBusinessDate">
+      <soap12:operation soapAction="http://www.ing.com.hk/GetSysBusinessDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSysBusinessDateComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUWAuthority">
+      <soap12:operation soapAction="http://www.ing.com.hk/checkUWAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:checkUWAuthorityComSOAPHeader" part="ComSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NBAWS">
+    <wsdl:port name="NBAWSSoap" binding="tns:NBAWSSoap">
+      <soap:address location="http://hkcomdev2/nbaws/nbaWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NBAWSSoap12" binding="tns:NBAWSSoap12">
+      <soap12:address location="http://hkcomdev2/nbaws/nbaWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

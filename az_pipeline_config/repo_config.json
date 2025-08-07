@@ -1,0 +1,23 @@
+{
+  "supportedENVs": "[DEV][SIT][UAT][PRD]",
+  "artifactType": "NuGet",
+  "excludeFile": "web.config, example1.config, example2.exe",
+  "additionalConfig": "",
+  "mailList": "derek.cw.chan@fwd.com;alex.th.lee@fwd.com",
+  "Major": "0",
+  "Minor": "0",
+  "ApplicationDomain": "AD-HKG-IT-Utility-Admin",
+
+  "deployType": "VM",
+  "sourceCodeType": ".NET",
+  "dotNetSolution": "**\\*.*proj",
+  "mavenPOMfile": "",
+
+  "appServicename": {
+    "DEV": "",
+    "SIT": "",
+    "UAT": "",
+    "PRD": ""
+  },
+  "virtualPath": ""
+}

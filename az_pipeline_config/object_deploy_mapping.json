@@ -1,0 +1,556 @@
+{
+  "objects": [
+    {
+      "name": "CS2005.exe",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CRS_Util.dll",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CRS_Component.dll",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Configuration.Production.xml",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CRS.dll",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CRS_Ctrl.dll",
+      "env": {
+        "DEV": [
+          {
+            "HostName": "WHKEASCRSAPPD01",
+            "MigrationGroup": "",
+            "Path": [
+              "F:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "SIT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "UAT": [
+          {
+            "HostName": "WHKEASCRSAPPU01",
+            "MigrationGroup": "",
+            "Path": [
+              "C:\\CRS_DevOps\\DEV"
+            ]
+          }
+        ],
+        "RGT": [
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ],
+        "PRD": [
+          {
+            "HostName": "WHKEASCOMBLDP01",
+            "MigrationGroup": "",
+            "Path": [
+              "\\\\hkgeasappprd01gzrs.file.core.windows.net\\share\\dist\\prod\\lifeasia"
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          },
+          {
+            "HostName": "",
+            "MigrationGroup": "",
+            "Path": [
+              ""
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

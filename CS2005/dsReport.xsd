@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsReport" targetNamespace="http://tempuri.org/dsReport.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsReport.xsd" xmlns:mstns="http://tempuri.org/dsReport.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+ 
+	<xs:element name="dsReport" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+			
+			<xs:element name="Logo" msprop:Generator_TableClassName="LogoDataTable" msprop:Generator_TableVarName="tableLogo" msprop:Generator_TablePropName="Logo" msprop:Generator_RowDeletingName="LogoRowDeleting" msprop:Generator_RowChangingName="LogoRowChanging" msprop:Generator_RowEvHandlerName="LogoRowChangeEventHandler" msprop:Generator_RowDeletedName="LogoRowDeleted" msprop:Generator_UserTableName="Logo" msprop:Generator_RowChangedName="LogoRowChanged" msprop:Generator_RowEvArgName="LogoRowChangeEvent" msprop:Generator_RowClassName="LogoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Policy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPolicy" msprop:Generator_ColumnPropNameInRow="Policy" msprop:Generator_ColumnPropNameInTable="PolicyColumn" msprop:Generator_UserColumnName="Policy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ING_Logo" msprop:Generator_ColumnVarNameInTable="columnING_Logo" msprop:Generator_ColumnPropNameInRow="ING_Logo" msprop:Generator_ColumnPropNameInTable="ING_LogoColumn" msprop:Generator_UserColumnName="ING_Logo" type="xs:base64Binary" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:base64Binary" />
+              <xs:element name="IService" msprop:Generator_ColumnVarNameInTable="columnIService" msprop:Generator_ColumnPropNameInRow="IService" msprop:Generator_ColumnPropNameInTable="IServiceColumn" msprop:Generator_UserColumnName="IService" type="xs:base64Binary" />
+              <xs:element name="ICaring" msprop:Generator_ColumnVarNameInTable="columnICaring" msprop:Generator_ColumnPropNameInRow="ICaring" msprop:Generator_ColumnPropNameInTable="ICaringColumn" msprop:Generator_UserColumnName="ICaring" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+			
+				<xs:element name="ServiceEventTypeCodes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventCategoryCode" type="xs:string" />
+							<xs:element name="EventTypeCode" type="xs:string" />
+							<xs:element name="EventTypeDesc" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="SortOrder" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="EventTypeDescChi" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ServiceEventDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ServiceEventNumber" type="xs:decimal" />
+							<xs:element name="EventCategoryCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventTypeCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MasterCSRID" type="xs:string" minOccurs="0" />
+							<xs:element name="EventInitialDateTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="EventSourceInitiatorCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventSourceMediumCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventTypeDetailCode" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="csw_event_typedtl_code">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="csw_event_category_code" type="xs:string" />
+							<xs:element name="csw_event_type_code" type="xs:string" />
+							<xs:element name="csw_event_typedtl_code" type="xs:string" />
+							<xs:element name="csw_event_typedtl_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="cswetd_sort_order" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="cswetd_def_tran_AES" type="xs:string" minOccurs="0" />
+							<xs:element name="cswetd_event_typedtl_desc_chi" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="csw_event_category_code">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cswecc_code" type="xs:string" />
+							<xs:element name="cswecc_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="cswecc_sort_order" type="xs:unsignedByte" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EventSourceMediumCodes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventSourceMediumCode" type="xs:string" />
+							<xs:element name="EventSourceMedium" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="IsDefaultTransferAES" type="xs:string" minOccurs="0" />
+							<xs:element name="EventSourceMediumChi" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="mcsvw_claim_breakdown_rpt">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="mcscbh_claim_no" type="xs:decimal" />
+							<xs:element name="mcscbh_claim_occur" type="xs:decimal" />
+							<xs:element name="mcschd_insured_id" type="xs:string" />
+							<xs:element name="mcschd_insured_name" type="xs:string" />
+							<xs:element name="mcschd_accident_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="mcschd_hospital_indate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="mcschd_hospital_outdate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="mcschd_present_curr" type="xs:string" />
+							<xs:element name="mcsply_policy_no" type="xs:string" />
+							<xs:element name="mcsply_policy_curr" type="xs:string" />
+							<xs:element name="mcschd_exchg_rate" type="xs:decimal" />
+							<xs:element name="mcscbh_pre_pol_xrate" type="xs:decimal" />
+							<xs:element name="mcscpc_coverage" type="xs:decimal" />
+							<xs:element name="mcscpc_plan_type" type="xs:string" />
+							<xs:element name="mcscpc_plan_code" type="xs:string" />
+							<xs:element name="mcscbh_table1" type="xs:string" />
+							<xs:element name="mcscbh_table2" type="xs:string" />
+							<xs:element name="mcsbrb_remain_booster" type="xs:decimal" minOccurs="0" />
+							<xs:element name="mcscbh_benefit_code" type="xs:string" />
+							<xs:element name="mcscbh_benefit_pcode" type="xs:string" minOccurs="0" />
+							<xs:element name="mcsben_benefit_desc" type="xs:string" />
+							<xs:element name="mcscbh_present_amt" type="xs:decimal" />
+							<xs:element name="mcscbh_present_day" type="xs:decimal" />
+							<xs:element name="mcscbh_paid_amt" type="xs:decimal" />
+							<xs:element name="mcscbh_paid_day" type="xs:decimal" />
+							<xs:element name="mcscbh_booster_paid" type="xs:decimal" />
+							<xs:element name="mcscbh_remain_clm_amt" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="mcscbh_remain_clm_days" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="mcscrb_remain_amt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="mcscrb_remain_day" type="xs:decimal" minOccurs="0" />
+							<xs:element name="mcscbh_sys_paid_amt" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Product">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ProductID" type="xs:string" />
+							<xs:element name="CompanyID" type="xs:string" minOccurs="0" />
+							<xs:element name="Name" type="xs:string" minOccurs="0" />
+							<xs:element name="ProductCategory" type="xs:string" minOccurs="0" />
+							<xs:element name="ProductTypeCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="csw_service_log_count">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventCategoryCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventTypeCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventSourceMediumCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventTypeDetailCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Count" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="csw_service_medium_count">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventSourceInitiatorCode" type="xs:string" minOccurs="0" />
+							<xs:element name="EventSourceMediumCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Count" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EventSourceInitiatorCodes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventSourceInitiatorCode" type="xs:string" />
+							<xs:element name="EventSourceInitiator" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="IsDefaultTransferAES" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="csw_csr_medium_count">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MasterCSRID" type="xs:string" minOccurs="0" />
+							<xs:element name="EventSourceMediumCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Count" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CSR">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CSRID" type="xs:string" />
+							<xs:element name="Name" type="xs:string" minOccurs="0" />
+							<xs:element name="CSRTypeCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="ProductsSpecializedIn" type="xs:string" minOccurs="0" />
+							<xs:element name="LicensesHeld" type="xs:string" minOccurs="0" />
+							<xs:element name="LicenseEffectiveDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CSRUnitCode" type="xs:string" minOccurs="0" />
+							<xs:element name="SupervisorsCSRID" type="xs:string" minOccurs="0" />
+							<xs:element name="timestamp" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CampaignCallCount">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="crmcmp_campaign_id" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcmp_campaign_name" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcpc_channel_id" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcpc_description" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcmp_start_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="crmcmp_end_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="crmcpo_owner_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcps_status_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="call_made" type="xs:integer" minOccurs="0" />
+							<xs:element name="success_call" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CampaignEDMCount">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="crmcmp_campaign_id" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcmp_campaign_name" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcpc_channel_id" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcpc_description" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcmp_start_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="crmcmp_end_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="crmcpo_owner_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="crmcps_status_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="mail_sent" type="xs:integer" minOccurs="0" />
+							<xs:element name="mail_received" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsReportKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ServiceEventTypeCodes" />
+			<xs:field xpath="mstns:EventCategoryCode" />
+			<xs:field xpath="mstns:EventTypeCode" />
+		</xs:unique>
+		<xs:unique name="dsReportKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ServiceEventDetail" />
+			<xs:field xpath="mstns:ServiceEventNumber" />
+		</xs:unique>
+		<xs:unique name="dsReportKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:csw_event_typedtl_code" />
+			<xs:field xpath="mstns:csw_event_category_code" />
+			<xs:field xpath="mstns:csw_event_type_code" />
+			<xs:field xpath="mstns:csw_event_typedtl_code" />
+		</xs:unique>
+		<xs:unique name="dsReportKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:csw_event_category_code" />
+			<xs:field xpath="mstns:cswecc_code" />
+		</xs:unique>
+		<xs:unique name="dsReportKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EventSourceMediumCodes" />
+			<xs:field xpath="mstns:EventSourceMediumCode" />
+		</xs:unique>
+		<xs:unique name="dsReportKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Product" />
+			<xs:field xpath="mstns:ProductID" />
+		</xs:unique>
+		<xs:unique name="dsReportKey7" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EventSourceInitiatorCodes" />
+			<xs:field xpath="mstns:EventSourceInitiatorCode" />
+		</xs:unique>
+		<xs:unique name="dsReportKey8" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CSR" />
+			<xs:field xpath="mstns:CSRID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CRSInterface.My.MyApplication</StartupObject>
+    <RootNamespace>CRSInterface</RootNamespace>
+    <AssemblyName>CRSInterface</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ing.key</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Life_Common\IPD\LIB\</OutputPath>
+    <DocumentationFile>CRSInterface.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CRSInterface.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComCtl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\ComCtl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CRS_Ctrl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\CRS_Ctrl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LifeClientInterfaceComponent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\LifeClientInterfaceComponent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSCommCtrl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\POSCommCtrl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SysEventLog, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\SysEventLog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ProdApps\LA DLL\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBesgin.Designer.vb">
+      <DependentUpon>frmBesgin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBesgin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCRSPolicyGeneralInformation.Designer.vb">
+      <DependentUpon>FrmCRSPolicyGeneralInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCRSPolicyGeneralInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRS_MainScreen.Designer.vb">
+      <DependentUpon>frmCRS_MainScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCRS_MainScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirectDebitEnq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirectDebitEnq.Designer.vb">
+      <DependentUpon>frmDirectDebitEnq.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinancialInfo.Designer.vb">
+      <DependentUpon>frmFinancialInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinancialInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTranHist.Designer.vb">
+      <DependentUpon>frmTranHist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTranHist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBesgin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBesgin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCRSPolicyGeneralInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCRSPolicyGeneralInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCRS_MainScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCRS_MainScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirectDebitEnq.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDirectDebitEnq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinancialInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFinancialInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTranHist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTranHist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ing.key" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

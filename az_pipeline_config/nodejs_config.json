@@ -1,0 +1,12 @@
+{
+    "applicationType": ".net",
+    "build": {
+        "poolVmImage": "windows-latest",
+        "applicationEnv": "HKU105",
+        "builderVersion": "12.14.1",
+        "vstsFeedPackagePublish": "eservice_api_uat16_1130"
+    },
+    "angular":{
+        "baseHref": ""
+    }
+}

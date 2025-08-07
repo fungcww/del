@@ -1,0 +1,10 @@
+; Field definition file for table: ADORecordset
+infordate	date		Jan 5, 1994
+custid	number		1.00
+polid	string	16	string sample value
+agcode	string	11	string sample value
+prn	string	1	string sample value
+prndate	date		Jan 5, 1994
+unitcode	string	5	string sample value
+agname	string	51	string sample value
+cusname	string	51	string sample value

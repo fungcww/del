@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ICS2005", "ICS2005.vbproj", "{EDBB2BE3-487F-4902-8B14-12089A6838BA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = ICS2005
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:ClearCase
+		CanCheckoutShared = false
+		SolutionUniqueID = {70D43B87-78E5-4EA6-AF77-799E076A1465}
+		SccProjectUniqueName1 = ICS2005.vbproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Debug.ActiveCfg = Debug|.NET
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Debug.Build.0 = Debug|.NET
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Release.ActiveCfg = Release|.NET
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

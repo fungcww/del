@@ -1,0 +1,2153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{182CEE29-E299-4362-8CA4-BE4E995FEFEE}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CS2005</AssemblyName>
+    <AssemblyOriginatorKeyFile>ing.key</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Text</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>CS2005</RootNamespace>
+    <StartupObject>CS2005.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccAuxPath>SAK</SccAuxPath>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/CS2005/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CS2005.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>RPC="HTTP", STRESS=0, HKL=0, UAT=0</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CS2005.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>UAT=0, RPC="HTTP", STRESS=0</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>RPC="HTTP", STRESS=0, HKL=0, UAT=0</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>CS2005.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\CS2005.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>UAT=0, RPC="HTTP", STRESS=0</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>CS2005.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\x64\Release\CS2005.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\FrontEnd\packages\ADODB.7.10.3077\lib\adodb.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AxInterop.SHDocVw, Version=1.1.0.0, Culture=neutral">
+      <HintPath>..\FrontEnd\packages\AxInterop.SHDocVw.1.0.0\lib\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="BOSchema, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\BOSchema.20250417.0.7\lib\net35\BOSchema.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComCtl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\ComCtl.20250417.0.7\lib\net35\ComCtl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DBLogon_NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\DBLogon_NET.1.0.1\lib\net\DBLogon_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="HashidsNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\HashidsNet.1.0.0\lib\net20\HashidsNet.dll</HintPath>
+    </Reference>
+    <Reference Include="HKL.Interface.ICRS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3">
+      <HintPath>..\FrontEnd\packages\HKL.Interface.ICRS.1.0.0\lib\net20\HKL.Interface.ICRS.dll</HintPath>
+    </Reference>
+    <Reference Include="HKL.Interface.ISecurity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3">
+      <HintPath>..\FrontEnd\packages\HKL.Interface.ISecurity.1.0.0\lib\net20\HKL.Interface.ISecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="ING.Life, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\ING.Life.1.0.5\lib\net20\ING.Life.dll</HintPath>
+    </Reference>
+    <Reference Include="ING.Life.Win, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\ING.Life.Win.1.0.5\lib\net20\ING.Life.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="ING.Win, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\ING.Win.1.0.5\lib\net20\ING.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="INGLife.Interface.ICS2005, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=x86">
+      <HintPath>..\FrontEnd\packages\INGLife.Interface.ICS2005.1.0.0\lib\net20\INGLife.Interface.ICS2005.dll</HintPath>
+    </Reference>
+    <Reference Include="INGLife.Interface.ISecurity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=x86">
+      <HintPath>..\FrontEnd\packages\INGLife.Interface.ISecurity.1.0.0\lib\net20\INGLife.Interface.ISecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="INGLife.Interface.ISSOCom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3">
+      <HintPath>..\FrontEnd\packages\INGLife.Interface.ISSOCom.1.0.0\lib\net20\INGLife.Interface.ISSOCom.dll</HintPath>
+    </Reference>
+    <Reference Include="ING_SOAPHeader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\ING_SOAPHeader.1.1.89\lib\net35\ING_SOAPHeader.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\Interop.Microsoft.Office.Core.2.2.0\lib\net20\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\Interop.SHDocVw.1.1.0\lib\net35\Interop.SHDocVw.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LCPClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\LCPClient.1.0.0\lib\net35\LCPClient.dll\LCPClient.exe</HintPath>
+    </Reference>
+    <Reference Include="LifeClientInterfaceComponent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\LifeClientInterfaceComponent.20250417.0.7\lib\net35\LifeClientInterfaceComponent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\FrontEnd\packages\Microsoft.Office.Interop.Excel.12.0.4518.1014\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\FrontEnd\packages\Microsoft.Office.Interop.Outlook.12.0.4518.1014\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NDde, Version=2.1.563.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\NDde.2.01.0563\lib\NDde.dll</HintPath>
+    </Reference>
+    <Reference Include="NewBusinessAdmin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\NewBusinessAdmin.20250417.0.7\lib\net35\NewBusinessAdmin.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfPrintingNet, Version=4.10.5.0, Culture=neutral, PublicKeyToken=ded90f87675288f3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\PdfPrintingNet.4.10.5\lib\net20\PdfPrintingNet.dll</HintPath>
+    </Reference>
+    <Reference Include="POSCommCtrl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\POSCommCtrl.20250417.0.7\lib\net35\POSCommCtrl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="POSMain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\POSMain.20250417.0.7\lib\net35\POSMain.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PosUtils2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\PosUtils2.20250417.0.7\lib\net35\PosUtils2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SysEventLog, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\SysEventLog.20250417.0.7\lib\net35\SysEventLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59471dc2f825e8a3, processorArchitecture=MSIL">
+      <HintPath>..\FrontEnd\packages\Utility.20250417.0.7\lib\net35\Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aplloanletter.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aplloanletter.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="aplloanletter.vb">
+      <DependentUpon>aplloanletter.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Base\frmPolicyBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\PosServiceInst.vb" />
+    <Compile Include="Base\SummaryTabBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\APIServiceBL.vb" />
+    <Compile Include="BusinessLogic\AsyncBaseBL.vb" />
+    <Compile Include="BusinessLogic\ClaimsBL.vb" />
+    <Compile Include="BusinessLogic\CoverageDetailsAsyncBL.vb" />
+    <Compile Include="BusinessLogic\CustomerBL.vb" />
+    <Compile Include="BusinessLogic\CustomerSearchBL.vb" />
+    <Compile Include="BusinessLogic\LetterCommonBL.vb" />
+    <Compile Include="BusinessLogic\LetterPrintBL.vb" />
+    <Compile Include="BusinessLogic\LetterQueryBase.vb" />
+    <Compile Include="BusinessLogic\MacauServiceBL.vb" />
+    <Compile Include="BusinessLogic\PolicySearchBL.vb" />
+    <Compile Include="BusinessLogic\PolicySummaryAsyncBL.vb" />
+    <Compile Include="BusinessLogic\ServiceLogBL.vb" />
+    <Compile Include="BusinessLogic\SMSManagementBL.vb" />
+    <Compile Include="BusinessLogic\SystemInfoAsyncBL.vb" />
+    <Compile Include="clsReportLogic.vb" />
+    <Compile Include="clsReportLogicMcu.vb" />
+    <Compile Include="FormModeEnum.vb" />
+    <Compile Include="frm7ElevenPayout.designer.vb">
+      <DependentUpon>frm7ElevenPayout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm7ElevenPayout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentCodeInput.Designer.vb">
+      <DependentUpon>frmAgentCodeInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentCodeInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackdoorReg.designer.vb">
+      <DependentUpon>frmBackdoorReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackdoorReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckSMS.Designer.vb">
+      <DependentUpon>frmCheckSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrmOptInOut.Designer.vb">
+      <DependentUpon>frmCrmOptInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrmOptInOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCS2005_Asur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEServiceOptInOut.Designer.vb">
+      <DependentUpon>frmEServiceOptInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEServiceOptInOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindUser.Designer.vb">
+      <DependentUpon>frmFindUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFundRiskLevel.Designer.vb">
+      <DependentUpon>frmFundRiskLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFundRiskLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralQueryDataGrid.Designer.vb">
+      <DependentUpon>frmGeneralQueryDataGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralQueryDataGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGIServiceLog.designer.vb">
+      <DependentUpon>frmGIServiceLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGIServiceLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHighRiskFund.Designer.vb">
+      <DependentUpon>frmHighRiskFund.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHighRiskFund.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHKTransLog.Designer.vb">
+      <DependentUpon>frmHKTransLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHKTransLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmiFWDFreePolicyEnq.designer.vb">
+      <DependentUpon>frmiFWDFreePolicyEnq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmiFWDFreePolicyEnq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmILASPostSalesLetterParm.Designer.vb">
+      <DependentUpon>frmILASPostSalesLetterParm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmILASPostSalesLetterParm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIwsClaimHist.Designer.vb">
+      <DependentUpon>frmIwsClaimHist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIwsClaimHist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLevyOverdueFollowUpRpt.Designer.vb">
+      <DependentUpon>frmLevyOverdueFollowUpRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLevyOverdueFollowUpRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLevyOverduePreGenerate.Designer.vb">
+      <DependentUpon>frmLevyOverduePreGenerate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLevyOverduePreGenerate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLtrParam.Designer.vb">
+      <DependentUpon>frmLtrParam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLtrParam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarkinHistMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMCUTransLog.Designer.vb">
+      <DependentUpon>frmMCUTransLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMCUTransLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPendingHistMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyAsur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesCallList.Designer.vb">
+      <DependentUpon>frmPostSalesCallList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesCallList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSelect.Designer.vb">
+      <DependentUpon>frmPostSalesCallProductSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSetting.Designer.vb">
+      <DependentUpon>frmPostSalesCallProductSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSettingMcu.designer.vb">
+      <DependentUpon>frmPostSalesCallProductSettingMcu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesCallProductSettingMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesQuestionnaireMaster.Designer.vb">
+      <DependentUpon>frmPostSalesQuestionnaireMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesQuestionnaireMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostSalesQuestionnaireMasterMcu.Designer.vb">
+      <DependentUpon>frmPostSalesQuestionnaireMasterMcu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostSalesQuestionnaireMasterMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport_Asur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchCustAsur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchPolicyAsur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchPolicyMcu.Designer.vb">
+      <DependentUpon>frmSearchPolicyMcu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchPolicyMcu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectMsgTemp.designer.vb">
+      <DependentUpon>frmSelectMsgTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectMsgTemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceLogRetrieve.designer.vb">
+      <DependentUpon>frmServiceLogRetrieve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServiceLogRetrieve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSmsTempMgt.Designer.vb">
+      <DependentUpon>frmSmsTempMgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSmsTempMgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.vb">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserPreference.Designer.vb">
+      <DependentUpon>frmUserPreference.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserPreference.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logger\AsyncDbLogger.vb" />
+    <Compile Include="Logger\AsyncDbLoggerItem.vb" />
+    <Compile Include="Logger\Logger.vb" />
+    <Compile Include="McuReportFuns\AplLoanLetter.vb" />
+    <Compile Include="McuReportFuns\ClaimRpt.vb" />
+    <Compile Include="McuReportFuns\FcrReport.vb" />
+    <Compile Include="McuReportFuns\MediumCrsRpt.vb" />
+    <Compile Include="McuReportFuns\MediumInitiatorRpt.vb" />
+    <Compile Include="McuReportFuns\MediumRpt.vb" />
+    <Compile Include="McuReportFuns\RpuReport.vb" />
+    <Compile Include="McuReportFuns\SuggestGReport.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AplLoanLetter.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AplLoanLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Setting\AppSettings.vb" />
+    <Compile Include="uclAdditionalMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAdditionalMcu_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAddressSelectMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAddressSelectMcu_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAgentInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAgentInfoMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCampaignTrackingMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCampaignTrackingMcu_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclClaimHist_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCoverageMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCrmOptInOutDtl.Designer.vb">
+      <DependentUpon>uclCrmOptInOutDtl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclCrmOptInOutDtl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCustomerRelMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDISC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclExecute.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclFinancialInfoMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclGIMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclParSur.Designer.vb">
+      <DependentUpon>uclParSur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclParSur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclParSur_Asur.Designer.vb">
+      <DependentUpon>uclParSur_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclParSur_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPersonal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPersonalMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPersonal_Asur_WorkAround.Designer.vb">
+      <DependentUpon>uclPersonal_Asur_WorkAround.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPersonal_Asur_WorkAround.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyAlt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyAltMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyAltPendingMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyBillingInfo_Asur.Designer.vb">
+      <DependentUpon>uclPolicyBillingInfo_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPolicyBillingInfo_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyClient_Asur.Designer.vb">
+      <DependentUpon>uclPolicyClient_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPolicyClient_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyMRP_Asur.Designer.vb">
+      <DependentUpon>uclPolicyMRP_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPolicyMRP_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyScreenHead_Asur.Designer.vb">
+      <DependentUpon>uclPolicyScreenHead_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPolicyScreenHead_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicySummary_Asur.Designer.vb">
+      <DependentUpon>uclPolicySummary_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPolicySummary_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaire.Designer.vb">
+      <DependentUpon>uclPostSalesCallQuestionnaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaire.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaire_Asur.Designer.vb">
+      <DependentUpon>uclPostSalesCallQuestionnaire_Asur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaire_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaireMcu.Designer.vb">
+      <DependentUpon>uclPostSalesCallQuestionnaireMcu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclPostSalesCallQuestionnaireMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclQuestion.Designer.vb">
+      <DependentUpon>uclQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclQuestion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSelectBox_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSelectDropDown.Designer.vb">
+      <DependentUpon>uclSelectDropDown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclSelectDropDown.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclServiceLog.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclServiceLogMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclServiceLogMcu_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclServiceLog_Asur_WorkAround.Designer.vb">
+      <DependentUpon>uclServiceLog_Asur_WorkAround.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uclServiceLog_Asur_WorkAround.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSMS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSMSiLAS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSMSMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDDACCDRMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSurveyMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclUWInfoMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSurveyMcu_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclUWInfo_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Web References\CCMWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CCRWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CRSWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LEVYWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MCSWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NBAWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\POSWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="app_Asur.config" />
+    <None Include="app_MOT.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app_T106_NewKongAPI.config" />
+    <None Include="app_U103.config" />
+    <None Include="CS2005.exe.production.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web References\CCMWS\BaseResponseOfLetterGenerateInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\BaseResponseOfLetterInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\BaseResponseOfWordDocMailMergeDOM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\BasicDataSetStruct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\BasicDataTableStruct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\CCMWS.disco" />
+    <None Include="app_Production.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="app_S106.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app_T106.config" />
+    <None Include="app_U101.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app_U104.config" />
+    <None Include="app_U105.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app_U201.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CCMWS\CCMWS.wsdl" />
+    <None Include="Web References\CCMWS\LetterImageBean.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\LetterParamBean.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\LetterPrintFileBean.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\LetterPrintSetBean.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCMWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="app_U202.config" />
+    <None Include="app_U401.config" />
+    <None Include="app_U401_rgt.config" />
+    <None Include="app_U402_rgt.config" />
+    <None Include="CS2005.exe.log4net" />
+    <None Include="remote.config" />
+    <None Include="Setting\appSetting.U105.json" />
+    <None Include="Setting\appSetting.S106.json" />
+    <None Include="Setting\appSetting.Production.json" />
+    <None Include="Setting\appSetting.LIDZ.json" />
+    <None Include="Setting\appSetting.T106.json" />
+    <None Include="Web References\CRSWS\CRSWS.disco" />
+    <None Include="Web References\CRSWS\CRSWS.wsdl" />
+    <None Include="Web References\CRSWS\PostSalesCallType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfCustomerID.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfListOfCustomerInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfListOfHKFIRpt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfListOfMCUReportList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfListOfPremCallRpt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfListOfRptILASFundDesc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfPaymentInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfPolicyInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRSWS\WSResponseOfRptILASNotificationLetterInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MCSWS\MCSWS.disco" />
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="aplloanletter.xsc">
+      <DependentUpon>aplloanletter.xsd</DependentUpon>
+    </None>
+    <None Include="aplloanletter.xss">
+      <DependentUpon>aplloanletter.xsd</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS2005_TemporaryKey.pfx" />
+    <None Include="dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsReport.xsx">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="ing.key" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCIC.vb" />
+    <Compile Include="clsCSDataGrid.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsDataGridTableStyle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsDataGridTextBoxColumn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsJoinTextBoxColumn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsMQWorker.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRemotingHelper.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsReportLogic_Asur.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssignCase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuthority.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBANK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChooseEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRM_Asur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRSBatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCSPolicy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCSR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer_Asur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustRel.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmDelMiscBatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnvSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExchgRate.Designer.vb">
+      <DependentUpon>frmExchgRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExchgRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGIPolicy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHKFI_Para.Designer.vb">
+      <DependentUpon>frmHKFI_Para.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHKFI_Para.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportCList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIRTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarkinHist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMiscType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModeChangeQuote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPAYHRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPendingHist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyMapping.Designer.vb">
+      <DependentUpon>frmPolicyMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPolicyMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyProj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremCallRpt.Designer.vb">
+      <DependentUpon>frmPremCallRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPremCallRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReprintCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptClaims.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptMiscType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSrvAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCO.designer.vb">
+      <DependentUpon>frmSelectCO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectCO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUVAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modConst.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modControlUtil.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modDspMsg.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modGlobal.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="NewBizAdmin.designer.vb">
+      <DependentUpon>NewBizAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewBizAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="uclAdditional.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAddressSelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAgentInfo_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclAPLHist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCampaign.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCampaignHead.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCampaignTracking.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCashFlow.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCOUH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCoverage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCustHist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclCustomerRel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDCAR.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDDACCDR.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDISC_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclEDM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclExecute_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclFinancialInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclGI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclMClaimHist_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclMClaimHistMcu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclMPF.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPersonal_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyAlt_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclPolicyAltPending.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclQuery.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSelectBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclServiceLog_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSMS_Asur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSurvey.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclTrxHist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclUTRH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclUWInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclWebBrowser.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Web References\CNBWrapper\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CommonWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="clsCSDataGrid.resx">
+      <DependentUpon>clsCSDataGrid.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clsDataGridTableStyle.resx">
+      <DependentUpon>clsDataGridTableStyle.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clsDataGridTextBoxColumn.resx">
+      <DependentUpon>clsDataGridTextBoxColumn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clsJoinTextBoxColumn.resx">
+      <DependentUpon>clsJoinTextBoxColumn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm7ElevenPayout.resx">
+      <DependentUpon>frm7ElevenPayout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentCodeInput.resx">
+      <DependentUpon>frmAgentCodeInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentInfo.resx">
+      <DependentUpon>frmAgentInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlert.resx">
+      <DependentUpon>frmAlert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssignCase.resx">
+      <DependentUpon>frmAssignCase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuthority.resx">
+      <DependentUpon>frmAuthority.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackdoorReg.resx">
+      <DependentUpon>frmBackdoorReg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBANK.resx">
+      <DependentUpon>frmBANK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckSMS.resx">
+      <DependentUpon>frmCheckSMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChooseEmail.resx">
+      <DependentUpon>frmChooseEmail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCRM.resx">
+      <DependentUpon>frmCRM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrmOptInOut.resx">
+      <DependentUpon>frmCrmOptInOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCRM_Asur.resx">
+      <DependentUpon>frmCRM_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCRSBatch.resx">
+      <DependentUpon>frmCRSBatch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCS2005_Asur.resx">
+      <DependentUpon>frmCS2005_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCSPolicy.resx">
+      <DependentUpon>frmCSPolicy.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCSR.resx">
+      <DependentUpon>frmCSR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer_Asur.resx">
+      <DependentUpon>frmCustomer_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerMcu.resx">
+      <DependentUpon>frmCustomerMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustRel.resx">
+      <DependentUpon>frmCustRel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDelMiscBatch.resx">
+      <DependentUpon>frmDelMiscBatch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnvSel.resx">
+      <DependentUpon>frmEnvSel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEServiceOptInOut.resx">
+      <DependentUpon>frmEServiceOptInOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchgRate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExchgRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFax.resx">
+      <DependentUpon>frmFax.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindUser.resx">
+      <DependentUpon>frmFindUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFundRiskLevel.resx">
+      <DependentUpon>frmFundRiskLevel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralQueryDataGrid.resx">
+      <DependentUpon>frmGeneralQueryDataGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGIPolicy.resx">
+      <DependentUpon>frmGIPolicy.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGIServiceLog.resx">
+      <DependentUpon>frmGIServiceLog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHighRiskFund.resx">
+      <DependentUpon>frmHighRiskFund.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHKFI_Para.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHKFI_Para.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHKTransLog.resx">
+      <DependentUpon>frmHKTransLog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmiFWDFreePolicyEnq.resx">
+      <DependentUpon>frmiFWDFreePolicyEnq.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmILASPostSalesLetterParm.resx">
+      <DependentUpon>frmILASPostSalesLetterParm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportCList.resx">
+      <DependentUpon>frmImportCList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportList.resx">
+      <DependentUpon>frmImportList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInbox.resx">
+      <DependentUpon>frmInbox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIRTS.resx">
+      <DependentUpon>frmIRTS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIwsClaimHist.resx">
+      <DependentUpon>frmIwsClaimHist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLevyOverdueFollowUpRpt.resx">
+      <DependentUpon>frmLevyOverdueFollowUpRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLevyOverduePreGenerate.resx">
+      <DependentUpon>frmLevyOverduePreGenerate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLtrParam.resx">
+      <DependentUpon>frmLtrParam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarkinHist.resx">
+      <DependentUpon>frmMarkinHist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarkinHistMcu.resx">
+      <DependentUpon>frmMarkinHistMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMCUTransLog.resx">
+      <DependentUpon>frmMCUTransLog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMiscType.resx">
+      <DependentUpon>frmMiscType.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModeChangeQuote.resx">
+      <DependentUpon>frmModeChangeQuote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPAYHRpt.resx">
+      <DependentUpon>frmPAYHRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPendingHist.resx">
+      <DependentUpon>frmPendingHist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPendingHistMcu.resx">
+      <DependentUpon>frmPendingHistMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyAlert.resx">
+      <DependentUpon>frmPolicyAlert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyAsur.resx">
+      <DependentUpon>frmPolicyAsur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyMapping.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPolicyMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyMcu.resx">
+      <DependentUpon>frmPolicyMcu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyProj.resx">
+      <DependentUpon>frmPolicyProj.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesCallList.resx">
+      <DependentUpon>frmPostSalesCallList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesCallProductSelect.resx">
+      <DependentUpon>frmPostSalesCallProductSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesCallProductSetting.resx">
+      <DependentUpon>frmPostSalesCallProductSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesCallProductSettingMcu.resx">
+      <DependentUpon>frmPostSalesCallProductSettingMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesQuestionnaireMaster.resx">
+      <DependentUpon>frmPostSalesQuestionnaireMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostSalesQuestionnaireMasterMcu.resx">
+      <DependentUpon>frmPostSalesQuestionnaireMasterMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremCallRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPremCallRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjRpt.resx">
+      <DependentUpon>frmProjRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRTS.resx">
+      <DependentUpon>frmPRTS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport_Asur.resx">
+      <DependentUpon>frmReport_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReprintCard.resx">
+      <DependentUpon>frmReprintCard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptClaims.resx">
+      <DependentUpon>frmRptClaims.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptMiscType.resx">
+      <DependentUpon>frmRptMiscType.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSrvAdmin.resx">
+      <DependentUpon>frmRptSrvAdmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchCustAsur.resx">
+      <DependentUpon>frmSearchCustAsur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchPolicyAsur.resx">
+      <DependentUpon>frmSearchPolicyAsur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchPolicyMcu.resx">
+      <DependentUpon>frmSearchPolicyMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCO.resx">
+      <DependentUpon>frmSelectCO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectMsgTemp.resx">
+      <DependentUpon>frmSelectMsgTemp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServiceLogRetrieve.resx">
+      <DependentUpon>frmServiceLogRetrieve.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSmsTempMgt.resx">
+      <DependentUpon>frmSmsTempMgt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserPreference.resx">
+      <DependentUpon>frmUserPreference.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUVAL.resx">
+      <DependentUpon>frmUVAL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBizAdmin.resx">
+      <DependentUpon>NewBizAdmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AplLoanLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AplLoanLetter.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAdditional.resx">
+      <DependentUpon>uclAdditional.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAdditionalMcu.resx">
+      <DependentUpon>uclAdditionalMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAdditionalMcu_Asur.resx">
+      <DependentUpon>uclAdditionalMcu_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAddressSelect.resx">
+      <DependentUpon>uclAddressSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAddressSelectMcu.resx">
+      <DependentUpon>uclAddressSelectMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAddressSelectMcu_Asur.resx">
+      <DependentUpon>uclAddressSelectMcu_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAgentInfo.resx">
+      <DependentUpon>uclAgentInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAgentInfo_Asur.resx">
+      <DependentUpon>uclAgentInfo_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAgentInfoMcu.resx">
+      <DependentUpon>uclAgentInfoMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclAPLHist.resx">
+      <DependentUpon>uclAPLHist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCampaign.resx">
+      <DependentUpon>uclCampaign.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCampaignHead.resx">
+      <DependentUpon>uclCampaignHead.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCampaignTracking.resx">
+      <DependentUpon>uclCampaignTracking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCampaignTrackingMcu.resx">
+      <DependentUpon>uclCampaignTrackingMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCampaignTrackingMcu_Asur.resx">
+      <DependentUpon>uclCampaignTrackingMcu_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCashFlow.resx">
+      <DependentUpon>uclCashFlow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclClaimHist_Asur.resx">
+      <DependentUpon>uclClaimHist_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCOUH.resx">
+      <DependentUpon>uclCOUH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCoverage.resx">
+      <DependentUpon>uclCoverage.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCoverageMcu.resx">
+      <DependentUpon>uclCoverageMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCrmOptInOutDtl.resx">
+      <DependentUpon>uclCrmOptInOutDtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCustHist.resx">
+      <DependentUpon>uclCustHist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCustomerRel.resx">
+      <DependentUpon>uclCustomerRel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclCustomerRelMcu.resx">
+      <DependentUpon>uclCustomerRelMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDCAR.resx">
+      <DependentUpon>uclDCAR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDDACCDR.resx">
+      <DependentUpon>uclDDACCDR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDDACCDRMcu.resx">
+      <DependentUpon>uclDDACCDRMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDISC.resx">
+      <DependentUpon>uclDISC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDISC_Asur.resx">
+      <DependentUpon>uclDISC_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclEDM.resx">
+      <DependentUpon>uclEDM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclExecute.resx">
+      <DependentUpon>uclExecute.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclExecute_Asur.resx">
+      <DependentUpon>uclExecute_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclFinancialInfo.resx">
+      <DependentUpon>uclFinancialInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclGI.resx">
+      <DependentUpon>uclGI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclMClaimHist_Asur.resx">
+      <DependentUpon>uclMClaimHist_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclMClaimHistMcu.resx">
+      <DependentUpon>uclMClaimHistMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclMPF.resx">
+      <DependentUpon>uclMPF.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclParSur.resx">
+      <DependentUpon>uclParSur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclParSur_Asur.resx">
+      <DependentUpon>uclParSur_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPersonal.resx">
+      <DependentUpon>uclPersonal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPersonal_Asur.resx">
+      <DependentUpon>uclPersonal_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPersonalMcu.resx">
+      <DependentUpon>uclPersonalMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPersonal_Asur_WorkAround.resx">
+      <DependentUpon>uclPersonal_Asur_WorkAround.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyAlt.resx">
+      <DependentUpon>uclPolicyAlt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyAlt_Asur.resx">
+      <DependentUpon>uclPolicyAlt_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyAltMcu.resx">
+      <DependentUpon>uclPolicyAltMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyAltPending.resx">
+      <DependentUpon>uclPolicyAltPending.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyAltPendingMcu.resx">
+      <DependentUpon>uclPolicyAltPendingMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyBillingInfo_Asur.resx">
+      <DependentUpon>uclPolicyBillingInfo_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyClient_Asur.resx">
+      <DependentUpon>uclPolicyClient_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyMRP_Asur.resx">
+      <DependentUpon>uclPolicyMRP_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicyScreenHead_Asur.resx">
+      <DependentUpon>uclPolicyScreenHead_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPolicySummary_Asur.resx">
+      <DependentUpon>uclPolicySummary_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPostSalesCallQuestionnaire.resx">
+      <DependentUpon>uclPostSalesCallQuestionnaire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclPostSalesCallQuestionnaire_Asur.resx">
+      <DependentUpon>uclPostSalesCallQuestionnaire_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclQuery.resx">
+      <DependentUpon>uclQuery.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclQuestion.resx">
+      <DependentUpon>uclQuestion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSelectBox_Asur.resx">
+      <DependentUpon>uclSelectBox_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSelectBox.resx">
+      <DependentUpon>uclSelectBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSelectDropDown.resx">
+      <DependentUpon>uclSelectDropDown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclServiceLog.resx">
+      <DependentUpon>uclServiceLog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclServiceLogMcu.resx">
+      <DependentUpon>uclServiceLogMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclServiceLog_Asur.resx">
+      <DependentUpon>uclServiceLog_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclServiceLogMcu_Asur.resx">
+      <DependentUpon>uclServiceLogMcu_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclServiceLog_Asur_WorkAround.resx">
+      <DependentUpon>uclServiceLog_Asur_WorkAround.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSMS.resx">
+      <DependentUpon>uclSMS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSMS_Asur.resx">
+      <DependentUpon>uclSMS_Asur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSMSiLAS.resx">
+      <DependentUpon>uclSMSiLAS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSMSMcu.resx">
+      <DependentUpon>uclSMSMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSurvey.resx">
+      <DependentUpon>uclSurvey.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSurveyMcu.resx">
+      <DependentUpon>uclSurveyMcu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSurveyMcu_Asur.resx">
+      <DependentUpon>uclSurveyMcu_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclTrxHist.resx">
+      <DependentUpon>uclTrxHist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclUTRH.resx">
+      <DependentUpon>uclUTRH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclUWInfo.resx">
+      <DependentUpon>uclUWInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclUWInfo_Asur.resx">
+      <DependentUpon>uclUWInfo_Asur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclWebBrowser.resx">
+      <DependentUpon>uclWebBrowser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="aplloanletter.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>aplloanletter.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="Configuration.Production.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="dsReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReport.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="payment.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="resource\ILAS uncertain replies customer with agent_broker response_Chinese Version.txt" />
+    <Content Include="resource\ILAS uncertain replies customer with agent_broker response_English Version.txt" />
+    <Content Include="resource\ILAS uncertain replies customer without agent_broker response_Chinese Version.txt" />
+    <Content Include="resource\ILAS uncertain replies customer without agent_broker response_English Version.txt" />
+    <Content Include="resource\ILAS unreachable &amp; unwilling customer_Chinese Version.txt" />
+    <Content Include="resource\ILAS unreachable &amp; unwilling customer_English Version.txt" />
+    <None Include="payment.xsc">
+      <DependentUpon>payment.xsd</DependentUpon>
+    </None>
+    <None Include="payment.xss">
+      <DependentUpon>payment.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\PolicyCampaignDiscountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\Recp_PlanCampaignMappingInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LEVYWS\LEVYWS.disco" />
+    <None Include="Web References\CCRWS\clsClient.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCRWS\clsClientPolicyRelation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CCRWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CCRWS\Service.disco" />
+    <None Include="Web References\CCRWS\Service.wsdl" />
+    <None Include="Web References\CommonWS\Recp_ASIInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CommonWS\Recp_ASIValidation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LEVYWS\LEVYWS.wsdl" />
+    <None Include="Web References\LEVYWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\MCSWS\MCSWS.wsdl" />
+    <None Include="Web References\MCSWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NBAWS\nbaws.disco" />
+    <None Include="Web References\NBAWS\nbaws.wsdl" />
+    <None Include="Web References\NBAWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\POSWS\posws.disco" />
+    <None Include="Web References\CommonWS\BoSchema_ExchangeRate_Rece_schema.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CommonWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CommonWS\service.disco" />
+    <None Include="Web References\CNBWrapper\BoSchema_NBAFI_Rece_schema.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\BoSchema_NBCreateReceipt_Rece_GetCreateReceiptSchema_DS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\BoSchema_NBCreate_Rece_GetNBPCreateSchema_DS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\BoSchema_NBDispatch_Rece_schema.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\BoSchema_NBEnquiry_Rece_GetNBPEnquirySchema_DS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\BoSchema_NBIssue_Rece_schema.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\NBWRAPPER.disco" />
+    <None Include="Web References\CNBWrapper\NBWRAPPER.wsdl" />
+    <None Include="Web References\CNBWrapper\Rece_PaymentTransferInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CNBWrapper\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CommonWS\service.wsdl" />
+    <None Include="Web References\POSWS\posws.wsdl" />
+    <None Include="Web References\POSWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:33894/CCMWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CCMWS\</RelPath>
+      <UpdateFromURL>http://localhost:33894/CCMWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_CCMWS_CCMWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://hkgcomuat02.hk.intranet/INGU102ClaimWS/MCSWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MCSWS\</RelPath>
+      <UpdateFromURL>http://hkgcomuat02.hk.intranet/INGU102ClaimWS/MCSWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_MCSWS_MCSWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:16228/CNBWS/NBWrapper.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CNBWrapper\</RelPath>
+      <UpdateFromURL>http://localhost:16228/CNBWS/NBWrapper.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_CNBWrapper_NBWrapper</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:15223/LifeAsiaWS/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CCRWS\</RelPath>
+      <UpdateFromURL>http://localhost:15223/LifeAsiaWS/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_CCRWS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:17419/LevyWebServices/LEVYWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LEVYWS\</RelPath>
+      <UpdateFromURL>http://localhost:17419/LevyWebServices/LEVYWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_LEVYWS_LEVYWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:20562/CRSWebService/CRSWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CRSWS\</RelPath>
+      <UpdateFromURL>http://localhost:20562/CRSWebService/CRSWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_CRSWS_CRSWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:57915/commonws/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CommonWS\</RelPath>
+      <UpdateFromURL>http://localhost:57915/commonws/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_CommonWS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:60311/nbaws/nbaws.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NBAWS\</RelPath>
+      <UpdateFromURL>http://localhost:60311/nbaws/nbaws.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_NBAWS_NBAWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:20560/POSWebService/POSWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\POSWS\</RelPath>
+      <UpdateFromURL>http://localhost:20560/POSWebService/POSWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CS2005_POSWS_POSWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRS Web service\CRS\CRS.vbproj">
+      <Project>{ab6fb29f-5c18-4495-9106-eb8eae5d9b61}</Project>
+      <Name>CRS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRS Web service\CRS\CRS.vbproj">
+      <Project>{ab6fb29f-5c18-4495-9106-eb8eae5d9b61}</Project>
+      <Name>CRS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrontEnd\CRS_Component\CRS_Component.vbproj">
+      <Project>{e9785092-e677-436f-a126-bc0c60c9b2a3}</Project>
+      <Name>CRS_Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrontEnd\CRS_Ctrl\CRS_Ctrl.vbproj">
+      <Project>{256702da-3891-416d-b098-0c7038060622}</Project>
+      <Name>CRS_Ctrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrontEnd\CRS_Util\CRS_Util.vbproj">
+      <Project>{7ad61418-5385-4252-ab81-bfa6994f89b6}</Project>
+      <Name>CRS_Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrontEnd\CRS_Component\CRS_Component.vbproj">
+      <Project>{e9785092-e677-436f-a126-bc0c60c9b2a3}</Project>
+      <Name>CRS_Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrontEnd\CRS_Util\CRS_Util.vbproj">
+      <Project>{7ad61418-5385-4252-ab81-bfa6994f89b6}</Project>
+      <Name>CRS_Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

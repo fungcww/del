@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CRSWebService\", "CRSWebService", "{5B95BD32-1010-4175-A143-52D9770B33AF}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "CRS_Ctrl"
+		SccAuxPath = ""
+		SccLocalPath = "..\.."
+		SccProvider = "MSSCCI:ClearCase"
+		Debug.AspNetCompiler.VirtualPath = "/CRSWebService"
+		Debug.AspNetCompiler.PhysicalPath = "CRSWebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CRSWebService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CRSWebService"
+		Release.AspNetCompiler.PhysicalPath = "CRSWebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CRSWebService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "27036"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CRS", "CRS\CRS.vbproj", "{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccWebProject0 = true
+		SccProjectUniqueName0 = CRSWebService
+		SccProjectName0 = CRS_Ctrl
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:ClearCase
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection0 = CRS\u0020Web\u0020service\\CRSWebService\\
+		SccProjectEnlistmentChoice0 = 2
+		SccProjectUniqueName1 = CRS\\CRS.vbproj
+		SccProjectName1 = CRS_Ctrl
+		SccLocalPath1 = ..
+		SccProvider1 = MSSCCI:ClearCase
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection1 = CRS\u0020Web\u0020service\\CRS\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Debug|.NET.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Debug|.NET.Build.0 = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Release|.NET.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Release|.NET.Build.0 = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{5B95BD32-1010-4175-A143-52D9770B33AF}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AB6FB29F-5C18-4495-9106-EB8EAE5D9B61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

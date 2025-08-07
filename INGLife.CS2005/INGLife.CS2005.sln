@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "INGLife.CS2005", "INGLife.CS2005.vbproj", "{C43CDFAA-73AF-452D-BF73-EBB48B421640}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "INGLife.DBAccess", "..\INGLife.DbAccess\INGLife.DBAccess.vbproj", "{3DCB53AC-8D52-4067-9C61-3879AD7C20F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ICS2005", "..\INGLife.Interface\ICS2005\ICS2005.vbproj", "{EDBB2BE3-487F-4902-8B14-12089A6838BA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ISecurity", "..\INGLife.Interface\ISecurity\ISecurity.vbproj", "{55634E15-B0D3-4C8D-A05A-DC8555D523A7}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://hktfsprd1:8080/tfs/INGCollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = INGLife.CS2005.vbproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\INGLife.DbAccess\\INGLife.DBAccess.vbproj
+		SccProjectName2 = ../INGLife.DbAccess
+		SccLocalPath2 = ..\\INGLife.DbAccess
+		SccProjectUniqueName3 = ..\\INGLife.Interface\\ICS2005\\ICS2005.vbproj
+		SccProjectName3 = ../INGLife.Interface/ICS2005
+		SccLocalPath3 = ..\\INGLife.Interface\\ICS2005
+		SccProjectUniqueName4 = ..\\INGLife.Interface\\ISecurity\\ISecurity.vbproj
+		SccProjectName4 = ../INGLife.Interface/ISecurity
+		SccLocalPath4 = ..\\INGLife.Interface\\ISecurity
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C43CDFAA-73AF-452D-BF73-EBB48B421640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43CDFAA-73AF-452D-BF73-EBB48B421640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43CDFAA-73AF-452D-BF73-EBB48B421640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43CDFAA-73AF-452D-BF73-EBB48B421640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DCB53AC-8D52-4067-9C61-3879AD7C20F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCB53AC-8D52-4067-9C61-3879AD7C20F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCB53AC-8D52-4067-9C61-3879AD7C20F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCB53AC-8D52-4067-9C61-3879AD7C20F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBB2BE3-487F-4902-8B14-12089A6838BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55634E15-B0D3-4C8D-A05A-DC8555D523A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55634E15-B0D3-4C8D-A05A-DC8555D523A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55634E15-B0D3-4C8D-A05A-DC8555D523A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55634E15-B0D3-4C8D-A05A-DC8555D523A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

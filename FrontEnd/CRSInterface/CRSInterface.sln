@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CRSInterface", "CRSInterface.vbproj", "{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = CRSInterface.vbproj
+		SccProjectName0 = CRS_Ctrl
+		SccLocalPath0 = ..\\..
+		SccProvider0 = MSSCCI:ClearCase
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection0 = FrontEnd\\CRSInterface\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6EBE58-9A43-442D-92DB-BC5CD88AC2E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
