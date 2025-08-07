@@ -1,0 +1,4 @@
+ING_Logo	BLOB
+ING_CompanyAddr	BLOB
+ING_Phone	BLOB
+CareCompany	BLOB

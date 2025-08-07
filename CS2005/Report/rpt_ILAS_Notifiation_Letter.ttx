@@ -1,0 +1,23 @@
+PolicyAccountID	string	16
+ProductID	string	22
+ProductDescription	string	50
+ChineseDescription	string	50
+PolicyCurrency	string	5
+CooloffDate	datetime
+LocationCode	string	6
+AgentLastName	string	100
+AgentFirstName	string	100
+FirstName	string	100
+LastName	string	100
+ChiFstNm	string	100
+ChiLstNm	string	100
+Address1	string	100
+Address2	string	100
+Address3	string	100
+City	string	50
+ModalPremium	number	(11,2)
+OneOffModalPremium	number	(11,2)
+Mode	string	5
+ModeDesc	string	50
+AgentChiName	string	100
+Period	number	(4)

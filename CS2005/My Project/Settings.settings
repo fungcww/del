@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="LAReady" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CS2005_DMSWS_CodeMappingServiceImplService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://10.10.218.101:8080/services/codeMappingService</Value>
+    </Setting>
+    <Setting Name="strCIWConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">max pool size=500;server=HKSQLUAT1;database=INGCIWU301;Network=DBMSSOCN;uid=com_las_ing;password=XXXXX</Value>
+    </Setting>
+    <Setting Name="strUPSConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">max pool size=500;server=HKSQLUAT1;database=INGPROFILEU301;Network=DBMSSOCN;uid=com_las_ing;password=XXXXX</Value>
+    </Setting>
+    <Setting Name="strMPFConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server=HKSQLUAT1;database=MPFAETNA;Network=DBMSSOCN;uid=com_las_ing;password=XXXXX</Value>
+    </Setting>
+    <Setting Name="strMCSConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">max pool size=500;server=HKSQLUAT1;database=INGMCSU301;Network=DBMSSOCN;uid=com_las_ing;password=XXXXX</Value>
+    </Setting>
+    <Setting Name="strMJCConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">max pool size=500;server=HKSQLUAT1;database=INGMCSU301;Network=DBMSSOCN;uid=com_las_ing;password=XXXXX</Value>
+    </Setting>
+    <Setting Name="CS2005_LEVYWS_LEVYWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomuat02.hk.intranet/ingU301Levyws/LevyWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CoBrowsUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://10.10.218.125:11020/#/login?lang=eng</Value>
+    </Setting>
+    <Setting Name="CS2005_AAUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://uat-eservices.hk.intranet/aa/fwd/landing/cer/</Value>
+    </Setting>
+    <Setting Name="CS2005_MCSWS_MCSWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/ClaimWS/MCSWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_LEVYWS_LEVYWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/LEVYWS/LevyWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CRSWS_CRSWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/CCRWS/Service.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CCRWS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/CNBWS/NBWrapper.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CNBWrapper_NBWrapper" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/NBAWS/NBAWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_NBAWS_NBAWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/commonws/service.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CommonWS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprj02.hk.intranet:8013/POSWS/POSWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_AAUrl_MC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://uat-eservices.fwd.com.hk/MCaa4/fwd/landing/cer/</Value>
+    </Setting>
+    <Setting Name="CS2005_SPAdd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kenny.siu@fwd.com</Value>
+    </Setting>
+    <Setting Name="CS2005_SPCCAdd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kenny.siu@fwd.com;alex.th.lee@fwd.com</Value>
+    </Setting>
+    <Setting Name="CS2005_MCSWS_MCSWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://whkeaslasappu02/INGU102CCMWS/CCMWS.asmx</Value>
+    </Setting>
+    <Setting Name="CS2005_CCMWS_CCMWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hkgcomprd02.hk.intranet/CCMWS/CCMWS.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

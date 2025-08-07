@@ -1,0 +1,100 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252"><meta name="Generator" content="Microsoft Word 14 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:NL;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:NL;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.EmailStyle20
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;
+	font-weight:normal;
+	font-style:normal;}
+span.EmailStyle21
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext="edit" spidmax="1027" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1" />
+</o:shapelayout></xml><![endif]--></head><body lang="EN-US" link="blue" vlink="purple"><div class="WordSection1"><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">Dear PolicyHolderLastNameInEnglish,<o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">Policy No.:&nbsp;PolicyNumber<o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">Policy</span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW">holder</span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"> Name:&nbsp;PolicyHolderNameInEnglish<o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Thank you for purchasing the above policy with FWD Life Insurance Company (Bermuda) Limited. <o:p></o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">As a matter of customer protection required by the Hong Kong Federation of Insurers ("HKFI") , we are required to conduct a post-sale call with you after the issuance of the above policy. As such, we have contacted you at your provided contact number(s) on the policy application form. During the call, you indicated that you have queries on some of the matters related to the Investment Linked Assurance Scheme ("ILAS") policy. We have therefore informed our servicing adviser / broker to follow up with you for clarification. Subsequently, we have tried to contact you again to confirm whether your queries have been fully addressed but in vain.<o:p></o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">A copy of the "Important Facts Statement"and "Applicant's Declarations"<span style="color:#0000CC"> </span>which you have read and signed during the application, will be attached to the Investment Linked Assurance Scheme ("ILAS") policy contract to be delivered to you by your servicing adviser / broker. Please read it carefully once you have received it because it contains important information and facts which you should know.<o:p></o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal" style="text-align:justify;text-autospace:none"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">As we were unable to reach you on the phone to confirm satisfactory understanding after follow-up explanation by the adviser / broker, consistent with the documents you have signed to declare your understanding and acceptance of the above policy, we </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW">will </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">send a letter containing further important information to </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW">you by post.<o:p></o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">If you do not received the letter within next two weeks or if you have any enquiry</span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">, please contact our 24-hour Service Hotline at (852) 3123-3123 before the expiry</span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-language:ZH-TW"> </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">of cooling-off period on CoolingOffDate.<o:p></o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p><p class="MsoNoSpacing"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW"><o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-HK">Yours faithfully,</span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-fareast-language:ZH-TW"><o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:11.0pt;color:black;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal" style="text-autospace:none"><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">Customer </span><span lang="NL" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060;mso-fareast-language:ZH-HK">Engagement<o:p></o:p></span></p><p class="MsoNormal" style="text-autospace:none"><span lang="NL" style="font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal" style="text-autospace:none"><span lang="NL"><a href="http://www.fwd.com.hk/"><span lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:windowtext;mso-fareast-language:ZH-TW;text-decoration:none"><img border="0" width="89" height="95" id="Picture_x0020_2" src="cid:image2103.jpg@01D19732.1B190AC0" alt="cid:3613433F-A0B7-4806-A8B0-41A61C5E1292"></span></a></span><span lang="NL" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060;mso-fareast-language:ZH-TW"><o:p></o:p></span></p><p class="MsoNormal" style="text-autospace:none"><b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">FWD Life Insurance Company (Bermuda) Limited</span></b><b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p></o:p></span></b></p><p class="MsoNormal" style="text-autospace:none"><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">28/F., FWD Financial Centre, 308 Des Voeux Road Central, Hong Kong<b><o:p></o:p></b></span></p><p class="MsoNormal" style="text-autospace:none"><b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">T</span></b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060"> &#43;852 </span><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060;mso-fareast-language:ZH-TW">3123 3123</span><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><span style="color:#606060">F</span></b><span style="color:#606060"> &#43;852 2290 7091</span><o:p></o:p></span></p><p class="MsoNormal"><b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">E</span></b><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060"> </span><span lang="NL"><a href="mailto:cs.hk@fwd.com"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-language:ZH-TW">cs.hk</span><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">@fwd.com</span></a></span><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060">&nbsp; </span><span lang="NL" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#606060;mso-fareast-language:ZH-TW">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="NL"><a href="http://www.fwd.com.hk/"><b><span lang="EN-GB" style="font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">www.fwd.com.hk</span></b></a></span><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter" />
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0" />
+<v:f eqn="sum @0 1 0" />
+<v:f eqn="sum 0 0 @1" />
+<v:f eqn="prod @2 1 2" />
+<v:f eqn="prod @3 21600 pixelWidth" />
+<v:f eqn="prod @3 21600 pixelHeight" />
+<v:f eqn="sum @0 0 1" />
+<v:f eqn="prod @6 1 2" />
+<v:f eqn="prod @7 21600 pixelWidth" />
+<v:f eqn="sum @8 21600 0" />
+<v:f eqn="prod @7 21600 pixelHeight" />
+<v:f eqn="sum @10 21600 0" />
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" />
+<o:lock v:ext="edit" aspectratio="t" />
+</v:shapetype><v:shape id="Straight_x0020_Arrow_x0020_Connector_x0020_5" o:spid="_x0000_s1026" type="#_x0000_t75" style='position:absolute;margin-left:1.5pt;margin-top:4.75pt;width:0;height:0;z-index:251658240;visibility:visible;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:3.17422mm;mso-wrap-distance-top:-1e-4mm;mso-wrap-distance-right:3.17422mm;mso-wrap-distance-bottom:-1e-4mm;mso-position-horizontal:absolute;mso-position-horizontal-relative:text;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:page'>
+<o:lock v:ext="edit" aspectratio="f" />
+</v:shape><![endif]--><span lang="NL" style="font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><o:p></o:p></span></p><p class="MsoNormal"><span lang="NL" style="font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p></div></body></html>

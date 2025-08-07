@@ -1,0 +1,135 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsReport" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="dsReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="policy">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PolicyAccountID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="ChineseDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="PolicyCurrency" type="xs:string" minOccurs="0" />
+              <xs:element name="Address1" type="xs:string" minOccurs="0" />
+              <xs:element name="Address2" type="xs:string" minOccurs="0" />
+              <xs:element name="Address3" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="TelePhone1" type="xs:string" minOccurs="0" />
+              <xs:element name="TelePhone2" type="xs:string" minOccurs="0" />
+              <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              <xs:element name="ChiFstNm" type="xs:string" minOccurs="0" />
+              <xs:element name="ChiLstNm" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneMobile" type="xs:string" minOccurs="0" />
+              <xs:element name="LocationCode" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentLastName" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentFirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentChiName" type="xs:string" minOccurs="0" />
+              <xs:element name="Mode" type="xs:string" minOccurs="0" />
+              <xs:element name="ModeDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="ModalPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OneOffModalPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Period" type="xs:int" minOccurs="0" />
+              <xs:element name="cswpsd_category" type="xs:int" minOccurs="0" />
+              <xs:element name="cswpsd_has_fees" type="xs:string" minOccurs="0" />
+			  <xs:element name="camaid_channel_code" type="xs:string" minOccurs="0" />
+              <xs:element name="EventTypeCode" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentResponse" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CooloffDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isSM" type="xs:boolean" minOccurs="0" />
+              <xs:element name="isVC" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="coverage">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PolicyAccountID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductID" type="xs:string" minOccurs="0" />
+              <xs:element name="Trailer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CoverageStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="RateScale" type="xs:string" minOccurs="0" />
+              <xs:element name="Participate" type="xs:string" minOccurs="0" />
+              <xs:element name="IssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SumInsured" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FlatExtra" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Multiple" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ModalPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PremiumChangeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WPMultiplier" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WPPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADMultiplier" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADFaceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TBL1" type="xs:string" minOccurs="0" />
+              <xs:element name="TBL2" type="xs:string" minOccurs="0" />
+              <xs:element name="ExhibitInforceDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="timestamp" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="RegNo" type="xs:string" minOccurs="0" />
+              <xs:element name="HirePurOwner" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="EngineNo" type="xs:string" minOccurs="0" />
+              <xs:element name="ChassisNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BodyType" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleCC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GrossWeight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YrOfManu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SeatCap" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BasPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CoverRmk" type="xs:string" minOccurs="0" />
+              <xs:element name="CovFaceAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TypeOfInsurance" type="xs:string" minOccurs="0" />
+              <xs:element name="SubmitDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompletionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CoverageOldSts" type="xs:string" minOccurs="0" />
+              <xs:element name="StsChgDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PREMIUMCESSATIONDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cswpsd_ProductID" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_category" type="xs:int" minOccurs="0" />
+              <xs:element name="cswpsd_benefit" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_premium_type" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_loan" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_dividend" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_coupon" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_special_bonus" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_cash_value" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_guide_url" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_others" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_has_fees" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_fees" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_ng_benefit" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_surr_charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cswpsd_product_type_eng" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_product_type_chi" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_product_objective_eng" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_product_objective_chi" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_risk_eng" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_risk_chi" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_create_by" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_create_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cswpsd_update_by" type="xs:string" minOccurs="0" />
+              <xs:element name="cswpsd_update_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cswcpc_category_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="cswcpc_category_desc_chi" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentTerm" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="ChineseDescription" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Logo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ING_Logo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="ING_CompanyAddr" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="ING_Phone" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CareCompany" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

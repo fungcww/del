@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://inglife.com.hk/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://inglife.com.hk/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://inglife.com.hk/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="smsSubmission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCompID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrEnv" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plngCustNo" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrAgtNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdateEffDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdateExpDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrMsgCat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPolNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrRefNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pintReqNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="smsSubmissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="smsSubmissionResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrRefNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pintReqNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="smsXgateSubmission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCompID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrEnv" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plngCustNo" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrAgtNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdateEffDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdateExpDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrMsgCat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPolNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrRefNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pintReqNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="smsXgateSubmissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="smsXgateSubmissionResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrRefNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pintReqNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExchangeRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFromCurr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToCurr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceObj" type="tns:BoSchema_ExchangeRate_Rece_schema" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dteEffectiveDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFixedFunc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BoSchema_ExchangeRate_Rece_schema">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SchemaReceiveObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="rlfcxr_from_ccy" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="rlfcxr_to_ccy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="rlfcxr_buy_rate" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="rlfcxr_sell_rate" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SchemaReceiveObject" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SchemaObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SchemaObject" abstract="true" />
+      <s:element name="GetExchangeRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetExchangeRateResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFromCurr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToCurr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceObj" type="tns:BoSchema_ExchangeRate_Rece_schema" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dteEffectiveDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFixedFunc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DBSOAPHeader" type="tns:DBSOAPHeader" />
+      <s:complexType name="DBSOAPHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Project" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConnectionAlias" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Env" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIWProject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIWConnectionAlias" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIWUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIWEnv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIWComp" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="getPendingRequestItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPendingRequestItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPendingRequestItemsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateInfoWithValidate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendObj" type="tns:Send_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Send_ASIInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyAccountId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Recp_ASIInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASIDtl" type="tns:ArrayOfASIDtlItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfASIDtlItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ASIDtlItem" nillable="true" type="tns:ASIDtlItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ASIDtlItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AggType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AggDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AggAmount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PolAmount" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Recp_ASIValidation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Validation" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAggregateInfoWithValidateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAggregateInfoWithValidateResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateProductGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProductId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsProductList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateProductGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAggregateProductGroupResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsProductList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCswTransHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCswTransHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCswTransHeaderResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendObj" type="tns:Send_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAggregateInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateValidation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendObj" type="tns:Send_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="sendAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiValidateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAggregateValidationResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiValidateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateValidationWithNewBooster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendObj" type="tns:Send_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBoosterPlan" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dblBoosterAmount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAggregateValidationWithNewBoosterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAggregateValidationWithNewBoosterResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="receAsiInfoObj" type="tns:Recp_ASIInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateObj" type="tns:Recp_ASIValidation" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUWComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUWCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getUWCommentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBranchOfficeCodeByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBranchOfficeCodeByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getBranchOfficeCodeByUserIDResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFundInfoFromRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fundCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFundInfoFromRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFundInfoFromRMResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAccVerRNTFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAccVerRNTFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadAccVerRNTFileResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTransUploadRNTFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTransUploadRNTFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadTransUploadRNTFileResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDailyAcountVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TranDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDailyAcountVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getDailyAcountVerificationResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="System" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransRecordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCupPaymentInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPolicyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPaymentCurrency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dblPaymentAmount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProvince" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExpiryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTranditionalChineseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSimpifiedChineseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCupPaymentInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateCupPaymentInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDailyTransFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="System" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TranDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResultText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDailyTransFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getDailyTransFileResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResultText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFundDisclaimerCodeTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFundDisclaimerCodeTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFundDisclaimerCodeTableResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendExternalMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="tns:SerializableMailMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SerializableMailMessage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="From" type="tns:SerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sender" type="tns:SerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyEncoding" type="tns:Encoding" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubjectEncoding" type="tns:Encoding" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeliveryNotificationOptions" type="tns:DeliveryNotificationOptions" />
+          <s:element minOccurs="0" maxOccurs="1" name="Headers">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="tns:MailPriority" />
+          <s:element minOccurs="0" maxOccurs="1" name="To" type="tns:ArrayOfSerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="CC" type="tns:ArrayOfSerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bcc" type="tns:ArrayOfSerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplyTo" type="tns:SerializableMailAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlternateViews" type="tns:ArrayOfSerializableAlternateView" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachments" type="tns:ArrayOfSerializableAttachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SerializableMailAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Encoding" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EncoderFallback" type="tns:EncoderFallback" />
+          <s:element minOccurs="0" maxOccurs="1" name="DecoderFallback" type="tns:DecoderFallback" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EncoderFallback" abstract="true" />
+      <s:complexType name="DecoderFallback" abstract="true" />
+      <s:simpleType name="DeliveryNotificationOptions">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="OnSuccess" />
+              <s:enumeration value="OnFailure" />
+              <s:enumeration value="Delay" />
+              <s:enumeration value="Never" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:simpleType name="MailPriority">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Low" />
+          <s:enumeration value="High" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSerializableMailAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SerializableMailAddress" nillable="true" type="tns:SerializableMailAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSerializableAlternateView">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SerializableAlternateView" nillable="true" type="tns:SerializableAlternateView" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SerializableAlternateView">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BaseUri" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentStream" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentType" type="tns:SerializableContentType" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkedResources" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferEncoding" type="tns:TransferEncoding" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SerializableContentType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Boundary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CharSet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameters">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TransferEncoding">
+        <s:restriction base="s:string">
+          <s:enumeration value="QuotedPrintable" />
+          <s:enumeration value="Base64" />
+          <s:enumeration value="SevenBit" />
+          <s:enumeration value="Unknown" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSerializableAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SerializableAttachment" nillable="true" type="tns:SerializableAttachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SerializableAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ContentId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentDisposition" type="tns:SerializableContentDisposition" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentType" type="tns:SerializableContentType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentStream" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferEncoding" type="tns:TransferEncoding" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameEncoding" type="tns:Encoding" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SerializableContentDisposition">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CreationDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DispositionType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Inline" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModificationDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReadDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameters">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendExternalMailResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="smsSubmissionSoapIn">
+    <wsdl:part name="parameters" element="tns:smsSubmission" />
+  </wsdl:message>
+  <wsdl:message name="smsSubmissionSoapOut">
+    <wsdl:part name="parameters" element="tns:smsSubmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="smsXgateSubmissionSoapIn">
+    <wsdl:part name="parameters" element="tns:smsXgateSubmission" />
+  </wsdl:message>
+  <wsdl:message name="smsXgateSubmissionSoapOut">
+    <wsdl:part name="parameters" element="tns:smsXgateSubmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequestItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:getPendingRequestItems" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequestItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:getPendingRequestItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequestItemsDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoWithValidateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAggregateInfoWithValidate" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoWithValidateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAggregateInfoWithValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoWithValidateDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateProductGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAggregateProductGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateProductGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAggregateProductGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateProductGroupDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCswTransHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCswTransHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCswTransHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCswTransHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCswTransHeaderDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAggregateInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAggregateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateInfoDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAggregateValidation" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAggregateValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationWithNewBoosterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAggregateValidationWithNewBooster" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationWithNewBoosterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAggregateValidationWithNewBoosterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAggregateValidationWithNewBoosterDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="getUWCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:getUWComment" />
+  </wsdl:message>
+  <wsdl:message name="getUWCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:getUWCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUWCommentDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="getBranchOfficeCodeByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getBranchOfficeCodeByUserID" />
+  </wsdl:message>
+  <wsdl:message name="getBranchOfficeCodeByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getBranchOfficeCodeByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBranchOfficeCodeByUserIDDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFundInfoFromRMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFundInfoFromRM" />
+  </wsdl:message>
+  <wsdl:message name="GetFundInfoFromRMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFundInfoFromRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFundInfoFromRMDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="UploadAccVerRNTFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAccVerRNTFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadAccVerRNTFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAccVerRNTFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAccVerRNTFileDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="UploadTransUploadRNTFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadTransUploadRNTFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadTransUploadRNTFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadTransUploadRNTFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadTransUploadRNTFileDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDailyAcountVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:getDailyAcountVerification" />
+  </wsdl:message>
+  <wsdl:message name="getDailyAcountVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:getDailyAcountVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDailyAcountVerificationDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetTransRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetTransRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransRecordDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCupPaymentInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateCupPaymentInfo" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCupPaymentInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateCupPaymentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCupPaymentInfoDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDailyTransFileSoapIn">
+    <wsdl:part name="parameters" element="tns:getDailyTransFile" />
+  </wsdl:message>
+  <wsdl:message name="getDailyTransFileSoapOut">
+    <wsdl:part name="parameters" element="tns:getDailyTransFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDailyTransFileDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFundDisclaimerCodeTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFundDisclaimerCodeTable" />
+  </wsdl:message>
+  <wsdl:message name="GetFundDisclaimerCodeTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFundDisclaimerCodeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFundDisclaimerCodeTableDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="SendExternalMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendExternalMail" />
+  </wsdl:message>
+  <wsdl:message name="SendExternalMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendExternalMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendExternalMailDBSOAPHeader">
+    <wsdl:part name="DBSOAPHeader" element="tns:DBSOAPHeader" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="smsSubmission">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">smsSubmission</wsdl:documentation>
+      <wsdl:input message="tns:smsSubmissionSoapIn" />
+      <wsdl:output message="tns:smsSubmissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="smsXgateSubmission">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">smsXgateSubmission</wsdl:documentation>
+      <wsdl:input message="tns:smsXgateSubmissionSoapIn" />
+      <wsdl:output message="tns:smsXgateSubmissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input message="tns:GetExchangeRateSoapIn" />
+      <wsdl:output message="tns:GetExchangeRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequestItems">
+      <wsdl:input message="tns:getPendingRequestItemsSoapIn" />
+      <wsdl:output message="tns:getPendingRequestItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfoWithValidate">
+      <wsdl:input message="tns:GetAggregateInfoWithValidateSoapIn" />
+      <wsdl:output message="tns:GetAggregateInfoWithValidateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateProductGroup">
+      <wsdl:input message="tns:GetAggregateProductGroupSoapIn" />
+      <wsdl:output message="tns:GetAggregateProductGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCswTransHeader">
+      <wsdl:input message="tns:UpdateCswTransHeaderSoapIn" />
+      <wsdl:output message="tns:UpdateCswTransHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfo">
+      <wsdl:input message="tns:GetAggregateInfoSoapIn" />
+      <wsdl:output message="tns:GetAggregateInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidation">
+      <wsdl:input message="tns:GetAggregateValidationSoapIn" />
+      <wsdl:output message="tns:GetAggregateValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidationWithNewBooster">
+      <wsdl:input message="tns:GetAggregateValidationWithNewBoosterSoapIn" />
+      <wsdl:output message="tns:GetAggregateValidationWithNewBoosterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUWComment">
+      <wsdl:input message="tns:getUWCommentSoapIn" />
+      <wsdl:output message="tns:getUWCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranchOfficeCodeByUserID">
+      <wsdl:input message="tns:getBranchOfficeCodeByUserIDSoapIn" />
+      <wsdl:output message="tns:getBranchOfficeCodeByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFundInfoFromRM">
+      <wsdl:input message="tns:GetFundInfoFromRMSoapIn" />
+      <wsdl:output message="tns:GetFundInfoFromRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAccVerRNTFile">
+      <wsdl:input message="tns:UploadAccVerRNTFileSoapIn" />
+      <wsdl:output message="tns:UploadAccVerRNTFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadTransUploadRNTFile">
+      <wsdl:input message="tns:UploadTransUploadRNTFileSoapIn" />
+      <wsdl:output message="tns:UploadTransUploadRNTFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDailyAcountVerification">
+      <wsdl:input message="tns:getDailyAcountVerificationSoapIn" />
+      <wsdl:output message="tns:getDailyAcountVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransRecord">
+      <wsdl:input message="tns:GetTransRecordSoapIn" />
+      <wsdl:output message="tns:GetTransRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCupPaymentInfo">
+      <wsdl:input message="tns:ValidateCupPaymentInfoSoapIn" />
+      <wsdl:output message="tns:ValidateCupPaymentInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDailyTransFile">
+      <wsdl:input message="tns:getDailyTransFileSoapIn" />
+      <wsdl:output message="tns:getDailyTransFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFundDisclaimerCodeTable">
+      <wsdl:input message="tns:GetFundDisclaimerCodeTableSoapIn" />
+      <wsdl:output message="tns:GetFundDisclaimerCodeTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExternalMail">
+      <wsdl:input message="tns:SendExternalMailSoapIn" />
+      <wsdl:output message="tns:SendExternalMailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="smsSubmission">
+      <soap:operation soapAction="http://inglife.com.hk/smsSubmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smsXgateSubmission">
+      <soap:operation soapAction="http://inglife.com.hk/smsXgateSubmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap:operation soapAction="http://inglife.com.hk/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeRateDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequestItems">
+      <soap:operation soapAction="http://inglife.com.hk/getPendingRequestItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPendingRequestItemsDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfoWithValidate">
+      <soap:operation soapAction="http://inglife.com.hk/GetAggregateInfoWithValidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAggregateInfoWithValidateDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateProductGroup">
+      <soap:operation soapAction="http://inglife.com.hk/GetAggregateProductGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAggregateProductGroupDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCswTransHeader">
+      <soap:operation soapAction="http://inglife.com.hk/UpdateCswTransHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateCswTransHeaderDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfo">
+      <soap:operation soapAction="http://inglife.com.hk/GetAggregateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAggregateInfoDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidation">
+      <soap:operation soapAction="http://inglife.com.hk/GetAggregateValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAggregateValidationDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidationWithNewBooster">
+      <soap:operation soapAction="http://inglife.com.hk/GetAggregateValidationWithNewBooster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAggregateValidationWithNewBoosterDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUWComment">
+      <soap:operation soapAction="http://inglife.com.hk/getUWComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getUWCommentDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranchOfficeCodeByUserID">
+      <soap:operation soapAction="http://inglife.com.hk/getBranchOfficeCodeByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getBranchOfficeCodeByUserIDDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFundInfoFromRM">
+      <soap:operation soapAction="http://inglife.com.hk/GetFundInfoFromRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFundInfoFromRMDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAccVerRNTFile">
+      <soap:operation soapAction="http://inglife.com.hk/UploadAccVerRNTFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UploadAccVerRNTFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTransUploadRNTFile">
+      <soap:operation soapAction="http://inglife.com.hk/UploadTransUploadRNTFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UploadTransUploadRNTFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyAcountVerification">
+      <soap:operation soapAction="http://inglife.com.hk/getDailyAcountVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDailyAcountVerificationDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransRecord">
+      <soap:operation soapAction="http://inglife.com.hk/GetTransRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTransRecordDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCupPaymentInfo">
+      <soap:operation soapAction="http://inglife.com.hk/ValidateCupPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidateCupPaymentInfoDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyTransFile">
+      <soap:operation soapAction="http://inglife.com.hk/getDailyTransFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDailyTransFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFundDisclaimerCodeTable">
+      <soap:operation soapAction="http://inglife.com.hk/GetFundDisclaimerCodeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFundDisclaimerCodeTableDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExternalMail">
+      <soap:operation soapAction="http://inglife.com.hk/SendExternalMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendExternalMailDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="smsSubmission">
+      <soap12:operation soapAction="http://inglife.com.hk/smsSubmission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smsXgateSubmission">
+      <soap12:operation soapAction="http://inglife.com.hk/smsXgateSubmission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap12:operation soapAction="http://inglife.com.hk/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetExchangeRateDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequestItems">
+      <soap12:operation soapAction="http://inglife.com.hk/getPendingRequestItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPendingRequestItemsDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfoWithValidate">
+      <soap12:operation soapAction="http://inglife.com.hk/GetAggregateInfoWithValidate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAggregateInfoWithValidateDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateProductGroup">
+      <soap12:operation soapAction="http://inglife.com.hk/GetAggregateProductGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAggregateProductGroupDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCswTransHeader">
+      <soap12:operation soapAction="http://inglife.com.hk/UpdateCswTransHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateCswTransHeaderDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateInfo">
+      <soap12:operation soapAction="http://inglife.com.hk/GetAggregateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAggregateInfoDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidation">
+      <soap12:operation soapAction="http://inglife.com.hk/GetAggregateValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAggregateValidationDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggregateValidationWithNewBooster">
+      <soap12:operation soapAction="http://inglife.com.hk/GetAggregateValidationWithNewBooster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAggregateValidationWithNewBoosterDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUWComment">
+      <soap12:operation soapAction="http://inglife.com.hk/getUWComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getUWCommentDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranchOfficeCodeByUserID">
+      <soap12:operation soapAction="http://inglife.com.hk/getBranchOfficeCodeByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getBranchOfficeCodeByUserIDDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFundInfoFromRM">
+      <soap12:operation soapAction="http://inglife.com.hk/GetFundInfoFromRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFundInfoFromRMDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAccVerRNTFile">
+      <soap12:operation soapAction="http://inglife.com.hk/UploadAccVerRNTFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UploadAccVerRNTFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTransUploadRNTFile">
+      <soap12:operation soapAction="http://inglife.com.hk/UploadTransUploadRNTFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UploadTransUploadRNTFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyAcountVerification">
+      <soap12:operation soapAction="http://inglife.com.hk/getDailyAcountVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDailyAcountVerificationDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransRecord">
+      <soap12:operation soapAction="http://inglife.com.hk/GetTransRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTransRecordDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCupPaymentInfo">
+      <soap12:operation soapAction="http://inglife.com.hk/ValidateCupPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidateCupPaymentInfoDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyTransFile">
+      <soap12:operation soapAction="http://inglife.com.hk/getDailyTransFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDailyTransFileDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFundDisclaimerCodeTable">
+      <soap12:operation soapAction="http://inglife.com.hk/GetFundDisclaimerCodeTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFundDisclaimerCodeTableDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExternalMail">
+      <soap12:operation soapAction="http://inglife.com.hk/SendExternalMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendExternalMailDBSOAPHeader" part="DBSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:57915/commonws/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:57915/commonws/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

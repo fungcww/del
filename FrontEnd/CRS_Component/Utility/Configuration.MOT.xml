@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Environments xmlns="crs:env">
+	<Environment Id="12" Alias="INGT106" Company="ING" ENV="T106">
+		<WebServiceURL>http://whkeascrsappm01.hk.intranet/CRSWS/CRSWS.asmx</WebServiceURL>
+		<APIEndPoint>http://whkeascrsappm01.hk.intranet/CRSAPI</APIEndPoint>
+		<!--<APIEndPoint>http://localhost:52556/</APIEndPoint>-->
+		<ConfigEndPoint>http://whkeascrsappm01.hk.intranet/CRSAPI/api/about/env</ConfigEndPoint>
+		<!--<ConfigEndPoint>http://localhost:52556/api/about/env</ConfigEndPoint>-->
+		<GetNCBEndPoint>http://whkeascrsappm01.hk.intranet/CRSAPI/api/policy/search/NCB/{0}</GetNCBEndPoint>
+		<!--<GetNCBEndPoint>http://localhost:52556/api/policy/search/NCB/{0}</GetNCBEndPoint>-->
+		<NBAPIEndPoint>http://t106-nbs-api.hk.intranet/nbs-ue-open-{0}/v1/{1}</NBAPIEndPoint>
+		<UtilityApiEndPoint>http://uat-apihk.hk.intranet/utility-api</UtilityApiEndPoint>
+		<UtilityApiKey>NAJl2wSwqLO61kxHu9SqNa3annQACPGR</UtilityApiKey>
+		<INGConnectionString>max pool size=500;server=WHKEASVANPPDM01;database=Vantive;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</INGConnectionString>
+		<MCUConnectionString>max pool size=500;server=WHKEASVANPPDM01;database=Vantive;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</MCUConnectionString>
+		<UPSConnectionString>max pool size=500;server=sql-mi-eas-mot-utl-01.f56b11081597.database.windows.net;database=PROFILEUAT;Network=DBMSSOCN;uid=usvc_crs;password=s$SW#T+4FraC</UPSConnectionString>
+		<MPFConnectionString>server=WHKEASVANPPDM01;database=MPFAETNA;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</MPFConnectionString>
+		<MCSConnectionString>max pool size=500;server=WHKEASVANPPDM01;database=MCS;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</MCSConnectionString>
+		<MJCConnectionString>max pool size=500;server=WHKEASVANPPDM01;database=MCS;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</MJCConnectionString>
+		<ICRConnectionString>max pool size=500;server=WHKEASVANPPDM01;database=ICR;Network=DBMSSOCN;uid=com_cs2005_ciw;password=Polk238a</ICRConnectionString>
+		<CAPSILConnectionString></CAPSILConnectionString>
+		<AsurConnectionString>max pool size=500;server=10.175.42.136;database=L7LACT_REPL;Network=DBMSSOCN;uid=FwdAssurance_ODS_UAT;password=FWD@12345</AsurConnectionString>
+
+		<LIDZConnectionString>max pool size=500;server=lidzmotdb1.643781973f86.database.windows.net;Initial Catalog=vantive;User id=dmr_svc_crs;Password=D18SW$?ucrl;Connect Timeout=300</LIDZConnectionString>
+		<LACConnectionString>max pool size=500;server=lidzmotdb1.643781973f86.database.windows.net;Initial Catalog=vantive;User id=dmr_svc_crs;Password=D18SW$?ucrl;Connect Timeout=300</LACConnectionString>
+		<LAHConnectionString>max pool size=500;server=lidzmotdb1.643781973f86.database.windows.net;Initial Catalog=vantive;User id=dmr_svc_crs;Password=D18SW$?ucrl;Connect Timeout=300</LAHConnectionString>
+
+		<!--modGlobal config-->
+		<CSW_USER_PRIVS>PROFILEUAT.dbo.csw_user_privs</CSW_USER_PRIVS>
+		<UPS_USER_GROUP_TAB>PROFILEUAT.dbo.ups_user_group_tab</UPS_USER_GROUP_TAB>
+		<UPS_USER_LIST_TAB>PROFILEUAT.dbo.ups_user_list_tab</UPS_USER_LIST_TAB>
+		<CIC_FULLNAME_MAPPING>PROFILEUAT.dbo.userid_fullname_mapping</CIC_FULLNAME_MAPPING>
+		<gSQL3>HKSQLVS1</gSQL3>
+		<cSQL3>HKSQLVS1</cSQL3>
+		<cSQL3_MCU>mosqlprd1</cSQL3_MCU>
+		<cSQL3_ASUR>[lidzmotdb1.643781973f86.database.windows.net]</cSQL3_ASUR>
+		<g_LAUser></g_LAUser>
+		<g_Qman>HKCAPSIL3</g_Qman>
+		<g_WinRemoteQ>LACSLHK01.TO.LA400LHK01</g_WinRemoteQ>
+		<g_WinRemoteMcuQ>LACSLMC01.TO.LA400LMC01</g_WinRemoteMcuQ>
+		<g_LAReplyQ>LA400LHK01.TO.LACSLHK01</g_LAReplyQ>
+		<g_LAReplyMcuQ>LA400LMC01.TO.LACSLMC01</g_LAReplyMcuQ>
+		<g_WinLocalQ>LACSLHK01.QUEUE1.LCL</g_WinLocalQ>
+		<g_WinLocalMcuQ>LACSLMC01.QUEUE1.LCL</g_WinLocalMcuQ>
+		<g_QmanAsur></g_QmanAsur>
+		<g_WinRemoteAsurQ></g_WinRemoteAsurQ>
+		<g_LAReplyAsurQ></g_LAReplyAsurQ>
+		<g_WinLocalAsurQ></g_WinLocalAsurQ>
+		<g_Env>PRD01</g_Env>
+		<g_McuEnv>PRD01</g_McuEnv>
+		<g_LacEnv>PRD01</g_LacEnv>
+		<g_LahEnv>PRD01</g_LahEnv>
+		<g_Comp>ING</g_Comp>
+		<g_McuComp>MCU</g_McuComp>
+		<g_LacComp>LAC</g_LacComp>
+		<g_LahComp>LAH</g_LahComp>
+		<g_AsurComp>LAC,LAH</g_AsurComp>
+		<g_ProjectAlias>CS2005</g_ProjectAlias>
+		<g_UserType>CSUSER</g_UserType>
+		<g_Connection_CIW>CIW</g_Connection_CIW>
+		<g_Connection_McuCIW>MCUCIWPRD01</g_Connection_McuCIW>
+		<g_Connection_UPS>CIW</g_Connection_UPS>
+		<g_Connection_MCS>CIW</g_Connection_MCS>
+		<g_Connection_ICR>ICR</g_Connection_ICR>
+		<g_UserType_ICR>CRSBATCH</g_UserType_ICR>
+		<g_ProjectAlias_MJC>MJC</g_ProjectAlias_MJC>
+		<g_Connection_MJC>MJCDB</g_Connection_MJC>
+		<g_Connection_McuMJC></g_Connection_McuMJC>
+		<g_UserType_MJC>UPDATE</g_UserType_MJC>
+		<g_Connection_CAM>CIW</g_Connection_CAM>
+		<g_Capsil_Project>CS2005</g_Capsil_Project>
+		<g_Capsil_Connection>ENQ400</g_Capsil_Connection>
+		<g_Capsil_UserType>CSUSER</g_Capsil_UserType>
+		<g_Capsil_Lib>EAADTA</g_Capsil_Lib>
+		<g_CAM_Database>CAM</g_CAM_Database>
+		<g_McuCAM_Database>ACM</g_McuCAM_Database>
+		<g_McuNBR_Database>NBM</g_McuNBR_Database>
+		<gcNBR>nbr.dbo.</gcNBR>
+		<gcMcuNBR>nbm.dbo.</gcMcuNBR>
+		<giEnv>0</giEnv>
+		<strLASCAM>INGCAMPRD01</strLASCAM>
+		<strValProj>CIW</strValProj>
+		<strValConn>CIW400CON</strValConn>
+		<g_Connection_CNB>INGCNBPRD01</g_Connection_CNB>
+		<gcCIW>vantive.dbo.</gcCIW>
+		<gcMcuCIW>vantive.dbo.</gcMcuCIW>
+		<gcMCS>mcs.dbo.</gcMCS>
+		<gcMcuMCS>mcm.dbo.</gcMcuMCS>
+		<gcRMLife>rmlife.dbo.</gcRMLife>
+		<gcPOS>pos.dbo.</gcPOS>
+		<gcMcuPOS>pom.dbo.</gcMcuPOS>
+		<gcLCP>lcp.dbo.</gcLCP>
+		<MCSConnectionString>max pool size=500;server=mcsprddb1.hk.azure;database=MCS;Network=DBMSSOCN;uid=com_las_ing;password=IngLA123</MCSConnectionString>
+		<MJCConnectionString>max pool size=500;server=mcsprddb1.hk.azure;database=MCS;Network=DBMSSOCN;uid=com_las_ing;password=IngLA123</MJCConnectionString>
+		<gcCRSServer>sql-mi-eas-mot-ce-01.e69e5c31c5ce.database.windows.net</gcCRSServer>
+		<gcCRSDB>CRS.dbo.</gcCRSDB>
+		<gcCRSDBMcu>CRSMCU.dbo.</gcCRSDBMcu>
+		<gcCRSDBAsur>CRSASUR.dbo.</gcCRSDBAsur>
+		<gcEPORTALDB>ePortal.dbo.</gcEPORTALDB>
+		<gcEPORTALDBMcu>ePortal.dbo.</gcEPORTALDBMcu>
+		<gcNBSDB>NBS.dbo.</gcNBSDB>
+		<gcNBSDBMcu>NBS.dbo.</gcNBSDBMcu>
+	</Environment>
+</Environments>

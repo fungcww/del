@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Environments xmlns="crs:env">
+	<Environment Id="1" Alias="INGU105" Company="ING" ENV="U105">
+		<WebServiceURL>http://whkeascrsappu01.hk.intranet/MCUU105CRSWS/CRSWS.asmx</WebServiceURL>
+		<APIEndPoint>http://whkeascrsappu01.hk.intranet/CRSAPI_MCUU105</APIEndPoint>
+		<ConfigEndPoint>http://whkeascrsappu01.hk.intranet/CRSAPI_MCUU105/api/about/env</ConfigEndPoint>
+		<Company>ING</Company>
+		<HKENV>U105</HKENV>
+		<MCENV>U101</MCENV>
+		<INGConnectionString>server=HKSQLUAT2;database=INGCIWU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</INGConnectionString>
+		<MCUConnectionString>server=HKSQLUAT2;database=MCUCIWU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</MCUConnectionString>
+		<UPSConnectionString>max pool size=500;server=upsuatdb1.hk.azure;database=INGPROFILEU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</UPSConnectionString>
+		<MPFConnectionString>server=HKSQLUAT1;database=MPFAETNA;Network=DBMSSOCN;uid=com_mpfaes;password=Tesg3wer</MPFConnectionString>
+		<MCSConnectionString>max pool size=500;server=mcsuatdb1.hk.azure;database=INGMCSU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</MCSConnectionString>
+		<MJCConnectionString>max pool size=500;server=mcsuatdb1.hk.azure;database=INGMCSU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</MJCConnectionString>
+		<ICRConnectionString>""</ICRConnectionString>
+		<CAPSILConnectionString>DSN=AS400_TEST;UID=LDDPOL96;PWD=LDDPOL9601</CAPSILConnectionString>
+		<AsurConnectionString>max pool size=500;server=10.175.42.136;database=L7LACT_REPL;Network=DBMSSOCN;uid=FwdAssurance_ODS_UAT;password=FWD@12345</AsurConnectionString>
+		<!--modGlobal config-->
+		<CSW_USER_PRIVS>INGCIWU105.dbo.csw_user_privs</CSW_USER_PRIVS>
+		<UPS_USER_GROUP_TAB>INGProfileU105.dbo.ups_user_group_tab</UPS_USER_GROUP_TAB>
+		<UPS_USER_LIST_TAB>INGProfileU105.dbo.ups_user_list_tab</UPS_USER_LIST_TAB>
+		<CIC_FULLNAME_MAPPING>INGProfileU105.dbo.userid_fullname_mapping</CIC_FULLNAME_MAPPING>
+		<gSQL3>hksqlsit1</gSQL3>
+		<cSQL3>HKSQLUAT2</cSQL3>
+		<cSQL3_MCU>HKSQLUAT2</cSQL3_MCU>
+		<g_LAUser>ING15</g_LAUser>
+		<g_Qman>LACSQMG3C</g_Qman>
+		<g_WinRemoteQ>LACSHKU105.TO.LA400HKU105</g_WinRemoteQ>
+		<g_WinRemoteMcuQ>LACSMCU105.TO.LA400MCU105</g_WinRemoteMcuQ>
+		<g_LAReplyQ>LA400HKU105.TO.LACSHKU105</g_LAReplyQ>
+		<g_LAReplyMcuQ>LA400MCU105.TO.LACSMCU105</g_LAReplyMcuQ>
+		<g_WinLocalQ>LACSHKU105.QUEUE1.LCL</g_WinLocalQ>
+		<g_WinLocalMcuQ>LACSMCU105.QUEUE1.LCL</g_WinLocalMcuQ>
+		<g_Env>U105</g_Env>
+		<g_McuEnv>U105</g_McuEnv>
+		<g_Comp>ING</g_Comp>
+		<g_McuComp>MCU</g_McuComp>
+		<g_ProjectAlias>LAS</g_ProjectAlias>
+		<g_UserType>LASUPDATE</g_UserType>
+		<g_Connection_CIW>INGCIWU105</g_Connection_CIW>
+		<g_Connection_McuCIW>MCUCIWU105</g_Connection_McuCIW>
+		<g_Connection_UPS>INGProfileU105</g_Connection_UPS>
+		<g_Connection_ICR>INGICRU105</g_Connection_ICR>
+		<g_Connection_MCS>INGMCSU105</g_Connection_MCS>
+		<g_Connection_MJC>INGMCSU105</g_Connection_MJC>
+		<g_Connection_McuMJC>MCUMCSU105</g_Connection_McuMJC>
+		<g_Connection_CAM>INGCAMU105</g_Connection_CAM>
+		<g_Capsil_Project>CS2005</g_Capsil_Project>
+		<g_Capsil_Connection>ENQ40096</g_Capsil_Connection>
+		<g_Capsil_UserType>CSUSER</g_Capsil_UserType>
+		<g_Capsil_Lib>LDDCPS96DB</g_Capsil_Lib>
+		<g_CAM_Database>INGCAMU105</g_CAM_Database>
+		<g_McuCAM_Database>MCUCAMU105</g_McuCAM_Database>
+		<g_McuNBR_Database>MCUNBRU105</g_McuNBR_Database>
+		<g_ProjectAlias_MJC>LAS</g_ProjectAlias_MJC>
+		<g_UserType_MJC>LASUPDATE</g_UserType_MJC>
+		<gcNBR>ingnbrU105.dbo.</gcNBR>
+		<gcMcuNBR>mcunbrU105.dbo.</gcMcuNBR>
+		<giEnv>73</giEnv>
+		<strValProj>CIW</strValProj>
+		<strValConn>CIW400CON96</strValConn>
+		<g_Connection_CNB>hksqlsit1</g_Connection_CNB>
+		<gcMcuCIW>mcuciwU105.dbo.</gcMcuCIW>
+		<gcCIW>ingciwU105.dbo.</gcCIW>
+		<gcMcuMCS>mcumcsU105.dbo.</gcMcuMCS>
+		<gcMCS>ingmcsU105.dbo.</gcMCS>
+		<gcRMLife>ingrmlifeU105.dbo.</gcRMLife>
+		<gcPOS>ingposu105.dbo.</gcPOS>
+		<gcMcuPOS>mcuposU105.dbo.</gcMcuPOS>
+		<MCSConnectionString>max pool size=500;server=mcsuatdb1.hk.azure;database=INGMCSU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</MCSConnectionString>    
+		<MJCConnectionString>max pool size=500;server=mcsuatdb1.hk.azure;database=INGMCSU105;Network=DBMSSOCN;uid=com_las_ing;password=IngLA456</MJCConnectionString>
+		<LIDZConnectionString_DEV>Data Source=sql-mi-eas-dev-ce-01.1eeee8df1dcd.database.windows.net;Initial Catalog=CRSDEV;User ID=dsvc_crs;Password=t=#GuCRO_h1b7net</LIDZConnectionString_DEV>
+		<LIDZConnectionString_SIT>Data Source=smpdevdb1.6acbce11ce82.database.windows.net;Initial Catalog=LIDZ;User ID=svc_lidz_connect_dev;Password=Mkjn08642!</LIDZConnectionString_SIT>
+		<TEST>Data Source=HKGPRJDBSTRA01,8013;Initial Catalog=vantive;User id=com_las_ing;Password=IngLA678;</TEST>
+	</Environment>
+</Environments>

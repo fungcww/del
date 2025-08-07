@@ -1,0 +1,87 @@
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=Generator content="Microsoft Word 14 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:新細明體;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:NL;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-priority:99;
+	mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-language:NL;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Plain Text";
+	font-family:"Calibri","sans-serif";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.EmailStyle21
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;
+	font-weight:normal;
+	font-style:normal;}
+span.shorttext
+	{mso-style-name:short_text;}
+span.EmailStyle23
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1" />
+</o:shapelayout></xml><![endif]--></head><body lang=EN-US link=blue vlink=purple><div class=WordSection1><p class=MsoNormal><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>致 </span><span style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>PolicyHolderLastNameInChinese,<o:p></o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:11.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p class=MsoNormal><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>保單號碼</span><span style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>.:&nbsp;PolicyNumber<o:p></o:p></span></p><p class=MsoNormal><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>保單持有人姓名</span><span style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>:&nbsp;PolicyHolderNameInChinese<o:p></o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>多謝您於富衛人壽</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>(</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>百慕達</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>)</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>有限公司投保。</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>根據香港保險業聯會的指引，為保障您的權益，我們需要於上述保單繕發後，致電給您進行售後電話跟進服務。據此，我們較早前按照您於保單申請書上所提供的聯絡電話與您聯絡，惟未能成功與您聯繫。</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>您的理財顧問／經紀將會把您的投資相連壽險合約送交給您，包括在銷售時您已經閲讀及簽署的「重要資料聲明書及投保人聲明書」副本。請您收到後小心細閱有關文件的內容，因為當中列明了您必須知道的重要資料及概要。</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal style='text-align:justify;text-autospace:none'><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoPlainText><span lang=ZH-TW style='font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>基於上述情況，以及您已簽署的文件聲明表示您已明白及接納上述保單，<span class=shorttext>我們會</span>發出信件通知您有關保單的重要資料。</span><span style='font-family:"新細明體","serif";color:black'><o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal style='text-align:justify'><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";color:black'>如在未來兩星期仍未收到</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";color:black;mso-fareast-language:ZH-TW'>上述信件，或</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";color:black'>有任何查詢</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>，請您在冷靜期屆滿前</span><span style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>CoolingOffDate<span lang=ZH-TW>致電本公司</span></span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>24</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>小時服務熱線</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'> : (852) 3123-3123</span><span lang=ZH-TW style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'>與我們聯絡。</span><span lang=NL style='font-size:11.0pt;font-family:"新細明體","serif";mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:11.0pt;color:black;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;color:black;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span lang=EN-GB style='font-size:11.0pt;color:black;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>客戶</span><span lang=ZH-TW style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959;mso-fareast-language:ZH-TW'>聯繫中心</span><span lang=NL style='font-size:10.0pt;font-family:"Cambria Math","serif";color:#595959;mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#002060;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span lang=NL><a href="http://www.fwd.com.hk/"><span lang=EN-US style='font-size:10.0pt;font-family:"新細明體","serif";color:#002060;mso-fareast-language:ZH-TW;text-decoration:none'><img border=0 width=89 height=95 id="Picture_x0020_2" src="cid:image2103.jpg@01D19732.1B190AC0" alt="cid:3613433F-A0B7-4806-A8B0-41A61C5E1292"></span></a></span><b><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#002060'><br></span></b><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>富衛人壽保險(百慕達</span><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>)</span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>有限公司</span><b><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'><br></span></b><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>香港上環德輔道中</span><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>308</span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>號富衛金融中心</span><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>28</span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>樓<br>電話：</span><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>(852) 3123 3123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-GB style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959;mso-fareast-language:ZH-TW'>&nbsp;</span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>傳真：(852) 2290 7091</span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#002060'><o:p></o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#595959'>電郵：</span><span lang=NL><a href="mailto:cs.hk@fwd.com"><span style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-language:ZH-TW'>cs.hk</span><span style='font-size:10.0pt;font-family:"Arial","sans-serif"'>@fwd.com</span></a></span><span lang=NL style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#606060'>&nbsp;&nbsp;&nbsp; </span><span lang=NL style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#606060;mso-fareast-language:ZH-TW'>&nbsp; </span><span lang=NL><a href="http://www.fwd.com.hk/"><b><span style='font-size:10.0pt;font-family:"Arial","sans-serif"'>www.fwd.com.hk</span></b></a></span><span lang=NL style='font-size:10.0pt;font-family:"新細明體","serif";color:#002060;mso-fareast-language:ZH-TW'><o:p></o:p></span></p><p class=MsoNormal><span lang=NL style='font-size:11.0pt;font-family:"Calibri","sans-serif"'><o:p>&nbsp;</o:p></span></p></div></body></html>

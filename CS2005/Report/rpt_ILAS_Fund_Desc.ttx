@@ -1,0 +1,3 @@
+FundCode	string	10
+FundDescription	string	50
+FundChiDesc	string	50
