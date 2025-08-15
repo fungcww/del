@@ -130,6 +130,41 @@ Public Class uclServiceLog_Asur
     Friend WithEvents cbMedium As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
+    ' New controls for enquiry tabs
+    Friend WithEvents tabEnquiry As TabControl
+    Friend WithEvents tab1stEnquiry As TabPage
+    Friend WithEvents tab2ndEnquiry As TabPage
+    Friend WithEvents tab3rdEnquiry As TabPage
+    Friend WithEvents cb1stEventCat As ComboBox
+    Friend WithEvents cb1stEventDetail As ComboBox
+    Friend WithEvents cb1stEventTypeDetail As ComboBox
+    Friend WithEvents cb2ndEventCat As ComboBox
+    Friend WithEvents cb2ndEventDetail As ComboBox
+    Friend WithEvents cb2ndEventTypeDetail As ComboBox
+    Friend WithEvents cb3rdEventCat As ComboBox
+    Friend WithEvents cb3rdEventDetail As ComboBox
+    Friend WithEvents cb3rdEventTypeDetail As ComboBox
+    Friend WithEvents txt1stReason As TextBox
+    Friend WithEvents txt1stAlternative As TextBox
+    Friend WithEvents txt2ndReason As TextBox
+    Friend WithEvents txt2ndAlternative As TextBox
+    Friend WithEvents txt3rdReason As TextBox
+    Friend WithEvents txt3rdAlternative As TextBox
+    Friend WithEvents lbl1stEventCat As Label
+    Friend WithEvents lbl1stEventDetail As Label
+    Friend WithEvents lbl1stEventTypeDetail As Label
+    Friend WithEvents lbl1stReason As Label
+    Friend WithEvents lbl1stAlternative As Label
+    Friend WithEvents lbl2ndEventCat As Label
+    Friend WithEvents lbl2ndEventDetail As Label
+    Friend WithEvents lbl2ndEventTypeDetail As Label
+    Friend WithEvents lbl2ndReason As Label
+    Friend WithEvents lbl2ndAlternative As Label
+    Friend WithEvents lbl3rdEventCat As Label
+    Friend WithEvents lbl3rdEventDetail As Label
+    Friend WithEvents lbl3rdEventTypeDetail As Label
+    Friend WithEvents lbl3rdReason As Label
+    Friend WithEvents lbl3rdAlternative As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents chkIdVerify As CheckBox
     Friend WithEvents dtReminder As DateTimePicker
@@ -250,6 +285,40 @@ Public Class uclServiceLog_Asur
         Me.cbEventDetail = New System.Windows.Forms.ComboBox()
         Me.cbEventTypeDetail = New System.Windows.Forms.ComboBox()
         Me.cbMedium = New System.Windows.Forms.ComboBox()
+        Me.tabEnquiry = New System.Windows.Forms.TabControl()
+        Me.tab1stEnquiry = New System.Windows.Forms.TabPage()
+        Me.tab2ndEnquiry = New System.Windows.Forms.TabPage()
+        Me.tab3rdEnquiry = New System.Windows.Forms.TabPage()
+        Me.cb1stEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb1stEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb1stEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.txt1stReason = New System.Windows.Forms.TextBox()
+        Me.txt1stAlternative = New System.Windows.Forms.TextBox()
+        Me.txt2ndReason = New System.Windows.Forms.TextBox()
+        Me.txt2ndAlternative = New System.Windows.Forms.TextBox()
+        Me.txt3rdReason = New System.Windows.Forms.TextBox()
+        Me.txt3rdAlternative = New System.Windows.Forms.TextBox()
+        Me.lbl1stEventCat = New System.Windows.Forms.Label()
+        Me.lbl1stEventDetail = New System.Windows.Forms.Label()
+        Me.lbl1stEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl1stReason = New System.Windows.Forms.Label()
+        Me.lbl1stAlternative = New System.Windows.Forms.Label()
+        Me.lbl2ndEventCat = New System.Windows.Forms.Label()
+        Me.lbl2ndEventDetail = New System.Windows.Forms.Label()
+        Me.lbl2ndEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl2ndReason = New System.Windows.Forms.Label()
+        Me.lbl2ndAlternative = New System.Windows.Forms.Label()
+        Me.lbl3rdEventCat = New System.Windows.Forms.Label()
+        Me.lbl3rdEventDetail = New System.Windows.Forms.Label()
+        Me.lbl3rdEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl3rdReason = New System.Windows.Forms.Label()
+        Me.lbl3rdAlternative = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -871,19 +940,14 @@ Public Class uclServiceLog_Asur
         '
         'grpServiceEvent
         '
-        Me.grpServiceEvent.Controls.Add(Me.Label8)
         Me.grpServiceEvent.Controls.Add(Me.Label6)
-        Me.grpServiceEvent.Controls.Add(Me.cbEventCat)
-        Me.grpServiceEvent.Controls.Add(Me.cbEventDetail)
-        Me.grpServiceEvent.Controls.Add(Me.cbEventTypeDetail)
         Me.grpServiceEvent.Controls.Add(Me.cbMedium)
-        Me.grpServiceEvent.Controls.Add(Me.Label7)
-        Me.grpServiceEvent.Controls.Add(Me.Label9)
+        Me.grpServiceEvent.Controls.Add(Me.tabEnquiry)
         Me.grpServiceEvent.Location = New System.Drawing.Point(7, 184)
         Me.grpServiceEvent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grpServiceEvent.Name = "grpServiceEvent"
         Me.grpServiceEvent.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.grpServiceEvent.Size = New System.Drawing.Size(559, 180)
+        Me.grpServiceEvent.Size = New System.Drawing.Size(559, 300)
         Me.grpServiceEvent.TabIndex = 76
         Me.grpServiceEvent.TabStop = False
         Me.grpServiceEvent.Text = "Service Event"
@@ -964,6 +1028,320 @@ Public Class uclServiceLog_Asur
         Me.Label9.Size = New System.Drawing.Size(144, 25)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Event Type Detail"
+        '
+        'tabEnquiry
+        '
+        Me.tabEnquiry.Controls.Add(Me.tab1stEnquiry)
+        Me.tabEnquiry.Controls.Add(Me.tab2ndEnquiry)
+        Me.tabEnquiry.Controls.Add(Me.tab3rdEnquiry)
+        Me.tabEnquiry.Location = New System.Drawing.Point(18, 60)
+        Me.tabEnquiry.Name = "tabEnquiry"
+        Me.tabEnquiry.SelectedIndex = 0
+        Me.tabEnquiry.Size = New System.Drawing.Size(533, 220)
+        Me.tabEnquiry.TabIndex = 11
+        '
+        'tab1stEnquiry
+        '
+        Me.tab1stEnquiry.Controls.Add(Me.lbl1stEventCat)
+        Me.tab1stEnquiry.Controls.Add(Me.cb1stEventCat)
+        Me.tab1stEnquiry.Controls.Add(Me.lbl1stEventDetail)
+        Me.tab1stEnquiry.Controls.Add(Me.cb1stEventDetail)
+        Me.tab1stEnquiry.Controls.Add(Me.lbl1stEventTypeDetail)
+        Me.tab1stEnquiry.Controls.Add(Me.cb1stEventTypeDetail)
+        Me.tab1stEnquiry.Controls.Add(Me.lbl1stReason)
+        Me.tab1stEnquiry.Controls.Add(Me.txt1stReason)
+        Me.tab1stEnquiry.Controls.Add(Me.lbl1stAlternative)
+        Me.tab1stEnquiry.Controls.Add(Me.txt1stAlternative)
+        Me.tab1stEnquiry.Location = New System.Drawing.Point(4, 22)
+        Me.tab1stEnquiry.Name = "tab1stEnquiry"
+        Me.tab1stEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        Me.tab1stEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab1stEnquiry.TabIndex = 0
+        Me.tab1stEnquiry.Text = "1st Enquiry"
+        Me.tab1stEnquiry.UseVisualStyleBackColor = True
+        '
+        'lbl1stEventCat
+        '
+        Me.lbl1stEventCat.Location = New System.Drawing.Point(6, 16)
+        Me.lbl1stEventCat.Name = "lbl1stEventCat"
+        Me.lbl1stEventCat.Size = New System.Drawing.Size(100, 23)
+        Me.lbl1stEventCat.TabIndex = 0
+        Me.lbl1stEventCat.Text = "Event Category"
+        '
+        'cb1stEventCat
+        '
+        Me.cb1stEventCat.BackColor = System.Drawing.Color.White
+        Me.cb1stEventCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb1stEventCat.Location = New System.Drawing.Point(120, 13)
+        Me.cb1stEventCat.Name = "cb1stEventCat"
+        Me.cb1stEventCat.Size = New System.Drawing.Size(395, 21)
+        Me.cb1stEventCat.TabIndex = 1
+        '
+        'lbl1stEventDetail
+        '
+        Me.lbl1stEventDetail.Location = New System.Drawing.Point(6, 43)
+        Me.lbl1stEventDetail.Name = "lbl1stEventDetail"
+        Me.lbl1stEventDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl1stEventDetail.TabIndex = 2
+        Me.lbl1stEventDetail.Text = "Event Detail"
+        '
+        'cb1stEventDetail
+        '
+        Me.cb1stEventDetail.BackColor = System.Drawing.Color.White
+        Me.cb1stEventDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb1stEventDetail.Location = New System.Drawing.Point(120, 40)
+        Me.cb1stEventDetail.Name = "cb1stEventDetail"
+        Me.cb1stEventDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb1stEventDetail.TabIndex = 3
+        '
+        'lbl1stEventTypeDetail
+        '
+        Me.lbl1stEventTypeDetail.Location = New System.Drawing.Point(6, 70)
+        Me.lbl1stEventTypeDetail.Name = "lbl1stEventTypeDetail"
+        Me.lbl1stEventTypeDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl1stEventTypeDetail.TabIndex = 4
+        Me.lbl1stEventTypeDetail.Text = "Event Type Detail"
+        '
+        'cb1stEventTypeDetail
+        '
+        Me.cb1stEventTypeDetail.BackColor = System.Drawing.Color.White
+        Me.cb1stEventTypeDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb1stEventTypeDetail.Location = New System.Drawing.Point(120, 67)
+        Me.cb1stEventTypeDetail.Name = "cb1stEventTypeDetail"
+        Me.cb1stEventTypeDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb1stEventTypeDetail.TabIndex = 5
+        '
+        'lbl1stReason
+        '
+        Me.lbl1stReason.Location = New System.Drawing.Point(6, 97)
+        Me.lbl1stReason.Name = "lbl1stReason"
+        Me.lbl1stReason.Size = New System.Drawing.Size(100, 23)
+        Me.lbl1stReason.TabIndex = 6
+        Me.lbl1stReason.Text = "Reason"
+        '
+        'txt1stReason
+        '
+        Me.txt1stReason.Location = New System.Drawing.Point(120, 94)
+        Me.txt1stReason.Name = "txt1stReason"
+        Me.txt1stReason.Size = New System.Drawing.Size(395, 20)
+        Me.txt1stReason.TabIndex = 7
+        '
+        'lbl1stAlternative
+        '
+        Me.lbl1stAlternative.Location = New System.Drawing.Point(6, 124)
+        Me.lbl1stAlternative.Name = "lbl1stAlternative"
+        Me.lbl1stAlternative.Size = New System.Drawing.Size(100, 23)
+        Me.lbl1stAlternative.TabIndex = 8
+        Me.lbl1stAlternative.Text = "Alternative"
+        '
+        'txt1stAlternative
+        '
+        Me.txt1stAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.txt1stAlternative.Name = "txt1stAlternative"
+        Me.txt1stAlternative.Size = New System.Drawing.Size(395, 20)
+        Me.txt1stAlternative.TabIndex = 9
+        '
+        'tab2ndEnquiry
+        '
+        Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndEventCat)
+        Me.tab2ndEnquiry.Controls.Add(Me.cb2ndEventCat)
+        Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndEventDetail)
+        Me.tab2ndEnquiry.Controls.Add(Me.cb2ndEventDetail)
+        Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndEventTypeDetail)
+        Me.tab2ndEnquiry.Controls.Add(Me.cb2ndEventTypeDetail)
+        Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndReason)
+        Me.tab2ndEnquiry.Controls.Add(Me.txt2ndReason)
+        Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndAlternative)
+        Me.tab2ndEnquiry.Controls.Add(Me.txt2ndAlternative)
+        Me.tab2ndEnquiry.Location = New System.Drawing.Point(4, 22)
+        Me.tab2ndEnquiry.Name = "tab2ndEnquiry"
+        Me.tab2ndEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        Me.tab2ndEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab2ndEnquiry.TabIndex = 1
+        Me.tab2ndEnquiry.Text = "2nd Enquiry"
+        Me.tab2ndEnquiry.UseVisualStyleBackColor = True
+        '
+        'lbl2ndEventCat
+        '
+        Me.lbl2ndEventCat.Location = New System.Drawing.Point(6, 16)
+        Me.lbl2ndEventCat.Name = "lbl2ndEventCat"
+        Me.lbl2ndEventCat.Size = New System.Drawing.Size(100, 23)
+        Me.lbl2ndEventCat.TabIndex = 0
+        Me.lbl2ndEventCat.Text = "Event Category"
+        '
+        'cb2ndEventCat
+        '
+        Me.cb2ndEventCat.BackColor = System.Drawing.Color.White
+        Me.cb2ndEventCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb2ndEventCat.Location = New System.Drawing.Point(120, 13)
+        Me.cb2ndEventCat.Name = "cb2ndEventCat"
+        Me.cb2ndEventCat.Size = New System.Drawing.Size(395, 21)
+        Me.cb2ndEventCat.TabIndex = 1
+        '
+        'lbl2ndEventDetail
+        '
+        Me.lbl2ndEventDetail.Location = New System.Drawing.Point(6, 43)
+        Me.lbl2ndEventDetail.Name = "lbl2ndEventDetail"
+        Me.lbl2ndEventDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl2ndEventDetail.TabIndex = 2
+        Me.lbl2ndEventDetail.Text = "Event Detail"
+        '
+        'cb2ndEventDetail
+        '
+        Me.cb2ndEventDetail.BackColor = System.Drawing.Color.White
+        Me.cb2ndEventDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb2ndEventDetail.Location = New System.Drawing.Point(120, 40)
+        Me.cb2ndEventDetail.Name = "cb2ndEventDetail"
+        Me.cb2ndEventDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb2ndEventDetail.TabIndex = 3
+        '
+        'lbl2ndEventTypeDetail
+        '
+        Me.lbl2ndEventTypeDetail.Location = New System.Drawing.Point(6, 70)
+        Me.lbl2ndEventTypeDetail.Name = "lbl2ndEventTypeDetail"
+        Me.lbl2ndEventTypeDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl2ndEventTypeDetail.TabIndex = 4
+        Me.lbl2ndEventTypeDetail.Text = "Event Type Detail"
+        '
+        'cb2ndEventTypeDetail
+        '
+        Me.cb2ndEventTypeDetail.BackColor = System.Drawing.Color.White
+        Me.cb2ndEventTypeDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb2ndEventTypeDetail.Location = New System.Drawing.Point(120, 67)
+        Me.cb2ndEventTypeDetail.Name = "cb2ndEventTypeDetail"
+        Me.cb2ndEventTypeDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb2ndEventTypeDetail.TabIndex = 5
+        '
+        'lbl2ndReason
+        '
+        Me.lbl2ndReason.Location = New System.Drawing.Point(6, 97)
+        Me.lbl2ndReason.Name = "lbl2ndReason"
+        Me.lbl2ndReason.Size = New System.Drawing.Size(100, 23)
+        Me.lbl2ndReason.TabIndex = 6
+        Me.lbl2ndReason.Text = "Reason"
+        '
+        'txt2ndReason
+        '
+        Me.txt2ndReason.Location = New System.Drawing.Point(120, 94)
+        Me.txt2ndReason.Name = "txt2ndReason"
+        Me.txt2ndReason.Size = New System.Drawing.Size(395, 20)
+        Me.txt2ndReason.TabIndex = 7
+        '
+        'lbl2ndAlternative
+        '
+        Me.lbl2ndAlternative.Location = New System.Drawing.Point(6, 124)
+        Me.lbl2ndAlternative.Name = "lbl2ndAlternative"
+        Me.lbl2ndAlternative.Size = New System.Drawing.Size(100, 23)
+        Me.lbl2ndAlternative.TabIndex = 8
+        Me.lbl2ndAlternative.Text = "Alternative"
+        '
+        'txt2ndAlternative
+        '
+        Me.txt2ndAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.txt2ndAlternative.Name = "txt2ndAlternative"
+        Me.txt2ndAlternative.Size = New System.Drawing.Size(395, 20)
+        Me.txt2ndAlternative.TabIndex = 9
+        '
+        'tab3rdEnquiry
+        '
+        Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdEventCat)
+        Me.tab3rdEnquiry.Controls.Add(Me.cb3rdEventCat)
+        Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdEventDetail)
+        Me.tab3rdEnquiry.Controls.Add(Me.cb3rdEventDetail)
+        Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdEventTypeDetail)
+        Me.tab3rdEnquiry.Controls.Add(Me.cb3rdEventTypeDetail)
+        Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdReason)
+        Me.tab3rdEnquiry.Controls.Add(Me.txt3rdReason)
+        Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdAlternative)
+        Me.tab3rdEnquiry.Controls.Add(Me.txt3rdAlternative)
+        Me.tab3rdEnquiry.Location = New System.Drawing.Point(4, 22)
+        Me.tab3rdEnquiry.Name = "tab3rdEnquiry"
+        Me.tab3rdEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        Me.tab3rdEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab3rdEnquiry.TabIndex = 2
+        Me.tab3rdEnquiry.Text = "3rd Enquiry"
+        Me.tab3rdEnquiry.UseVisualStyleBackColor = True
+        '
+        'lbl3rdEventCat
+        '
+        Me.lbl3rdEventCat.Location = New System.Drawing.Point(6, 16)
+        Me.lbl3rdEventCat.Name = "lbl3rdEventCat"
+        Me.lbl3rdEventCat.Size = New System.Drawing.Size(100, 23)
+        Me.lbl3rdEventCat.TabIndex = 0
+        Me.lbl3rdEventCat.Text = "Event Category"
+        '
+        'cb3rdEventCat
+        '
+        Me.cb3rdEventCat.BackColor = System.Drawing.Color.White
+        Me.cb3rdEventCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb3rdEventCat.Location = New System.Drawing.Point(120, 13)
+        Me.cb3rdEventCat.Name = "cb3rdEventCat"
+        Me.cb3rdEventCat.Size = New System.Drawing.Size(395, 21)
+        Me.cb3rdEventCat.TabIndex = 1
+        '
+        'lbl3rdEventDetail
+        '
+        Me.lbl3rdEventDetail.Location = New System.Drawing.Point(6, 43)
+        Me.lbl3rdEventDetail.Name = "lbl3rdEventDetail"
+        Me.lbl3rdEventDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl3rdEventDetail.TabIndex = 2
+        Me.lbl3rdEventDetail.Text = "Event Detail"
+        '
+        'cb3rdEventDetail
+        '
+        Me.cb3rdEventDetail.BackColor = System.Drawing.Color.White
+        Me.cb3rdEventDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb3rdEventDetail.Location = New System.Drawing.Point(120, 40)
+        Me.cb3rdEventDetail.Name = "cb3rdEventDetail"
+        Me.cb3rdEventDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb3rdEventDetail.TabIndex = 3
+        '
+        'lbl3rdEventTypeDetail
+        '
+        Me.lbl3rdEventTypeDetail.Location = New System.Drawing.Point(6, 70)
+        Me.lbl3rdEventTypeDetail.Name = "lbl3rdEventTypeDetail"
+        Me.lbl3rdEventTypeDetail.Size = New System.Drawing.Size(100, 23)
+        Me.lbl3rdEventTypeDetail.TabIndex = 4
+        Me.lbl3rdEventTypeDetail.Text = "Event Type Detail"
+        '
+        'cb3rdEventTypeDetail
+        '
+        Me.cb3rdEventTypeDetail.BackColor = System.Drawing.Color.White
+        Me.cb3rdEventTypeDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb3rdEventTypeDetail.Location = New System.Drawing.Point(120, 67)
+        Me.cb3rdEventTypeDetail.Name = "cb3rdEventTypeDetail"
+        Me.cb3rdEventTypeDetail.Size = New System.Drawing.Size(395, 21)
+        Me.cb3rdEventTypeDetail.TabIndex = 5
+        '
+        'lbl3rdReason
+        '
+        Me.lbl3rdReason.Location = New System.Drawing.Point(6, 97)
+        Me.lbl3rdReason.Name = "lbl3rdReason"
+        Me.lbl3rdReason.Size = New System.Drawing.Size(100, 23)
+        Me.lbl3rdReason.TabIndex = 6
+        Me.lbl3rdReason.Text = "Reason"
+        '
+        'txt3rdReason
+        '
+        Me.txt3rdReason.Location = New System.Drawing.Point(120, 94)
+        Me.txt3rdReason.Name = "txt3rdReason"
+        Me.txt3rdReason.Size = New System.Drawing.Size(395, 20)
+        Me.txt3rdReason.TabIndex = 7
+        '
+        'lbl3rdAlternative
+        '
+        Me.lbl3rdAlternative.Location = New System.Drawing.Point(6, 124)
+        Me.lbl3rdAlternative.Name = "lbl3rdAlternative"
+        Me.lbl3rdAlternative.Size = New System.Drawing.Size(100, 23)
+        Me.lbl3rdAlternative.TabIndex = 8
+        Me.lbl3rdAlternative.Text = "Alternative"
+        '
+        'txt3rdAlternative
+        '
+        Me.txt3rdAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.txt3rdAlternative.Name = "txt3rdAlternative"
+        Me.txt3rdAlternative.Size = New System.Drawing.Size(395, 20)
+        Me.txt3rdAlternative.TabIndex = 9
         '
         'GroupBox1
         '
@@ -1455,6 +1833,25 @@ Public Class uclServiceLog_Asur
         txtPolicyNo.DataBindings.Clear()
         txtCustomerID.DataBindings.Clear()
         chkIdVerify.DataBindings.Clear()
+        
+        ' Clear new enquiry tab controls data bindings
+        cb1stEventCat.DataBindings.Clear()
+        cb1stEventDetail.DataBindings.Clear()
+        cb1stEventTypeDetail.DataBindings.Clear()
+        txt1stReason.DataBindings.Clear()
+        txt1stAlternative.DataBindings.Clear()
+        
+        cb2ndEventCat.DataBindings.Clear()
+        cb2ndEventDetail.DataBindings.Clear()
+        cb2ndEventTypeDetail.DataBindings.Clear()
+        txt2ndReason.DataBindings.Clear()
+        txt2ndAlternative.DataBindings.Clear()
+        
+        cb3rdEventCat.DataBindings.Clear()
+        cb3rdEventDetail.DataBindings.Clear()
+        cb3rdEventTypeDetail.DataBindings.Clear()
+        txt3rdReason.DataBindings.Clear()
+        txt3rdAlternative.DataBindings.Clear()
     End Function
 
     'BuildUI() - Display the Service Log History and initialize form for user input
@@ -2200,6 +2597,43 @@ Public Class uclServiceLog_Asur
         cbEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cbEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cbEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
+        ' Set data sources for new enquiry tab controls
+        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb1stEventCat.DisplayMember = "cswecc_desc"
+        cb1stEventCat.ValueMember = "cswecc_code"
+        
+        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb1stEventDetail.DisplayMember = "EventTypeDesc"
+        cb1stEventDetail.ValueMember = "EventTypeCode"
+        
+        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
+        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb2ndEventCat.DisplayMember = "cswecc_desc"
+        cb2ndEventCat.ValueMember = "cswecc_code"
+        
+        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb2ndEventDetail.DisplayMember = "EventTypeDesc"
+        cb2ndEventDetail.ValueMember = "EventTypeCode"
+        
+        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
+        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb3rdEventCat.DisplayMember = "cswecc_desc"
+        cb3rdEventCat.ValueMember = "cswecc_code"
+        
+        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb3rdEventDetail.DisplayMember = "EventTypeDesc"
+        cb3rdEventDetail.ValueMember = "EventTypeCode"
+        
+        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
     End Sub
 
     Private Sub InitPartialcbWithOutIWS()
@@ -2224,6 +2658,44 @@ Public Class uclServiceLog_Asur
         cbEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cbEventCat.DisplayMember = "cswecc_desc"
         cbEventCat.ValueMember = "cswecc_code"
+        
+        ' Set data sources for new enquiry tab controls (without IWS)
+        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb1stEventCat.DisplayMember = "cswecc_desc"
+        cb1stEventCat.ValueMember = "cswecc_code"
+        
+        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb1stEventDetail.DisplayMember = "EventTypeDesc"
+        cb1stEventDetail.ValueMember = "EventTypeCode"
+        
+        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
+        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb2ndEventCat.DisplayMember = "cswecc_desc"
+        cb2ndEventCat.ValueMember = "cswecc_code"
+        
+        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb2ndEventDetail.DisplayMember = "EventTypeDesc"
+        cb2ndEventDetail.ValueMember = "EventTypeCode"
+        
+        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
+        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb3rdEventCat.DisplayMember = "cswecc_desc"
+        cb3rdEventCat.ValueMember = "cswecc_code"
+        
+        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb3rdEventDetail.DisplayMember = "EventTypeDesc"
+        cb3rdEventDetail.ValueMember = "EventTypeCode"
+        
+        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
         blnIsWithOutIWS = False
     End Sub
 
@@ -2262,6 +2734,63 @@ Public Class uclServiceLog_Asur
         cbEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeCode")
         cbEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeDetailCode")
         cbReceiver.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "SecondaryCSRID")
+        
+        ' Bind new enquiry tab controls
+        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb1stEventCat.DisplayMember = "cswecc_desc"
+        cb1stEventCat.ValueMember = "cswecc_code"
+        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+        
+        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb1stEventDetail.DisplayMember = "EventTypeDesc"
+        cb1stEventDetail.ValueMember = "EventTypeCode"
+        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+        
+        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+        
+        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+        
+        ' 2nd Enquiry
+        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb2ndEventCat.DisplayMember = "cswecc_desc"
+        cb2ndEventCat.ValueMember = "cswecc_code"
+        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+        
+        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb2ndEventDetail.DisplayMember = "EventTypeDesc"
+        cb2ndEventDetail.ValueMember = "EventTypeCode"
+        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+        
+        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+        
+        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+        
+        ' 3rd Enquiry
+        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb3rdEventCat.DisplayMember = "cswecc_desc"
+        cb3rdEventCat.ValueMember = "cswecc_code"
+        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+        
+        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb3rdEventDetail.DisplayMember = "EventTypeDesc"
+        cb3rdEventDetail.ValueMember = "EventTypeCode"
+        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+        
+        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+        
+        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
         'dtInitial.DataBindings.Add("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
         b = New Binding("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
         AddHandler b.Format, AddressOf DTFormatter
@@ -2468,6 +2997,193 @@ Public Class uclServiceLog_Asur
         dsSrvLog.Tables("EventStatusCodes").DefaultView.Sort = "sort_order"
     End Sub
     'VHIS end - Add SetStatus
+    
+    ' New enquiry tab cascade functionality
+    Private Sub cb1stEventCat_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb1stEventCat.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb1stEventCat.SelectedValue) Is String Then
+            Set1stType()
+            Set1stTypeDetail()
+        End If
+    End Sub
+
+    Private Sub cb1stEventDetail_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb1stEventDetail.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb1stEventCat.SelectedValue) Is String And TypeOf (cb1stEventDetail.SelectedValue) Is String Then
+            Set1stTypeDetail()
+        End If
+    End Sub
+
+    Private Sub cb2ndEventCat_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb2ndEventCat.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb2ndEventCat.SelectedValue) Is String Then
+            Set2ndType()
+            Set2ndTypeDetail()
+        End If
+    End Sub
+
+    Private Sub cb2ndEventDetail_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb2ndEventDetail.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb2ndEventCat.SelectedValue) Is String And TypeOf (cb2ndEventDetail.SelectedValue) Is String Then
+            Set2ndTypeDetail()
+        End If
+    End Sub
+
+    Private Sub cb3rdEventCat_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb3rdEventCat.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb3rdEventCat.SelectedValue) Is String Then
+            Set3rdType()
+            Set3rdTypeDetail()
+        End If
+    End Sub
+
+    Private Sub cb3rdEventDetail_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb3rdEventDetail.SelectedIndexChanged
+        If blnIsWithOutIWS Then
+            Exit Sub
+        End If
+
+        If TypeOf (cb3rdEventCat.SelectedValue) Is String And TypeOf (cb3rdEventDetail.SelectedValue) Is String Then
+            Set3rdTypeDetail()
+        End If
+    End Sub
+
+    Private Sub Set1stType()
+        Dim strCat As String
+        strCat = cb1stEventCat.SelectedValue.ToString
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "ServiceEventTypeCodes_wo_iws"
+        Else
+            tableName = "ServiceEventTypeCodes"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        If cb1stEventDetail.Items.Count > 0 Then
+            cb1stEventDetail.SelectedIndex = -1
+            cb1stEventDetail.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Set1stTypeDetail()
+        Dim strCat As String
+        Dim strType As String
+        strCat = cb1stEventCat.SelectedValue.ToString
+        If Not cb1stEventDetail.SelectedValue Is Nothing Then
+            strType = cb1stEventDetail.SelectedValue.ToString
+        End If
+
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "csw_event_typedtl_code_wo_iws"
+        Else
+            tableName = "csw_event_typedtl_code"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        If cb1stEventTypeDetail.Items.Count > 0 Then
+            cb1stEventTypeDetail.SelectedIndex = -1
+            cb1stEventTypeDetail.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Set2ndType()
+        Dim strCat As String
+        strCat = cb2ndEventCat.SelectedValue.ToString
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "ServiceEventTypeCodes_wo_iws"
+        Else
+            tableName = "ServiceEventTypeCodes"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        If cb2ndEventDetail.Items.Count > 0 Then
+            cb2ndEventDetail.SelectedIndex = -1
+            cb2ndEventDetail.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Set2ndTypeDetail()
+        Dim strCat As String
+        Dim strType As String
+        strCat = cb2ndEventCat.SelectedValue.ToString
+        If Not cb2ndEventDetail.SelectedValue Is Nothing Then
+            strType = cb2ndEventDetail.SelectedValue.ToString
+        End If
+
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "csw_event_typedtl_code_wo_iws"
+        Else
+            tableName = "csw_event_typedtl_code"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        If cb2ndEventTypeDetail.Items.Count > 0 Then
+            cb2ndEventTypeDetail.SelectedIndex = -1
+            cb2ndEventTypeDetail.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Set3rdType()
+        Dim strCat As String
+        strCat = cb3rdEventCat.SelectedValue.ToString
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "ServiceEventTypeCodes_wo_iws"
+        Else
+            tableName = "ServiceEventTypeCodes"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        If cb3rdEventDetail.Items.Count > 0 Then
+            cb3rdEventDetail.SelectedIndex = -1
+            cb3rdEventDetail.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Set3rdTypeDetail()
+        Dim strCat As String
+        Dim strType As String
+        strCat = cb3rdEventCat.SelectedValue.ToString
+        If Not cb3rdEventDetail.SelectedValue Is Nothing Then
+            strType = cb3rdEventDetail.SelectedValue.ToString
+        End If
+
+        Dim tableName As String
+        If blnIsNewMode Then
+            tableName = "csw_event_typedtl_code_wo_iws"
+        Else
+            tableName = "csw_event_typedtl_code"
+        End If
+
+        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        If cb3rdEventTypeDetail.Items.Count > 0 Then
+            cb3rdEventTypeDetail.SelectedIndex = -1
+            cb3rdEventTypeDetail.SelectedIndex = 0
+        End If
+    End Sub
 
     Private Sub dtReminder_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtReminder.ValueChanged
         If DateTime.Equals(dtReminder.Value, #1/1/1800#) Then
@@ -3825,7 +4541,7 @@ Public Class uclServiceLog_Asur
     '       Catch ex As Exception
 
     '       End Try
-    '   End Function
+    '   End function
 
     'oliver 2024-4-24 added for Table_Relocate_Sprint13
     Private Function UpdatePiAuth(ByVal policyAccountID As String, ByVal piCustID As String, ByVal enable As String, ByVal usr As String) As Boolean
