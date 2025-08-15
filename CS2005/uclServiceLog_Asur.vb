@@ -3901,7 +3901,22 @@ Public Class uclServiceLog_Asur
                                 {"IsPolicyAlert", IIf(Not String.IsNullOrEmpty(dr.Item("IsPolicyAlert").ToString()), dr.Item("IsPolicyAlert").ToString(), " ")},
                                 {"AlertNotes", IIf(Not String.IsNullOrEmpty(dr.Item("AlertNotes").ToString()), dr.Item("AlertNotes").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
-                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")}
+                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
+                                {"1stEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventCategoryCode").ToString()), dr.Item("1stEventCategoryCode").ToString(), " ")},
+                                {"1stEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeCode").ToString()), dr.Item("1stEventTypeCode").ToString(), " ")},
+                                {"1stEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeDetailCode").ToString()), dr.Item("1stEventTypeDetailCode").ToString(), " ")},
+                                {"1stReason", IIf(Not String.IsNullOrEmpty(dr.Item("1stReason").ToString()), dr.Item("1stReason").ToString(), " ")},
+                                {"1stAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("1stAlternative").ToString()), dr.Item("1stAlternative").ToString(), " ")},
+                                {"2ndEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventCategoryCode").ToString()), dr.Item("2ndEventCategoryCode").ToString(), " ")},
+                                {"2ndEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeCode").ToString()), dr.Item("2ndEventTypeCode").ToString(), " ")},
+                                {"2ndEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeDetailCode").ToString()), dr.Item("2ndEventTypeDetailCode").ToString(), " ")},
+                                {"2ndReason", IIf(Not String.IsNullOrEmpty(dr.Item("2ndReason").ToString()), dr.Item("2ndReason").ToString(), " ")},
+                                {"2ndAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("2ndAlternative").ToString()), dr.Item("2ndAlternative").ToString(), " ")},
+                                {"3rdEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventCategoryCode").ToString()), dr.Item("3rdEventCategoryCode").ToString(), " ")},
+                                {"3rdEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeCode").ToString()), dr.Item("3rdEventTypeCode").ToString(), " ")},
+                                {"3rdEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeDetailCode").ToString()), dr.Item("3rdEventTypeDetailCode").ToString(), " ")},
+                                {"3rdReason", IIf(Not String.IsNullOrEmpty(dr.Item("3rdReason").ToString()), dr.Item("3rdReason").ToString(), " ")},
+                                {"3rdAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("3rdAlternative").ToString()), dr.Item("3rdAlternative").ToString(), " ")}
                                 })
             'MsgBox("Insert Data Success !", , "Insert Data Success")
         Catch ex As Exception
@@ -4002,7 +4017,22 @@ Public Class uclServiceLog_Asur
                                 {"PolicyAccountID", IIf(Not String.IsNullOrEmpty(dr.Item("PolicyAccountID").ToString()), dr.Item("PolicyAccountID").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
                                 {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
-                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")}
+                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")},
+                                {"1stEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventCategoryCode").ToString()), dr.Item("1stEventCategoryCode").ToString(), " ")},
+                                {"1stEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeCode").ToString()), dr.Item("1stEventTypeCode").ToString(), " ")},
+                                {"1stEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeDetailCode").ToString()), dr.Item("1stEventTypeDetailCode").ToString(), " ")},
+                                {"1stReason", IIf(Not String.IsNullOrEmpty(dr.Item("1stReason").ToString()), dr.Item("1stReason").ToString(), " ")},
+                                {"1stAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("1stAlternative").ToString()), dr.Item("1stAlternative").ToString(), " ")},
+                                {"2ndEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventCategoryCode").ToString()), dr.Item("2ndEventCategoryCode").ToString(), " ")},
+                                {"2ndEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeCode").ToString()), dr.Item("2ndEventTypeCode").ToString(), " ")},
+                                {"2ndEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeDetailCode").ToString()), dr.Item("2ndEventTypeDetailCode").ToString(), " ")},
+                                {"2ndReason", IIf(Not String.IsNullOrEmpty(dr.Item("2ndReason").ToString()), dr.Item("2ndReason").ToString(), " ")},
+                                {"2ndAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("2ndAlternative").ToString()), dr.Item("2ndAlternative").ToString(), " ")},
+                                {"3rdEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventCategoryCode").ToString()), dr.Item("3rdEventCategoryCode").ToString(), " ")},
+                                {"3rdEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeCode").ToString()), dr.Item("3rdEventTypeCode").ToString(), " ")},
+                                {"3rdEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeDetailCode").ToString()), dr.Item("3rdEventTypeDetailCode").ToString(), " ")},
+                                {"3rdReason", IIf(Not String.IsNullOrEmpty(dr.Item("3rdReason").ToString()), dr.Item("3rdReason").ToString(), " ")},
+                                {"3rdAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("3rdAlternative").ToString()), dr.Item("3rdAlternative").ToString(), " ")}
                                 })
             MsgBox("Update Data Success !", , "Update Data Success")
         Catch ex As Exception
@@ -4269,6 +4299,25 @@ Public Class uclServiceLog_Asur
         cbEventDetail.DataBindings.Remove(cbEventDetail.DataBindings.Item("SelectedValue"))
         cbEventTypeDetail.DataBindings.Remove(cbEventTypeDetail.DataBindings.Item("SelectedValue"))
         cbReceiver.DataBindings.Remove(cbReceiver.DataBindings.Item("SelectedValue"))
+
+        ' Remove data bindings for new enquiry controls
+        cb1stEventCat.DataBindings.Remove(cb1stEventCat.DataBindings.Item("SelectedValue"))
+        cb1stEventDetail.DataBindings.Remove(cb1stEventDetail.DataBindings.Item("SelectedValue"))
+        cb1stEventTypeDetail.DataBindings.Remove(cb1stEventTypeDetail.DataBindings.Item("SelectedValue"))
+        txt1stReason.DataBindings.Remove(txt1stReason.DataBindings.Item("Text"))
+        txt1stAlternative.DataBindings.Remove(txt1stAlternative.DataBindings.Item("Text"))
+
+        cb2ndEventCat.DataBindings.Remove(cb2ndEventCat.DataBindings.Item("SelectedValue"))
+        cb2ndEventDetail.DataBindings.Remove(cb2ndEventDetail.DataBindings.Item("SelectedValue"))
+        cb2ndEventTypeDetail.DataBindings.Remove(cb2ndEventTypeDetail.DataBindings.Item("SelectedValue"))
+        txt2ndReason.DataBindings.Remove(txt2ndReason.DataBindings.Item("Text"))
+        txt2ndAlternative.DataBindings.Remove(txt2ndAlternative.DataBindings.Item("Text"))
+
+        cb3rdEventCat.DataBindings.Remove(cb3rdEventCat.DataBindings.Item("SelectedValue"))
+        cb3rdEventDetail.DataBindings.Remove(cb3rdEventDetail.DataBindings.Item("SelectedValue"))
+        cb3rdEventTypeDetail.DataBindings.Remove(cb3rdEventTypeDetail.DataBindings.Item("SelectedValue"))
+        txt3rdReason.DataBindings.Remove(txt3rdReason.DataBindings.Item("Text"))
+        txt3rdAlternative.DataBindings.Remove(txt3rdAlternative.DataBindings.Item("Text"))
 
         dtInitial.DataBindings.Remove(dtInitial.DataBindings.Item("Value"))
 

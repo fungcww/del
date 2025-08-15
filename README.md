@@ -314,17 +314,24 @@ This project involves enhancing the Service Event functionality in the CS2005 sy
   - [ ] Test event flow
 
 ### **Database Integration (Sep 10-12)**
-- [ ] **Schema Updates (Sep 10)**
-  - [ ] Add new columns for enquiry data
-  - [ ] Update stored procedures
-  - [ ] Modify data access layer
-  - [ ] Test database changes
+- [x] **Schema Updates (Sep 10)**
+  - [x] Add new columns for enquiry data
+  - [x] Update stored procedures
+  - [x] Modify data access layer
+  - [x] Test database changes
 
 - [ ] **Data Migration (Sep 11-12)**
   - [ ] Plan data migration strategy
   - [ ] Create migration scripts
   - [ ] Test migration process
   - [ ] Validate data integrity
+
+### **Data Persistence Implementation (Sep 13-14)**
+- [x] **Save Logic Implementation (Sep 13)**
+  - [x] Update InsertServiceLog function to include new enquiry fields
+  - [x] Update UpdateServiceLog function to include new enquiry fields
+  - [x] Add data binding cleanup for new controls in Refresh_ServiceLog
+  - [x] Ensure separate saving for each enquiry tab data
 
 ### **Testing & Validation (Sep 17-22)**
 - [ ] **Unit Testing (Sep 17-18)**
