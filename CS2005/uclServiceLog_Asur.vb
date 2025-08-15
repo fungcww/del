@@ -36,6 +36,11 @@ Public Class uclServiceLog_Asur
     'oliver 2024-8-6 added for Com 6
     Private blnIsHnwPolicy As Boolean = False
 
+    ' Track which enquiry tabs have been visited to preserve data
+    Private bln1stEnquiryVisited As Boolean = False
+    Private bln2ndEnquiryVisited As Boolean = False
+    Private bln3rdEnquiryVisited As Boolean = False
+
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
     Private blnIsNBMPolicy As Boolean = False
     Private blnIsEnableNBMPolicyPanel As Boolean = False
@@ -1862,7 +1867,15 @@ Public Class uclServiceLog_Asur
 
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
     Private Sub uclServiceLog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Initialize enquiry tab visited flags
+        bln1stEnquiryVisited = False
+        bln2ndEnquiryVisited = False
+        bln3rdEnquiryVisited = False
+        
         CheckEnableNBMPanel()
+        
+        ' Since 1st Enquiry is the default selected tab, mark it as visited
+        bln1stEnquiryVisited = True
     End Sub
 
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
@@ -3111,6 +3124,30 @@ Public Class uclServiceLog_Asur
         End If
     End Sub
 
+    Private Sub tabEnquiry_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles tabEnquiry.SelectedIndexChanged
+        ' Handle tab switching to clear/preserve data appropriately
+        Select Case tabEnquiry.SelectedIndex
+            Case 0 ' 1st Enquiry
+                If Not bln1stEnquiryVisited Then
+                    ' First time visiting 1st Enquiry - clear all fields
+                    Clear1stEnquiryFields()
+                    bln1stEnquiryVisited = True
+                End If
+            Case 1 ' 2nd Enquiry
+                If Not bln2ndEnquiryVisited Then
+                    ' First time visiting 2nd Enquiry - clear all fields
+                    Clear2ndEnquiryFields()
+                    bln2ndEnquiryVisited = True
+                End If
+            Case 2 ' 3rd Enquiry
+                If Not bln3rdEnquiryVisited Then
+                    ' First time visiting 3rd Enquiry - clear all fields
+                    Clear3rdEnquiryFields()
+                    bln3rdEnquiryVisited = True
+                End If
+        End Select
+    End Sub
+
     Private Sub Set1stType()
         Dim strCat As String
         strCat = cb1stEventCat.SelectedValue.ToString
@@ -3232,6 +3269,76 @@ Public Class uclServiceLog_Asur
             cb3rdEventTypeDetail.SelectedIndex = -1
             cb3rdEventTypeDetail.SelectedIndex = 0
         End If
+    End Sub
+
+    ' Helper functions to clear enquiry fields
+    Private Sub Clear1stEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb1stEventCat.DataBindings.Clear()
+        cb1stEventDetail.DataBindings.Clear()
+        cb1stEventTypeDetail.DataBindings.Clear()
+        txt1stReason.DataBindings.Clear()
+        txt1stAlternative.DataBindings.Clear()
+        
+        ' Clear the fields
+        cb1stEventCat.SelectedIndex = -1
+        cb1stEventDetail.SelectedIndex = -1
+        cb1stEventTypeDetail.SelectedIndex = -1
+        txt1stReason.Text = ""
+        txt1stAlternative.Text = ""
+        
+        ' Re-establish data bindings
+        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+    End Sub
+
+    Private Sub Clear2ndEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb2ndEventCat.DataBindings.Clear()
+        cb2ndEventDetail.DataBindings.Clear()
+        cb2ndEventTypeDetail.DataBindings.Clear()
+        txt2ndReason.DataBindings.Clear()
+        txt2ndAlternative.DataBindings.Clear()
+        
+        ' Clear the fields
+        cb2ndEventCat.SelectedIndex = -1
+        cb2ndEventDetail.SelectedIndex = -1
+        cb2ndEventTypeDetail.SelectedIndex = -1
+        txt2ndReason.Text = ""
+        txt2ndAlternative.Text = ""
+        
+        ' Re-establish data bindings
+        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+    End Sub
+
+    Private Sub Clear3rdEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb3rdEventCat.DataBindings.Clear()
+        cb3rdEventDetail.DataBindings.Clear()
+        cb3rdEventTypeDetail.DataBindings.Clear()
+        txt3rdReason.DataBindings.Clear()
+        txt3rdAlternative.DataBindings.Clear()
+        
+        ' Clear the fields
+        cb3rdEventCat.SelectedIndex = -1
+        cb3rdEventDetail.SelectedIndex = -1
+        cb3rdEventTypeDetail.SelectedIndex = -1
+        txt3rdReason.Text = ""
+        txt3rdAlternative.Text = ""
+        
+        ' Re-establish data bindings
+        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
     End Sub
 
     Private Sub dtReminder_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtReminder.ValueChanged
@@ -4277,6 +4384,11 @@ Public Class uclServiceLog_Asur
 
     'updated at 2023-9-22 by oliver for Customer Level Search Issue
     Public Sub Refresh_ServiceLog()
+
+        ' Reset enquiry tab visited flags when refreshing service log
+        bln1stEnquiryVisited = False
+        bln2ndEnquiryVisited = False
+        bln3rdEnquiryVisited = False
 
         dsSrvLog.Tables("ServiceEventDetail").Clear()
         If blnIsParallelMode AndAlso blnIsBothComp AndAlso Not String.IsNullOrEmpty(strIDNumber) AndAlso Not strIDNumber.ToUpper.StartsWith("XXX") Then

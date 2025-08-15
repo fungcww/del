@@ -333,6 +333,13 @@ This project involves enhancing the Service Event functionality in the CS2005 sy
   - [x] Add data binding cleanup for new controls in Refresh_ServiceLog
   - [x] Ensure separate saving for each enquiry tab data
 
+- [x] **Tab Navigation Logic Implementation (Sep 14)**
+  - [x] Add TabControl event handler for SelectedIndexChanged
+  - [x] Implement logic to clear fields when first visiting each enquiry tab
+  - [x] Add tracking variables to preserve data when navigating between tabs
+  - [x] Ensure data is preserved when returning to previously filled tabs
+  - [x] Reset visited flags when service log is refreshed
+
 ### **Testing & Validation (Sep 17-22)**
 - [ ] **Unit Testing (Sep 17-18)**
   - [ ] Test individual control functionality
