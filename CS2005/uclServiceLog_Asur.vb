@@ -2418,6 +2418,55 @@ Public Class uclServiceLog_Asur
             If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("EventSourceMedium") Then
                 dsSrvLog.Tables("ServiceEventDetail").Columns.Add("EventSourceMedium", GetType(String))
             End If
+
+            ' Add new columns for enquiry tabs
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stEventCategoryCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stEventCategoryCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stEventTypeCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stEventTypeCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stEventTypeDetailCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stEventTypeDetailCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stReason") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stReason", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stAlternative") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stAlternative", GetType(String))
+            End If
+
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("2ndEventCategoryCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("2ndEventCategoryCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("2ndEventTypeCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("2ndEventTypeCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("2ndEventTypeDetailCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("2ndEventTypeDetailCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("2ndReason") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("2ndReason", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("2ndAlternative") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("2ndAlternative", GetType(String))
+            End If
+
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdEventCategoryCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdEventCategoryCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdEventTypeCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdEventTypeCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdEventTypeDetailCode") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdEventTypeDetailCode", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdReason") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdReason", GetType(String))
+            End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdAlternative") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdAlternative", GetType(String))
+            End If
         Catch ex As Exception
             Throw
         End Try
