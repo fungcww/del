@@ -785,7 +785,7 @@ Public Class uclServiceLog_Asur
         Me.GroupBox2.Controls.Add(Me.lbReceiver)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.chkAES)
-        Me.GroupBox2.Location = New System.Drawing.Point(7, 368)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 418)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -947,7 +947,7 @@ Public Class uclServiceLog_Asur
         Me.grpServiceEvent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grpServiceEvent.Name = "grpServiceEvent"
         Me.grpServiceEvent.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.grpServiceEvent.Size = New System.Drawing.Size(559, 300)
+        Me.grpServiceEvent.Size = New System.Drawing.Size(559, 350)
         Me.grpServiceEvent.TabIndex = 76
         Me.grpServiceEvent.TabStop = False
         Me.grpServiceEvent.Text = "Service Event"
@@ -1037,7 +1037,7 @@ Public Class uclServiceLog_Asur
         Me.tabEnquiry.Location = New System.Drawing.Point(18, 60)
         Me.tabEnquiry.Name = "tabEnquiry"
         Me.tabEnquiry.SelectedIndex = 0
-        Me.tabEnquiry.Size = New System.Drawing.Size(533, 220)
+        Me.tabEnquiry.Size = New System.Drawing.Size(533, 270)
         Me.tabEnquiry.TabIndex = 11
         '
         'tab1stEnquiry
@@ -1055,7 +1055,7 @@ Public Class uclServiceLog_Asur
         Me.tab1stEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab1stEnquiry.Name = "tab1stEnquiry"
         Me.tab1stEnquiry.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab1stEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab1stEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab1stEnquiry.TabIndex = 0
         Me.tab1stEnquiry.Text = "1st Enquiry"
         Me.tab1stEnquiry.UseVisualStyleBackColor = True
@@ -1156,7 +1156,7 @@ Public Class uclServiceLog_Asur
         Me.tab2ndEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab2ndEnquiry.Name = "tab2ndEnquiry"
         Me.tab2ndEnquiry.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab2ndEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab2ndEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab2ndEnquiry.TabIndex = 1
         Me.tab2ndEnquiry.Text = "2nd Enquiry"
         Me.tab2ndEnquiry.UseVisualStyleBackColor = True
@@ -1257,7 +1257,7 @@ Public Class uclServiceLog_Asur
         Me.tab3rdEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab3rdEnquiry.Name = "tab3rdEnquiry"
         Me.tab3rdEnquiry.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab3rdEnquiry.Size = New System.Drawing.Size(525, 194)
+        Me.tab3rdEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab3rdEnquiry.TabIndex = 2
         Me.tab3rdEnquiry.Text = "3rd Enquiry"
         Me.tab3rdEnquiry.UseVisualStyleBackColor = True
@@ -1360,7 +1360,7 @@ Public Class uclServiceLog_Asur
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(837, 476)
+        Me.GroupBox1.Size = New System.Drawing.Size(837, 526)
         Me.GroupBox1.TabIndex = 82
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alert and Notes"
