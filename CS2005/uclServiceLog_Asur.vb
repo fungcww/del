@@ -1876,6 +1876,9 @@ Public Class uclServiceLog_Asur
         
         ' Since 1st Enquiry is the default selected tab, mark it as visited
         bln1stEnquiryVisited = True
+        
+        ' Manage enquiry tab controls on form load
+        ManageEnquiryTabControls()
     End Sub
 
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
@@ -3287,12 +3290,14 @@ Public Class uclServiceLog_Asur
         txt1stReason.Text = ""
         txt1stAlternative.Text = ""
         
-        ' Re-establish data bindings
-        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+        ' Re-establish data bindings only if in new mode
+        If blnIsNewMode Then
+            cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+            cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+            cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+        End If
     End Sub
 
     Private Sub Clear2ndEnquiryFields()
@@ -3310,12 +3315,14 @@ Public Class uclServiceLog_Asur
         txt2ndReason.Text = ""
         txt2ndAlternative.Text = ""
         
-        ' Re-establish data bindings
-        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+        ' Re-establish data bindings only if in new mode
+        If blnIsNewMode Then
+            cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+            cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+            cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+        End If
     End Sub
 
     Private Sub Clear3rdEnquiryFields()
@@ -3333,12 +3340,14 @@ Public Class uclServiceLog_Asur
         txt3rdReason.Text = ""
         txt3rdAlternative.Text = ""
         
-        ' Re-establish data bindings
-        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+        ' Re-establish data bindings only if in new mode
+        If blnIsNewMode Then
+            cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+            cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+            cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+            txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+            txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+        End If
     End Sub
 
     Private Sub dtReminder_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtReminder.ValueChanged
@@ -3450,12 +3459,18 @@ Public Class uclServiceLog_Asur
 
         'default enable for new Service Log
         chkFCR.Checked = True
+        
+        ' Enable enquiry tab controls for new mode
+        ManageEnquiryTabControls()
     End Sub
 
     'btnCancel_Click() - Cancel the modifications since last acceptchanges() 
     Private Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         blnIsNewMode = False
         CancelServiceLog()
+        
+        ' Disable enquiry tab controls when exiting new mode
+        ManageEnquiryTabControls()
     End Sub
 
     'btnSave_Click() - Synchronize the SQL table with modifications in dataset
@@ -3710,6 +3725,76 @@ Public Class uclServiceLog_Asur
             'C001 - End
         End If
 
+        ' Manage enquiry tab controls based on new mode
+        ManageEnquiryTabControls()
+    End Sub
+
+    ' Manage enquiry tab controls - enable only in new mode
+    Private Sub ManageEnquiryTabControls()
+        ' Enable enquiry tab controls only when in new mode
+        Dim enableEnquiryControls As Boolean = blnIsNewMode
+        
+        ' 1st Enquiry controls
+        cb1stEventCat.Enabled = enableEnquiryControls
+        cb1stEventDetail.Enabled = enableEnquiryControls
+        cb1stEventTypeDetail.Enabled = enableEnquiryControls
+        txt1stReason.Enabled = enableEnquiryControls
+        txt1stAlternative.Enabled = enableEnquiryControls
+        
+        ' 2nd Enquiry controls
+        cb2ndEventCat.Enabled = enableEnquiryControls
+        cb2ndEventDetail.Enabled = enableEnquiryControls
+        cb2ndEventTypeDetail.Enabled = enableEnquiryControls
+        txt2ndReason.Enabled = enableEnquiryControls
+        txt2ndAlternative.Enabled = enableEnquiryControls
+        
+        ' 3rd Enquiry controls
+        cb3rdEventCat.Enabled = enableEnquiryControls
+        cb3rdEventDetail.Enabled = enableEnquiryControls
+        cb3rdEventTypeDetail.Enabled = enableEnquiryControls
+        txt3rdReason.Enabled = enableEnquiryControls
+        txt3rdAlternative.Enabled = enableEnquiryControls
+        
+        ' Set visual appearance for disabled state
+        If Not enableEnquiryControls Then
+            ' Make disabled controls appear readonly
+            cb1stEventCat.BackColor = System.Drawing.Color.LightGray
+            cb1stEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb1stEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt1stReason.BackColor = System.Drawing.Color.LightGray
+            txt1stAlternative.BackColor = System.Drawing.Color.LightGray
+            
+            cb2ndEventCat.BackColor = System.Drawing.Color.LightGray
+            cb2ndEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt2ndReason.BackColor = System.Drawing.Color.LightGray
+            txt2ndAlternative.BackColor = System.Drawing.Color.LightGray
+            
+            cb3rdEventCat.BackColor = System.Drawing.Color.LightGray
+            cb3rdEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt3rdReason.BackColor = System.Drawing.Color.LightGray
+            txt3rdAlternative.BackColor = System.Drawing.Color.LightGray
+        Else
+            ' Reset to normal appearance for enabled state
+            cb1stEventCat.BackColor = System.Drawing.Color.White
+            cb1stEventDetail.BackColor = System.Drawing.Color.White
+            cb1stEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt1stReason.BackColor = System.Drawing.Color.White
+            txt1stAlternative.BackColor = System.Drawing.Color.White
+            
+            cb2ndEventCat.BackColor = System.Drawing.Color.White
+            cb2ndEventDetail.BackColor = System.Drawing.Color.White
+            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt2ndReason.BackColor = System.Drawing.Color.White
+            txt2ndAlternative.BackColor = System.Drawing.Color.White
+            
+            cb3rdEventCat.BackColor = System.Drawing.Color.White
+            cb3rdEventDetail.BackColor = System.Drawing.Color.White
+            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt3rdReason.BackColor = System.Drawing.Color.White
+            txt3rdAlternative.BackColor = System.Drawing.Color.White
+        End If
     End Sub
 
     'CheckTransferAES() - Check whether the case should be transferred to AES
@@ -4306,7 +4391,7 @@ Public Class uclServiceLog_Asur
                 serviceEventNumber = dr.Item("ServiceEventNumber").ToString()
             Else
                 serviceEventNumber = (CInt(maxServiceEventNumber) + 1).ToString
-            End If
+            End If/
             If Not String.IsNullOrEmpty(serviceEventNumber) Then
                 CheckNBMPolicyRadioButton(policyAccountID, serviceEventNumber, customerID)
             End If
@@ -4451,6 +4536,9 @@ Public Class uclServiceLog_Asur
         dtReminder.DataBindings.Remove(dtReminder.DataBindings.Item("Value"))
         InitForm()
         CheckEnableNBMPanel()
+        
+        ' Manage enquiry tab controls after refresh
+        ManageEnquiryTabControls()
 
     End Sub
 

@@ -340,6 +340,15 @@ This project involves enhancing the Service Event functionality in the CS2005 sy
   - [x] Ensure data is preserved when returning to previously filled tabs
   - [x] Reset visited flags when service log is refreshed
 
+### **Readonly Mode and New Record Enhancement (Sep 15)**
+- [x] **Readonly Mode Implementation (Sep 15)**
+  - [x] Add ManageEnquiryTabControls function to control tab editability
+  - [x] Make enquiry tabs readonly when viewing existing records (blnIsNewMode = False)
+  - [x] Enable enquiry tabs only when creating new service log records (blnIsNewMode = True)
+  - [x] Add visual feedback (gray background) for disabled controls
+  - [x] Integrate control management with CheckStatus, btnNew, btnCancel, and Refresh_ServiceLog
+  - [x] Fix data binding issues in Clear functions to prevent interference with existing records
+
 ### **Testing & Validation (Sep 17-22)**
 - [ ] **Unit Testing (Sep 17-18)**
   - [ ] Test individual control functionality
