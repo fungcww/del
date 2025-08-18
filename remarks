@@ -1,18 +1,85 @@
-        ' Remove data bindings for new enquiry controls
-        cb1stEventCat.DataBindings.Remove(cb1stEventCat.DataBindings.Item("SelectedValue"))
-        cb1stEventDetail.DataBindings.Remove(cb1stEventDetail.DataBindings.Item("SelectedValue"))
-        cb1stEventTypeDetail.DataBindings.Remove(cb1stEventTypeDetail.DataBindings.Item("SelectedValue"))
-        txt1stReason.DataBindings.Remove(txt1stReason.DataBindings.Item("Text"))
-        txt1stAlternative.DataBindings.Remove(txt1stAlternative.DataBindings.Item("Text"))
+            'C001 - Start
+            chkMCV.Enabled = False
+            'C001 - End
+        End If
 
-        cb2ndEventCat.DataBindings.Remove(cb2ndEventCat.DataBindings.Item("SelectedValue"))
-        cb2ndEventDetail.DataBindings.Remove(cb2ndEventDetail.DataBindings.Item("SelectedValue"))
-        cb2ndEventTypeDetail.DataBindings.Remove(cb2ndEventTypeDetail.DataBindings.Item("SelectedValue"))
-        txt2ndReason.DataBindings.Remove(txt2ndReason.DataBindings.Item("Text"))
-        txt2ndAlternative.DataBindings.Remove(txt2ndAlternative.DataBindings.Item("Text"))
+    End Sub
 
-        cb3rdEventCat.DataBindings.Remove(cb3rdEventCat.DataBindings.Item("SelectedValue"))
-        cb3rdEventDetail.DataBindings.Remove(cb3rdEventDetail.DataBindings.Item("SelectedValue"))
-        cb3rdEventTypeDetail.DataBindings.Remove(cb3rdEventTypeDetail.DataBindings.Item("SelectedValue"))
-        txt3rdReason.DataBindings.Remove(txt3rdReason.DataBindings.Item("Text"))
-        txt3rdAlternative.DataBindings.Remove(txt3rdAlternative.DataBindings.Item("Text"))
+->
+
+            'C001 - Start
+            chkMCV.Enabled = False
+            'C001 - End
+        End If
+
+        ' Manage enquiry tab controls based on new mode
+        ManageEnquiryTabControls()
+    End Sub
+
+    ' Manage enquiry tab controls - enable only in new mode
+    Private Sub ManageEnquiryTabControls()
+        ' Enable enquiry tab controls only when in new mode
+        Dim enableEnquiryControls As Boolean = blnIsNewMode
+        
+        ' 1st Enquiry controls
+        cb1stEventCat.Enabled = enableEnquiryControls
+        cb1stEventDetail.Enabled = enableEnquiryControls
+        cb1stEventTypeDetail.Enabled = enableEnquiryControls
+        txt1stReason.Enabled = enableEnquiryControls
+        txt1stAlternative.Enabled = enableEnquiryControls
+        
+        ' 2nd Enquiry controls
+        cb2ndEventCat.Enabled = enableEnquiryControls
+        cb2ndEventDetail.Enabled = enableEnquiryControls
+        cb2ndEventTypeDetail.Enabled = enableEnquiryControls
+        txt2ndReason.Enabled = enableEnquiryControls
+        txt2ndAlternative.Enabled = enableEnquiryControls
+        
+        ' 3rd Enquiry controls
+        cb3rdEventCat.Enabled = enableEnquiryControls
+        cb3rdEventDetail.Enabled = enableEnquiryControls
+        cb3rdEventTypeDetail.Enabled = enableEnquiryControls
+        txt3rdReason.Enabled = enableEnquiryControls
+        txt3rdAlternative.Enabled = enableEnquiryControls
+        
+        ' Set visual appearance for disabled state
+        If Not enableEnquiryControls Then
+            ' Make disabled controls appear readonly
+            cb1stEventCat.BackColor = System.Drawing.Color.LightGray
+            cb1stEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb1stEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt1stReason.BackColor = System.Drawing.Color.LightGray
+            txt1stAlternative.BackColor = System.Drawing.Color.LightGray
+            
+            cb2ndEventCat.BackColor = System.Drawing.Color.LightGray
+            cb2ndEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt2ndReason.BackColor = System.Drawing.Color.LightGray
+            txt2ndAlternative.BackColor = System.Drawing.Color.LightGray
+            
+            cb3rdEventCat.BackColor = System.Drawing.Color.LightGray
+            cb3rdEventDetail.BackColor = System.Drawing.Color.LightGray
+            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.LightGray
+            txt3rdReason.BackColor = System.Drawing.Color.LightGray
+            txt3rdAlternative.BackColor = System.Drawing.Color.LightGray
+        Else
+            ' Reset to normal appearance for enabled state
+            cb1stEventCat.BackColor = System.Drawing.Color.White
+            cb1stEventDetail.BackColor = System.Drawing.Color.White
+            cb1stEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt1stReason.BackColor = System.Drawing.Color.White
+            txt1stAlternative.BackColor = System.Drawing.Color.White
+            
+            cb2ndEventCat.BackColor = System.Drawing.Color.White
+            cb2ndEventDetail.BackColor = System.Drawing.Color.White
+            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt2ndReason.BackColor = System.Drawing.Color.White
+            txt2ndAlternative.BackColor = System.Drawing.Color.White
+            
+            cb3rdEventCat.BackColor = System.Drawing.Color.White
+            cb3rdEventDetail.BackColor = System.Drawing.Color.White
+            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.White
+            txt3rdReason.BackColor = System.Drawing.Color.White
+            txt3rdAlternative.BackColor = System.Drawing.Color.White
+        End If
+    End Sub
