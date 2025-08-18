@@ -36,7 +36,7 @@ Public Class uclServiceLog_Asur
 
     'oliver 2024-8-6 added for Com 6
     Private blnIsHnwPolicy As Boolean = False
-'Service log enhancement
+    'Service log enhancement
     ' Track which enquiry tabs have been visited to preserve data
     Private bln1stEnquiryVisited As Boolean = False
     Private bln2ndEnquiryVisited As Boolean = False
@@ -1858,19 +1858,19 @@ Public Class uclServiceLog_Asur
         txtCustomerID.DataBindings.Clear()
         chkIdVerify.DataBindings.Clear()
         'Service Log enhanement
-        
+
         cb1stEventCat.DataBindings.Clear()
         cb1stEventDetail.DataBindings.Clear()
         cb1stEventTypeDetail.DataBindings.Clear()
         txt1stReason.DataBindings.Clear()
         txt1stAlternative.DataBindings.Clear()
-        
+
         cb2ndEventCat.DataBindings.Clear()
         cb2ndEventDetail.DataBindings.Clear()
         cb2ndEventTypeDetail.DataBindings.Clear()
         txt2ndReason.DataBindings.Clear()
         txt2ndAlternative.DataBindings.Clear()
-        
+
         cb3rdEventCat.DataBindings.Clear()
         cb3rdEventDetail.DataBindings.Clear()
         cb3rdEventTypeDetail.DataBindings.Clear()
@@ -1897,7 +1897,7 @@ Public Class uclServiceLog_Asur
         'Service log enhancement
         ' Since 1st Enquiry is the default selected tab, mark it as visited
         bln1stEnquiryVisited = True
-        
+
         ' Manage enquiry tab controls on form load
         ManageEnquiryTabControls()
         '
@@ -2084,13 +2084,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToGetSerLogByIdCard(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_HK_SERLOG_BY_IDCARD"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_ASSUR_SERLOG_BY_IDCARD"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_ASSUR_SERLOG_BY_IDCARD"
         Else
@@ -2101,13 +2101,13 @@ Public Class uclServiceLog_Asur
 
     'oliver 2024-8-6 added for Com 6
     Private Sub SetCompanyNameAndBusiIdToGetBMUSerLogByIdCard(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_HK_BMU_SERLOG_BY_IDCARD"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_ASSUR_SERLOG_BY_IDCARD"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_ASSUR_SERLOG_BY_IDCARD"
         Else
@@ -2127,13 +2127,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToGetSerLogByPolicyNo(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_HK_SERLOG_BY_POLICYNO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_ASSUR_SERLOG_BY_POLICYNO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_ASSUR_SERLOG_BY_POLICYNO"
         Else
@@ -2153,13 +2153,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToInsertSerLog(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "INSERT_HK_SERLOG_INFO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "INSERT_ASSUR_SERLOG_INFO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "INSERT_ASSUR_SERLOG_INFO"
         Else
@@ -2179,13 +2179,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToUpdateSerLog(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "UPDATED_HK_SERLOG_INFO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "UPDATED_ASSUR_SERLOG_INFO"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "UPDATED_ASSUR_SERLOG_INFO"
         Else
@@ -2205,13 +2205,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToGetSerLogRelatedTable(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_SERLOG_INFO_RELATED_TABLE"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_SERLOG_INFO_RELATED_TABLE"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_SERLOG_INFO_RELATED_TABLE"
         Else
@@ -2231,13 +2231,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToGetSerLogCustomerTable(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_SERLOG_INFO_CUSTOMER_BY_CUSTOMERID"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_SERLOG_INFO_CUSTOMER_BY_CUSTOMERID"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_SERLOG_INFO_CUSTOMER_BY_CUSTOMERID"
         Else
@@ -2257,13 +2257,13 @@ Public Class uclServiceLog_Asur
     ''' <param name="companyName">Represents the company name to access different databases</param>
     ''' <param name="busiId">Represents the busiId to access different API</param>
     Private Sub SetCompanyNameAndBusiIdToGetSerLogUpdateTime(ByVal companyType As String, ByRef companyName As String, ByRef busiId As String)
-        If (_CompanyID.Equals(COMPANY_NAME_BERMUDA)) Then
+        If companyType = COMPANY_NAME_BERMUDA Then
             companyName = "HK"
             busiId = "GET_SERLOG_UPDATETIME"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE Then
             companyName = "LAC"
             busiId = "GET_SERLOG_UPDATETIME"
-        ElseIf (_CompanyID.Equals(COMPANY_NAME_ASSURANCE2)) Then
+        ElseIf companyType = COMPANY_NAME_ASSURANCE2 Then
             companyName = "LAH"
             busiId = "GET_SERLOG_UPDATETIME"
         Else
@@ -2643,9 +2643,9 @@ Public Class uclServiceLog_Asur
             dgSrvLog.DataSource = dsSrvLog.Tables("ServiceEventDetail")
 
             'oliver 2024-4-24 udpated for Table_Relocate_Sprint13
-            Dim dtPiAuth As DataTable = New DataTable
-            If strPolicy IsNot Nothing AndAlso strPolicy.Length > 0 Then
-                dtPiAuth = getPiAuth(strPolicy)
+            Dim dtPiAuth As New DataTable
+            If Not String.IsNullOrEmpty(strPolicy) Then
+                dtPiAuth = GetPiAuth(strPolicy)
             End If
             If dtPiAuth.Rows.Count > 0 Then
                 dtPiAuth.Columns("CustomerID").ColumnName = "PI ID"
@@ -2691,35 +2691,35 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
-        
+
         cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
+
         cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
-        
+
         cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
+
         cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
-        
+
         cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
@@ -2754,35 +2754,35 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
-        
+
         cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
+
         cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
-        
+
         cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
+
         cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
-        
+
         cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
-        
+
         cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
@@ -2831,55 +2831,55 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
         cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-        
+
         cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
         cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-        
+
         cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-        
+
         txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
         txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-        
+
         ' 2nd Enquiry
         cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
         cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-        
+
         cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
         cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-        
+
         cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-        
+
         txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
         txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-        
+
         ' 3rd Enquiry
         cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
         cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-        
+
         cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
         cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-        
+
         cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-        
+
         txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
         txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
         '
@@ -4000,9 +4000,9 @@ Public Class uclServiceLog_Asur
                 SetCompanyNameAndBusiIdToInsertSerLog(COMPANY_NAME_ASSURANCE, companyName, busiId)
             End If
         Else
-            If _CompanyID = COMPANY_NAME_BERMUDA Then
+            If strCompany = COMPANY_NAME_BERMUDA Then
                 SetCompanyNameAndBusiIdToInsertSerLog(COMPANY_NAME_BERMUDA, companyName, busiId)
-            ElseIf _CompanyID = COMPANY_NAME_ASSURANCE OrElse _CompanyID = COMPANY_NAME_ASSURANCE2 Then
+            ElseIf strCompany = COMPANY_NAME_ASSURANCE OrElse strCompany = COMPANY_NAME_ASSURANCE2 Then
                 SetCompanyNameAndBusiIdToInsertSerLog(COMPANY_NAME_ASSURANCE, companyName, busiId)
             Else
                 SetCompanyNameAndBusiIdToInsertSerLog(COMPANY_NAME_BERMUDA, companyName, busiId)
@@ -4702,58 +4702,23 @@ Public Class uclServiceLog_Asur
     End Function
 
     'oliver 2024-4-24 added for Table_Relocate_Sprint13
-    Private Function getPiAuth(ByVal strPolicy As String) As DataTable
-        Dim ds As DataSet = New DataSet()
-        Dim dt As DataTable = New DataTable()
+    Private Function GetPiAuth(ByVal strPolicy As String) As DataTable
         Try
-            ds = APIServiceBL.CallAPIBusi(getCompanyCode(strCompany), "GET_PI_AUTH",
-                        New Dictionary(Of String, String) From {
-                        {"strPolicyNo", strPolicy}
-                        })
+            Dim ds As DataSet = APIServiceBL.CallAPIBusi(getCompanyCode(strCompany), "GET_PI_AUTH", New Dictionary(Of String, String) From {
+                {"strPolicyNo", strPolicy}
+            })
             If ds.Tables.Count > 0 Then
-                dt = ds.Tables(0)
+                Return ds.Tables(0).Copy()
             End If
-            Return dt
-
         Catch ex As Exception
             HandleGlobalException(ex, "CRSAPI Retrieve Error." & vbCrLf & ex.Message)
         End Try
-        Return dt
 
+        Return New DataTable()
     End Function
-
-    '   Private Function getPiAuth() As DataTable
-    '       Try
-    '           If Not strPolicy = "" Then
-    '               Dim dsReturn As New DataSet
-    '               If Not sqlConn2.State = ConnectionState.Open Then
-    '                   sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
-    '                   sqlConn2.Open()
-    '               End If
-    '               'daTmp = New SqlDataAdapter("sp_crs_get_auth_policy_pi", sqlConn2)
-    '               Dim strSql = "select csw_poli_rel.CustomerID, Customer.EmailAddr, crs_auth_policy_pi.LastUpdateDate, crs_auth_policy_pi.[Enable] from csw_poli_rel with (nolock)" &
-    '" inner join Customer with (nolock) on Customer.CustomerID = csw_poli_rel.CustomerID" &
-    '" left outer join crs_auth_policy_pi with (nolock) on csw_poli_rel.PolicyAccountID = crs_auth_policy_pi.PolicyAccountID and csw_poli_rel.CustomerID = crs_auth_policy_pi.PICustID" &
-    '" where (csw_poli_rel.PolicyAccountID = @PolicyAccountID)" &
-    '" and csw_poli_rel.PolicyRelateCode = 'PI'"
-    '               daTmp = New SqlDataAdapter(strSql, sqlConn2)
-    '               daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
-    '               'daTmp.SelectCommand.Parameters.Add("@PICustID", SqlDbType.VarChar, 20).Value = ""
-    '               'daTmp.SelectCommand.Parameters.Add("@Enable", SqlDbType.Char, 1).Value = ""
-    '               'daTmp.SelectCommand.CommandType = CommandType.StoredProcedure
-    '               dsReturn = New DataSet
-    '               daTmp.Fill(dsReturn)
-    '               sqlConn2.Close()
-    '               Return dsReturn.Tables(0)
-    '           End If
-    '       Catch ex As Exception
-
-    '       End Try
-    '   End function
 
     'oliver 2024-4-24 added for Table_Relocate_Sprint13
     Private Function UpdatePiAuth(ByVal policyAccountID As String, ByVal piCustID As String, ByVal enable As String, ByVal usr As String) As Boolean
-        Dim isUpdate As Boolean = False
         Try
             APIServiceBL.ExecAPIBusi(getCompanyCode(strCompany), "UPDATE_PI_AUTH",
                                 New Dictionary(Of String, String) From {
@@ -4762,135 +4727,116 @@ Public Class uclServiceLog_Asur
                                 {"Enable", enable},
                                 {"usr", usr}
                                 })
-            isUpdate = True
+            Return True
         Catch ex As Exception
             HandleGlobalException(ex, "Error occurs when updating the comments. Error:  " & ex.Message)
         End Try
-        Return isUpdate
+        Return False
     End Function
 
-    'Private Function updatePiAuth() As Boolean
-    '    Try
-    '        Dim dsReturn As New DataSet
-    '        If Not sqlConn2.State = ConnectionState.Open Then
-    '            sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
-    '            sqlConn2.Open()
-    '        End If
-    '        Dim cmd = New SqlClient.SqlCommand("sp_crs_update_auth_policy_pi", sqlConn2)
-    '        cmd.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
-    '        cmd.Parameters.Add("@PICustID", SqlDbType.VarChar, 20).Value = sPiID
-    '        cmd.Parameters.Add("@Enable", SqlDbType.Char, 1).Value = "Y"
-    '        cmd.Parameters.Add("@usr", SqlDbType.VarChar, 20).Value = gsUser
-    '        cmd.CommandType = CommandType.StoredProcedure
-    '        cmd.ExecuteNonQuery()
-    '        sqlConn2.Close()
-    '    Catch ex As Exception
-    '        MessageBox.Show(ex.ToString)
-    '        MessageBox.Show(ex.Message)
-    '        Return False
-    '    End Try
-    '    Return True
-    'End Function
+    Private Function GetPiAuthOtp(customerID As String) As Dictionary(Of String, String)
+        Dim returnObj As New Dictionary(Of String, String)
 
-    Private Function getPiAuthOtp() As System.Collections.Generic.Dictionary(Of String, String)
-        Dim returnObj As New System.Collections.Generic.Dictionary(Of String, String)
-        Dim objclsPiAuthResponse As CRS_Util.clsJSONBusinessObj.clsPiAuthResponse
-        objclsPiAuthResponse = CRS_Util.clsJSONTool.CallPiAuthGenKey(sPiID, gsUser)
-
-        If Not objclsPiAuthResponse Is Nothing Then
-            If objclsPiAuthResponse.status.Equals("error") Then
-                MessageBox.Show("Fail to gen OTP with following error:" & objclsPiAuthResponse.error.message)
-            End If
-            If objclsPiAuthResponse.status.Equals("success") Then
-                returnObj.Add("otp", objclsPiAuthResponse.data.unlocKey)
-                returnObj.Add("expiry", objclsPiAuthResponse.data.expiry.Substring(0, 10))
-                returnObj.Add("expiryY", objclsPiAuthResponse.data.expiry.Substring(0, 4))
-                returnObj.Add("expiryM", objclsPiAuthResponse.data.expiry.Substring(5, 2))
-                returnObj.Add("expiryD", objclsPiAuthResponse.data.expiry.Substring(8, 2))
-                Dim sPhNamePrefix As String = ""
-                Dim sPhFirstName As String = ""
-                Dim sPhNameSuffix As String = ""
-                Dim sPhChiFstNm As String = ""
-                Dim sPiNamePrefix As String = ""
-                Dim sPiFirstName As String = ""
-                Dim sPiNameSuffix As String = ""
-                Dim sPiChiFstNm As String = ""
-                Dim sProduct As String = ""
-                Dim sProductChi As String = ""
-
-                Dim dsReturn As New DataSet
-                If Not sqlConn2.State = ConnectionState.Open Then
-                    sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
-                    sqlConn2.Open()
+        Try
+            Dim objclsPiAuthResponse As CRS_Util.clsJSONBusinessObj.clsPiAuthResponse = CRS_Util.clsJSONTool.CallPiAuthGenKey(customerID, gsUser)
+            If objclsPiAuthResponse IsNot Nothing Then
+                If objclsPiAuthResponse.status.Equals("error") Then
+                    MessageBox.Show("Fail to gen OTP with following error:" & objclsPiAuthResponse.error.message)
                 End If
-                daTmp = New SqlDataAdapter("select NamePrefix, FirstName, NameSuffix, ChiFstNm from Customer with (nolock) inner join csw_poli_rel with (nolock) on Customer.CustomerID = csw_poli_rel.CustomerID where csw_poli_rel.PolicyRelateCode = @Type and csw_poli_rel.PolicyAccountID = @PolicyAccountID", sqlConn2)
-                daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
-                daTmp.SelectCommand.Parameters.Add("@Type", SqlDbType.VarChar, 20).Value = "PH"
-                dsReturn = New DataSet
-                daTmp.Fill(dsReturn)
-                If dsReturn.Tables(0).Rows.Count > 0 Then
-                    sPhNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
-                    sPhFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
-                    sPhNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
-                    sPhChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
-                End If
+                If objclsPiAuthResponse.status.Equals("success") Then
+                    returnObj.Add("otp", objclsPiAuthResponse.data.unlocKey)
+                    returnObj.Add("expiry", objclsPiAuthResponse.data.expiry.Substring(0, 10))
+                    returnObj.Add("expiryY", objclsPiAuthResponse.data.expiry.Substring(0, 4))
+                    returnObj.Add("expiryM", objclsPiAuthResponse.data.expiry.Substring(5, 2))
+                    returnObj.Add("expiryD", objclsPiAuthResponse.data.expiry.Substring(8, 2))
+                    Dim sPhNamePrefix As String = ""
+                    Dim sPhFirstName As String = ""
+                    Dim sPhNameSuffix As String = ""
+                    Dim sPhChiFstNm As String = ""
+                    Dim sPiNamePrefix As String = ""
+                    Dim sPiFirstName As String = ""
+                    Dim sPiNameSuffix As String = ""
+                    Dim sPiChiFstNm As String = ""
+                    Dim sProduct As String = ""
+                    Dim sProductChi As String = ""
 
-                daTmp.SelectCommand.Parameters("@Type").Value = "PI"
-                dsReturn = New DataSet
-                daTmp.Fill(dsReturn)
-                If dsReturn.Tables(0).Rows.Count > 0 Then
-                    sPiNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
-                    sPiFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
-                    sPiNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
-                    sPiChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
-                End If
+                    Dim dsReturn As New DataSet
+                    If Not sqlConn2.State = ConnectionState.Open Then
+                        sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
+                        sqlConn2.Open()
+                    End If
+                    daTmp = New SqlDataAdapter("select NamePrefix, FirstName, NameSuffix, ChiFstNm from Customer with (nolock) inner join csw_poli_rel with (nolock) on Customer.CustomerID = csw_poli_rel.CustomerID where csw_poli_rel.PolicyRelateCode = @Type and csw_poli_rel.PolicyAccountID = @PolicyAccountID", sqlConn2)
+                    daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+                    daTmp.SelectCommand.Parameters.Add("@Type", SqlDbType.VarChar, 20).Value = "PH"
+                    dsReturn = New DataSet
+                    daTmp.Fill(dsReturn)
+                    If dsReturn.Tables(0).Rows.Count > 0 Then
+                        sPhNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
+                        sPhFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
+                        sPhNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
+                        sPhChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
+                    End If
 
-                daTmp = New SqlDataAdapter("select [Product].[Description], [Product_Chi].ChineseDescription from [PolicyAccount] with (nolock) inner join [Product] with (nolock) on [PolicyAccount].ProductID = [Product].ProductID inner join NBS..[Product_Chi] with (nolock) on [PolicyAccount].ProductID = [Product_Chi].ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
-                daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
-                dsReturn = New DataSet
-                daTmp.Fill(dsReturn)
-                If dsReturn.Tables(0).Rows.Count > 0 Then
-                    sProduct = dsReturn.Tables(0).Rows(0)("Description").ToString
-                    sProductChi = dsReturn.Tables(0).Rows(0)("ChineseDescription").ToString
-                Else
-                    daTmp = New SqlDataAdapter("select ProductName, ProductNameCHI from [PolicyAccount] with (nolock) inner join GI_Product with (nolock) on [PolicyAccount].ProductID = GI_Product.ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
+                    daTmp.SelectCommand.Parameters("@Type").Value = "PI"
+                    dsReturn = New DataSet
+                    daTmp.Fill(dsReturn)
+                    If dsReturn.Tables(0).Rows.Count > 0 Then
+                        sPiNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
+                        sPiFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
+                        sPiNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
+                        sPiChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
+                    End If
+
+                    daTmp = New SqlDataAdapter($"select [Product].[Description], [Product_Chi].ChineseDescription from [PolicyAccount] with (nolock) inner join [Product] with (nolock) on [PolicyAccount].ProductID = [Product].ProductID inner join {gcNBSDB}[Product_Chi] with (nolock) on [PolicyAccount].ProductID = [Product_Chi].ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
                     daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
                     dsReturn = New DataSet
                     daTmp.Fill(dsReturn)
                     If dsReturn.Tables(0).Rows.Count > 0 Then
-                        sProduct = dsReturn.Tables(0).Rows(0)("ProductName").ToString
-                        sProductChi = dsReturn.Tables(0).Rows(0)("ProductNameCHI").ToString
+                        sProduct = dsReturn.Tables(0).Rows(0)("Description").ToString
+                        sProductChi = dsReturn.Tables(0).Rows(0)("ChineseDescription").ToString
+                    Else
+                        daTmp = New SqlDataAdapter("select ProductName, ProductNameCHI from [PolicyAccount] with (nolock) inner join GI_Product with (nolock) on [PolicyAccount].ProductID = GI_Product.ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
+                        daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+                        dsReturn = New DataSet
+                        daTmp.Fill(dsReturn)
+                        If dsReturn.Tables(0).Rows.Count > 0 Then
+                            sProduct = dsReturn.Tables(0).Rows(0)("ProductName").ToString
+                            sProductChi = dsReturn.Tables(0).Rows(0)("ProductNameCHI").ToString
+                        End If
                     End If
+
+                    sqlConn2.Close()
+
+                    returnObj.Add("PH_NamePrefix", sPhNamePrefix)
+                    returnObj.Add("PH_FirstName", sPhFirstName)
+                    returnObj.Add("PH_NameSuffix", sPhNameSuffix)
+                    returnObj.Add("PH_ChiFstNm", sPhChiFstNm)
+                    returnObj.Add("PI_NamePrefix", sPiNamePrefix)
+                    returnObj.Add("PI_FirstName", sPiFirstName)
+                    returnObj.Add("PI_NameSuffix", sPiNameSuffix)
+                    returnObj.Add("PI_ChiFstNm", sPiChiFstNm)
+                    returnObj.Add("Product", sProduct)
+                    returnObj.Add("ProductChi", sProductChi)
+                    Return returnObj
                 End If
-
-                sqlConn2.Close()
-
-                returnObj.Add("PH_NamePrefix", sPhNamePrefix)
-                returnObj.Add("PH_FirstName", sPhFirstName)
-                returnObj.Add("PH_NameSuffix", sPhNameSuffix)
-                returnObj.Add("PH_ChiFstNm", sPhChiFstNm)
-                returnObj.Add("PI_NamePrefix", sPiNamePrefix)
-                returnObj.Add("PI_FirstName", sPiFirstName)
-                returnObj.Add("PI_NameSuffix", sPiNameSuffix)
-                returnObj.Add("PI_ChiFstNm", sPiChiFstNm)
-                returnObj.Add("Product", sProduct)
-                returnObj.Add("ProductChi", sProductChi)
-                Return returnObj
+            Else
+                MessageBox.Show("Fail to gen OTP")
             End If
-        Else
-            MessageBox.Show("Fail to gen OTP")
-        End If
+        Catch ex As Exception
+            HandleGlobalException(ex, ex.Message)
+        End Try
+
         Return returnObj
     End Function
 
-    Private Function sendPiMail(ByVal dOtp As System.Collections.Generic.Dictionary(Of String, String), ByVal toEmail As String) As Boolean
+    Private Function SendPiMail(dOtp As Dictionary(Of String, String), toEmail As String, ccEmail As String) As Boolean
         Try
             Dim strToMail As String = toEmail
+            Dim strCcMailArry As String() = If(ccEmail, String.Empty).Split({";"}, StringSplitOptions.RemoveEmptyEntries)
             Dim strSubject As String = "FWD eServices registration request <policy no. " & strPolicy & ">「富衛eServices」賬戶申請 <保單號碼 " & strPolicy & ">"
             Dim strFrMail As String = "cs.hk@fwd.com"
             Dim strAttachmentPath As String = ""
-            Dim strContent As String = ""
-            strContent &= System.IO.File.ReadAllText(".\CETPEP.bin")
+            Dim strContent As String = IO.File.ReadAllText(".\CETPEP.bin")
 
             strContent = strContent.Replace("<OTP_Image>", "<img border=0 width=89 height=95 id=""Picture_x0020_2"" src=""cid:image2103.jpg@01D19732.1B190AC0"" alt=""cid:3613433F-A0B7-4806-A8B0-41A61C5E1292"">")
             strContent = strContent.Replace("<OTP_Policy>", strPolicy)
@@ -4911,30 +4857,27 @@ Public Class uclServiceLog_Asur
             Dim mailAttachment As New CommonWS.SerializableAttachment()
             Dim fromAddr As New CommonWS.SerializableMailAddress()
             Dim toAddr(0) As CommonWS.SerializableMailAddress
-            'Dim bcc(0) As CommonWS.SerializableMailAddress
-            Dim cc(2) As CommonWS.SerializableMailAddress
-
-            Dim sCc(2) As String
-            'sCc = DecryptData(My.Settings.CS2005_SPCCAdd).Split(";")
-            sCc = My.Settings.CS2005_SPCCAdd.Split(";")
+            Dim bccAddr As New List(Of CommonWS.SerializableMailAddress)(strCcMailArry.Length)
 
             fromAddr.Address = strFrMail
-            toAddr(0) = New CommonWS.SerializableMailAddress()
-            toAddr(0).Address = strToMail
-            cc(0) = New CommonWS.SerializableMailAddress()
-            cc(0).Address = sCc(0)
-            cc(1) = New CommonWS.SerializableMailAddress()
-            cc(1).Address = sCc(1)
-            cc(2) = New CommonWS.SerializableMailAddress()
-            cc(2).Address = sCc(2)
+
+            toAddr(0) = New CommonWS.SerializableMailAddress With {
+                .Address = strToMail
+            }
+
+            For Each strCCMail As String In strCcMailArry
+                bccAddr.Add(New CommonWS.SerializableMailAddress With {
+                    .Address = strCCMail
+                })
+            Next
+
             mailMsg.From = fromAddr
             mailMsg.To = toAddr
             mailMsg.Subject = strSubject
             mailMsg.Body = strContent
-            'mailMsg.Bcc = bcc
-            mailMsg.CC = cc
+            mailMsg.Bcc = bccAddr.ToArray()
             mailMsg.IsBodyHtml = True
-            mailAttachment.ContentStream = System.IO.File.ReadAllBytes("c:\prodapps\La dll\image2103.jpg")
+            mailAttachment.ContentStream = IO.File.ReadAllBytes("c:\prodapps\La dll\image2103.jpg")
             mailAttachment.ContentId = "image2103.jpg@01D19732.1B190AC0"
             Dim attachments(0) As CommonWS.SerializableAttachment
             attachments(0) = mailAttachment
@@ -4944,19 +4887,20 @@ Public Class uclServiceLog_Asur
                 ws.SendExternalMail(mailMsg)
             End Using
         Catch ex As Exception
-            System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "sendPiMail Error : " + Environment.NewLine + ex.Message + vbNewLine)
+            AsyncDbLogger.LogError(gsUser, "Service Log", "SendPiMail Error", ex.ToString())
             Return False
         End Try
         Return True
     End Function
-    Private Function sendBrokerMail(ByVal dOtp As System.Collections.Generic.Dictionary(Of String, String), ByVal toEmail As String) As Boolean
+
+    Private Function SendBrokerMail(dOtp As Dictionary(Of String, String), toEmail As String, ccEmail As String) As Boolean
         Try
             Dim strToMail As String = toEmail
+            Dim strCcMailArry As String() = If(ccEmail, String.Empty).Split({";"}, StringSplitOptions.RemoveEmptyEntries)
             Dim strSubject As String = "FWD eServices registration request <policy no. " & strPolicy & ">「富衛eServices」賬戶申請 <保單號碼 " & strPolicy & ">"
             Dim strFrMail As String = "cs.hk@fwd.com"
             Dim strAttachmentPath As String = ""
-            Dim strContent As String = ""
-            strContent &= System.IO.File.ReadAllText(".\CETPEB.bin")
+            Dim strContent As String = IO.File.ReadAllText(".\CETPEB.bin")
 
             strContent = strContent.Replace("<OTP_Image>", "<img border=0 width=89 height=95 id=""Picture_x0020_2"" src=""cid:image2103.jpg@01D19732.1B190AC0"" alt=""cid:3613433F-A0B7-4806-A8B0-41A61C5E1292"">")
             strContent = strContent.Replace("<OTP_Policy>", strPolicy)
@@ -4977,32 +4921,27 @@ Public Class uclServiceLog_Asur
             Dim mailAttachment As New CommonWS.SerializableAttachment()
             Dim fromAddr As New CommonWS.SerializableMailAddress()
             Dim toAddr(0) As CommonWS.SerializableMailAddress
-            'Dim bcc(0) As CommonWS.SerializableMailAddress
-            Dim cc(2) As CommonWS.SerializableMailAddress
-
-            Dim sCc(2) As String
-            'sCc = DecryptData(My.Settings.CS2005_SPCCAdd).Split(";")
-            sCc = My.Settings.CS2005_SPCCAdd.Split(";")
+            Dim ccAddr As New List(Of CommonWS.SerializableMailAddress)(strCcMailArry.Length)
 
             fromAddr.Address = strFrMail
-            toAddr(0) = New CommonWS.SerializableMailAddress()
-            toAddr(0).Address = strToMail
-            'bcc(0) = New CommonWS.SerializableMailAddress()
-            'bcc(0).Address = "cs.hk@fwd.com"
-            cc(0) = New CommonWS.SerializableMailAddress()
-            cc(0).Address = sCc(0)
-            cc(1) = New CommonWS.SerializableMailAddress()
-            cc(1).Address = sCc(1)
-            cc(2) = New CommonWS.SerializableMailAddress()
-            cc(2).Address = sCc(2)
+
+            toAddr(0) = New CommonWS.SerializableMailAddress With {
+                .Address = strToMail
+            }
+
+            For Each strCCMail As String In strCcMailArry
+                ccAddr.Add(New CommonWS.SerializableMailAddress With {
+                    .Address = strCCMail
+                })
+            Next
+
             mailMsg.From = fromAddr
             mailMsg.To = toAddr
             mailMsg.Subject = strSubject
             mailMsg.Body = strContent
-            'mailMsg.Bcc = bcc
-            mailMsg.CC = cc
+            mailMsg.CC = ccAddr.ToArray()
             mailMsg.IsBodyHtml = True
-            mailAttachment.ContentStream = System.IO.File.ReadAllBytes("c:\prodapps\La dll\image2103.jpg")
+            mailAttachment.ContentStream = IO.File.ReadAllBytes("c:\prodapps\La dll\image2103.jpg")
             mailAttachment.ContentId = "image2103.jpg@01D19732.1B190AC0"
             Dim attachments(0) As CommonWS.SerializableAttachment
             attachments(0) = mailAttachment
@@ -5012,11 +4951,12 @@ Public Class uclServiceLog_Asur
                 ws.SendExternalMail(mailMsg)
             End Using
         Catch ex As Exception
-            System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "sendBrokerMail Error : " + Environment.NewLine + ex.Message + vbNewLine)
+            AsyncDbLogger.LogError(gsUser, "Service Log", "SendBrokerMail Error", ex.ToString())
             Return False
         End Try
         Return True
     End Function
+
     Private Function GetCommonWS() As CommonWS.Service
         Dim ws As New CommonWS.Service()
         Dim header As New CommonWS.DBSOAPHeader()
@@ -5068,53 +5008,37 @@ Public Class uclServiceLog_Asur
         End If
 
         If dgvAuthPi.SelectedRows(0).Cells("Auth Date").Value.ToString.Length > 0 Then
-            Dim result As Windows.Forms.DialogResult = MessageBox.Show("Auth PI user already, do you want to re-gen Auth OTP?", "Question", MessageBoxButtons.YesNo)
-            If result = Windows.Forms.DialogResult.Yes Then
-                bDo = True
-            Else
-                bDo = False
-            End If
+            bDo = MessageBox.Show("Auth PI user already, do you want to re-gen Auth OTP?", "Question", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes
         End If
+
         If bDo Then
             If isInForce() Then
                 If isCooling() Then
-                    sPiID = dgvAuthPi.SelectedRows(0).Cells("PI ID").Value.ToString
-                    sPiEmail = dgvAuthPi.SelectedRows(0).Cells("Email").Value.ToString
-                    If sPiEmail.Trim.Length > 0 Then
+                    Dim sPiID As String = dgvAuthPi.SelectedRows(0).Cells("PI ID").Value.ToString
+                    Dim sPiEmail As String = dgvAuthPi.SelectedRows(0).Cells("Email").Value.ToString.Trim
+                    Dim sPiBccEmail As String = GetCodeTableValue("SPBCCAdd")
+                    Dim sBrokerEmail As String = dgvAuthPi.SelectedRows(0).Cells("Broker Email").Value.ToString.Trim
+                    Dim sBrokerCcEmail As String = GetCodeTableValue("SPCCAdd")
+
+                    If sPiEmail.Length > 0 AndAlso sBrokerEmail.Length > 0 Then
                         'oliver 2024-4-24 updated for Table_Relocate_Sprint13
                         If UpdatePiAuth(strPolicy, sPiID, "Y", gsUser) Then
-                            Dim dOtp As System.Collections.Generic.Dictionary(Of String, String)
-                            dOtp = getPiAuthOtp()
-                            If dOtp("otp").Trim.Length > 0 Then
+                            Dim dOtp As Dictionary(Of String, String) = GetPiAuthOtp(sPiID)
+                            If dOtp.ContainsKey("otp") AndAlso dOtp("otp").Trim.Length > 0 Then
+                                LogOTPInfo(dOtp, sPiEmail, sPiBccEmail, sBrokerEmail, sBrokerCcEmail)
 
-                                System.IO.File.Delete("C:\temp\OTP_TMP.txt")
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "PH_FirstName : " + dOtp("PH_FirstName") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "PH_NameSuffix : " + dOtp("PH_NameSuffix") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "PI_FirstName : " + dOtp("PI_FirstName") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "PI_NameSuffix : " + dOtp("PI_NameSuffix") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "Product : " + dOtp("Product") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "ProductChi : " + dOtp("ProductChi") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "otp : " + dOtp("otp") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "expiry : " + dOtp("expiry") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "expiryY : " + dOtp("expiryY") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "expiryM : " + dOtp("expiryM") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "expiryD : " + dOtp("expiryD") + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "PiMail : " + My.Settings.CS2005_SPAdd + Environment.NewLine)
-                                System.IO.File.AppendAllText("C:\temp\OTP_TMP.txt", "BrokerMail : " + My.Settings.CS2005_SPCCAdd + Environment.NewLine)
+                                bPiMail = SendPiMail(dOtp, sPiEmail, sPiBccEmail)
+                                bBrokerMail = SendBrokerMail(dOtp, sBrokerEmail, sBrokerCcEmail)
 
-                                'bPiMail = sendPiMail(dOtp, DecryptData(My.Settings.CS2005_SPAdd))
-                                bPiMail = sendPiMail(dOtp, My.Settings.CS2005_SPAdd)
-                                'bBrokerMail = sendBrokerMail(dOtp, DecryptData(My.Settings.CS2005_SPAdd))
-                                bBrokerMail = sendBrokerMail(dOtp, My.Settings.CS2005_SPAdd)
                                 If bPiMail And bBrokerMail Then
                                     MessageBox.Show("PI Auth done")
                                 Else
                                     Dim sErrMsg As String = ""
                                     If Not bPiMail Then
-                                        sErrMsg = sErrMsg & "Fail send mail to PI" & vbNewLine
+                                        sErrMsg &= "Fail send mail to PI" & vbNewLine
                                     End If
                                     If Not bBrokerMail Then
-                                        sErrMsg = sErrMsg & "Fail send mail to Broker"
+                                        sErrMsg &= "Fail send mail to Broker"
                                     End If
                                     MessageBox.Show(sErrMsg.Trim)
                                 End If
@@ -5125,7 +5049,7 @@ Public Class uclServiceLog_Asur
                             MessageBox.Show("Update Auth record fail, please try again later")
                         End If
                     Else
-                        MessageBox.Show("PI Email address not valid")
+                        MessageBox.Show("PI / Broker Email address not valid")
                     End If
                 Else
                     MessageBox.Show("Policy is not ready yet")
