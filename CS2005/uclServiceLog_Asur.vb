@@ -2,6 +2,7 @@
 
 Imports System.Data.SqlClient
 Imports System.Globalization
+Imports System.Text
 
 Public Class uclServiceLog_Asur
     Inherits System.Windows.Forms.UserControl
@@ -35,12 +36,12 @@ Public Class uclServiceLog_Asur
 
     'oliver 2024-8-6 added for Com 6
     Private blnIsHnwPolicy As Boolean = False
-
+'Service log enhancement
     ' Track which enquiry tabs have been visited to preserve data
     Private bln1stEnquiryVisited As Boolean = False
     Private bln2ndEnquiryVisited As Boolean = False
     Private bln3rdEnquiryVisited As Boolean = False
-
+    '
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
     Private blnIsNBMPolicy As Boolean = False
     Private blnIsEnableNBMPolicyPanel As Boolean = False
@@ -72,8 +73,6 @@ Public Class uclServiceLog_Asur
     Dim daInitiatorWithOutIWS As SqlDataAdapter
     Dim dsSrvLog As New DataSet
     Dim dsTmp As New DataSet 'AL20210201 eService PI Access
-    Dim sPiEmail As String = "" 'AL20210201 eService PI Access
-    Dim sPiID As String = "" 'AL20210201 eService PI Access
     Dim ServiceLogBL As New ServiceLogBL
     Friend WithEvents SaveFileDialogDownlaod As System.Windows.Forms.SaveFileDialog
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
@@ -135,7 +134,36 @@ Public Class uclServiceLog_Asur
     Friend WithEvents cbMedium As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
-    ' New controls for enquiry tabs
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents chkIdVerify As CheckBox
+    Friend WithEvents dtReminder As DateTimePicker
+    Friend WithEvents Label4 As Label
+    Friend WithEvents chkReminder As CheckBox
+    Friend WithEvents chkPolicyAlert As CheckBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtNotes As TextBox
+    Friend WithEvents txtReminder As TextBox
+    Friend WithEvents txtPolicyAlert As TextBox
+    Friend WithEvents btncustlogweb As Button
+    Friend WithEvents hidSrvEvtNo As TextBox
+    Friend WithEvents rbAsur As RadioButton
+    Friend WithEvents gbNBM As GroupBox
+    Friend WithEvents txtCampaignDetails As TextBox
+    Friend WithEvents lblCampaignDetails As Label
+    Friend WithEvents txtFinishDate As TextBox
+    Friend WithEvents lblFinishDate As Label
+    Friend WithEvents txtNetPremium As TextBox
+    Friend WithEvents lblNetPremium As Label
+    Friend WithEvents lblReason As Label
+    Friend WithEvents cbRejectReason As ComboBox
+    Friend WithEvents txtEffectiveDate As TextBox
+    Friend WithEvents lblEffectiveDate As Label
+    Friend WithEvents palYesNo As Panel
+    Friend WithEvents rbNo As RadioButton
+    Friend WithEvents rbYes As RadioButton
+    ' Service Log enhancement
     Friend WithEvents tabEnquiry As TabControl
     Friend WithEvents tab1stEnquiry As TabPage
     Friend WithEvents tab2ndEnquiry As TabPage
@@ -170,35 +198,7 @@ Public Class uclServiceLog_Asur
     Friend WithEvents lbl3rdEventTypeDetail As Label
     Friend WithEvents lbl3rdReason As Label
     Friend WithEvents lbl3rdAlternative As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents chkIdVerify As CheckBox
-    Friend WithEvents dtReminder As DateTimePicker
-    Friend WithEvents Label4 As Label
-    Friend WithEvents chkReminder As CheckBox
-    Friend WithEvents chkPolicyAlert As CheckBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtNotes As TextBox
-    Friend WithEvents txtReminder As TextBox
-    Friend WithEvents txtPolicyAlert As TextBox
-    Friend WithEvents btncustlogweb As Button
-    Friend WithEvents hidSrvEvtNo As TextBox
-    Friend WithEvents rbAsur As RadioButton
-    Friend WithEvents gbNBM As GroupBox
-    Friend WithEvents txtCampaignDetails As TextBox
-    Friend WithEvents lblCampaignDetails As Label
-    Friend WithEvents txtFinishDate As TextBox
-    Friend WithEvents lblFinishDate As Label
-    Friend WithEvents txtNetPremium As TextBox
-    Friend WithEvents lblNetPremium As Label
-    Friend WithEvents lblReason As Label
-    Friend WithEvents cbRejectReason As ComboBox
-    Friend WithEvents txtEffectiveDate As TextBox
-    Friend WithEvents lblEffectiveDate As Label
-    Friend WithEvents palYesNo As Panel
-    Friend WithEvents rbNo As RadioButton
-    Friend WithEvents rbYes As RadioButton
+    '
     Dim bm As BindingManagerBase
 
     Public Delegate Sub EventSavedEventHandler(ByVal sender As Object, ByVal e As DataRow)
@@ -290,40 +290,6 @@ Public Class uclServiceLog_Asur
         Me.cbEventDetail = New System.Windows.Forms.ComboBox()
         Me.cbEventTypeDetail = New System.Windows.Forms.ComboBox()
         Me.cbMedium = New System.Windows.Forms.ComboBox()
-        Me.tabEnquiry = New System.Windows.Forms.TabControl()
-        Me.tab1stEnquiry = New System.Windows.Forms.TabPage()
-        Me.tab2ndEnquiry = New System.Windows.Forms.TabPage()
-        Me.tab3rdEnquiry = New System.Windows.Forms.TabPage()
-        Me.cb1stEventCat = New System.Windows.Forms.ComboBox()
-        Me.cb1stEventDetail = New System.Windows.Forms.ComboBox()
-        Me.cb1stEventTypeDetail = New System.Windows.Forms.ComboBox()
-        Me.cb2ndEventCat = New System.Windows.Forms.ComboBox()
-        Me.cb2ndEventDetail = New System.Windows.Forms.ComboBox()
-        Me.cb2ndEventTypeDetail = New System.Windows.Forms.ComboBox()
-        Me.cb3rdEventCat = New System.Windows.Forms.ComboBox()
-        Me.cb3rdEventDetail = New System.Windows.Forms.ComboBox()
-        Me.cb3rdEventTypeDetail = New System.Windows.Forms.ComboBox()
-        Me.txt1stReason = New System.Windows.Forms.TextBox()
-        Me.txt1stAlternative = New System.Windows.Forms.TextBox()
-        Me.txt2ndReason = New System.Windows.Forms.TextBox()
-        Me.txt2ndAlternative = New System.Windows.Forms.TextBox()
-        Me.txt3rdReason = New System.Windows.Forms.TextBox()
-        Me.txt3rdAlternative = New System.Windows.Forms.TextBox()
-        Me.lbl1stEventCat = New System.Windows.Forms.Label()
-        Me.lbl1stEventDetail = New System.Windows.Forms.Label()
-        Me.lbl1stEventTypeDetail = New System.Windows.Forms.Label()
-        Me.lbl1stReason = New System.Windows.Forms.Label()
-        Me.lbl1stAlternative = New System.Windows.Forms.Label()
-        Me.lbl2ndEventCat = New System.Windows.Forms.Label()
-        Me.lbl2ndEventDetail = New System.Windows.Forms.Label()
-        Me.lbl2ndEventTypeDetail = New System.Windows.Forms.Label()
-        Me.lbl2ndReason = New System.Windows.Forms.Label()
-        Me.lbl2ndAlternative = New System.Windows.Forms.Label()
-        Me.lbl3rdEventCat = New System.Windows.Forms.Label()
-        Me.lbl3rdEventDetail = New System.Windows.Forms.Label()
-        Me.lbl3rdEventTypeDetail = New System.Windows.Forms.Label()
-        Me.lbl3rdReason = New System.Windows.Forms.Label()
-        Me.lbl3rdAlternative = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -366,6 +332,42 @@ Public Class uclServiceLog_Asur
         Me.gbNBM.SuspendLayout()
         Me.palYesNo.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Service Log enhancement
+        Me.tabEnquiry = New System.Windows.Forms.TabControl()
+        Me.tab1stEnquiry = New System.Windows.Forms.TabPage()
+        Me.tab2ndEnquiry = New System.Windows.Forms.TabPage()
+        Me.tab3rdEnquiry = New System.Windows.Forms.TabPage()
+        Me.cb1stEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb1stEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb1stEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb2ndEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventCat = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventDetail = New System.Windows.Forms.ComboBox()
+        Me.cb3rdEventTypeDetail = New System.Windows.Forms.ComboBox()
+        Me.txt1stReason = New System.Windows.Forms.TextBox()
+        Me.txt1stAlternative = New System.Windows.Forms.TextBox()
+        Me.txt2ndReason = New System.Windows.Forms.TextBox()
+        Me.txt2ndAlternative = New System.Windows.Forms.TextBox()
+        Me.txt3rdReason = New System.Windows.Forms.TextBox()
+        Me.txt3rdAlternative = New System.Windows.Forms.TextBox()
+        Me.lbl1stEventCat = New System.Windows.Forms.Label()
+        Me.lbl1stEventDetail = New System.Windows.Forms.Label()
+        Me.lbl1stEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl1stReason = New System.Windows.Forms.Label()
+        Me.lbl1stAlternative = New System.Windows.Forms.Label()
+        Me.lbl2ndEventCat = New System.Windows.Forms.Label()
+        Me.lbl2ndEventDetail = New System.Windows.Forms.Label()
+        Me.lbl2ndEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl2ndReason = New System.Windows.Forms.Label()
+        Me.lbl2ndAlternative = New System.Windows.Forms.Label()
+        Me.lbl3rdEventCat = New System.Windows.Forms.Label()
+        Me.lbl3rdEventDetail = New System.Windows.Forms.Label()
+        Me.lbl3rdEventTypeDetail = New System.Windows.Forms.Label()
+        Me.lbl3rdReason = New System.Windows.Forms.Label()
+        Me.lbl3rdAlternative = New System.Windows.Forms.Label()
         '
         'BackgroundWorker1
         '
@@ -790,6 +792,7 @@ Public Class uclServiceLog_Asur
         Me.GroupBox2.Controls.Add(Me.lbReceiver)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.chkAES)
+        'Me.GroupBox2.Location = New System.Drawing.Point(7, 368)
         Me.GroupBox2.Location = New System.Drawing.Point(7, 418)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
@@ -945,13 +948,22 @@ Public Class uclServiceLog_Asur
         '
         'grpServiceEvent
         '
-        Me.grpServiceEvent.Controls.Add(Me.Label6)
-        Me.grpServiceEvent.Controls.Add(Me.cbMedium)
+        'Service Log enhancement
         Me.grpServiceEvent.Controls.Add(Me.tabEnquiry)
+        '
+        'Me.grpServiceEvent.Controls.Add(Me.Label8)
+        Me.grpServiceEvent.Controls.Add(Me.Label6)
+        'Me.grpServiceEvent.Controls.Add(Me.cbEventCat)
+        'Me.grpServiceEvent.Controls.Add(Me.cbEventDetail)
+        'Me.grpServiceEvent.Controls.Add(Me.cbEventTypeDetail)
+        Me.grpServiceEvent.Controls.Add(Me.cbMedium)
+        'Me.grpServiceEvent.Controls.Add(Me.Label7)
+        'Me.grpServiceEvent.Controls.Add(Me.Label9)
         Me.grpServiceEvent.Location = New System.Drawing.Point(7, 184)
         Me.grpServiceEvent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grpServiceEvent.Name = "grpServiceEvent"
         Me.grpServiceEvent.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        'Me.grpServiceEvent.Size = New System.Drawing.Size(559, 180)
         Me.grpServiceEvent.Size = New System.Drawing.Size(559, 350)
         Me.grpServiceEvent.TabIndex = 76
         Me.grpServiceEvent.TabStop = False
@@ -1034,6 +1046,7 @@ Public Class uclServiceLog_Asur
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Event Type Detail"
         '
+        'Service log enhancement
         'tabEnquiry
         '
         Me.tabEnquiry.Controls.Add(Me.tab1stEnquiry)
@@ -1042,6 +1055,7 @@ Public Class uclServiceLog_Asur
         Me.tabEnquiry.Location = New System.Drawing.Point(18, 60)
         Me.tabEnquiry.Name = "tabEnquiry"
         Me.tabEnquiry.SelectedIndex = 0
+        'Me.tabEnquiry.Size = New System.Drawing.Size(533, 220)
         Me.tabEnquiry.Size = New System.Drawing.Size(533, 270)
         Me.tabEnquiry.TabIndex = 11
         '
@@ -1060,6 +1074,7 @@ Public Class uclServiceLog_Asur
         Me.tab1stEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab1stEnquiry.Name = "tab1stEnquiry"
         Me.tab1stEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        'Me.tab1stEnquiry.Size = New System.Drawing.Size(525, 194)
         Me.tab1stEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab1stEnquiry.TabIndex = 0
         Me.tab1stEnquiry.Text = "1st Enquiry"
@@ -1161,6 +1176,7 @@ Public Class uclServiceLog_Asur
         Me.tab2ndEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab2ndEnquiry.Name = "tab2ndEnquiry"
         Me.tab2ndEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        'Me.tab2ndEnquiry.Size = New System.Drawing.Size(525, 194)
         Me.tab2ndEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab2ndEnquiry.TabIndex = 1
         Me.tab2ndEnquiry.Text = "2nd Enquiry"
@@ -1262,6 +1278,7 @@ Public Class uclServiceLog_Asur
         Me.tab3rdEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab3rdEnquiry.Name = "tab3rdEnquiry"
         Me.tab3rdEnquiry.Padding = New System.Windows.Forms.Padding(3)
+        'Me.tab3rdEnquiry.Size = New System.Drawing.Size(525, 194)
         Me.tab3rdEnquiry.Size = New System.Drawing.Size(525, 244)
         Me.tab3rdEnquiry.TabIndex = 2
         Me.tab3rdEnquiry.Text = "3rd Enquiry"
@@ -1348,6 +1365,7 @@ Public Class uclServiceLog_Asur
         Me.txt3rdAlternative.Size = New System.Drawing.Size(395, 20)
         Me.txt3rdAlternative.TabIndex = 9
         '
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.chkIdVerify)
@@ -1365,6 +1383,7 @@ Public Class uclServiceLog_Asur
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        'Me.GroupBox1.Size = New System.Drawing.Size(837, 476)
         Me.GroupBox1.Size = New System.Drawing.Size(837, 526)
         Me.GroupBox1.TabIndex = 82
         Me.GroupBox1.TabStop = False
@@ -1838,8 +1857,8 @@ Public Class uclServiceLog_Asur
         txtPolicyNo.DataBindings.Clear()
         txtCustomerID.DataBindings.Clear()
         chkIdVerify.DataBindings.Clear()
+        'Service Log enhanement
         
-        ' Clear new enquiry tab controls data bindings
         cb1stEventCat.DataBindings.Clear()
         cb1stEventDetail.DataBindings.Clear()
         cb1stEventTypeDetail.DataBindings.Clear()
@@ -1857,6 +1876,7 @@ Public Class uclServiceLog_Asur
         cb3rdEventTypeDetail.DataBindings.Clear()
         txt3rdReason.DataBindings.Clear()
         txt3rdAlternative.DataBindings.Clear()
+        '
     End Function
 
     'BuildUI() - Display the Service Log History and initialize form for user input
@@ -1867,18 +1887,20 @@ Public Class uclServiceLog_Asur
 
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
     Private Sub uclServiceLog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Service log enhancement
         ' Initialize enquiry tab visited flags
         bln1stEnquiryVisited = False
         bln2ndEnquiryVisited = False
         bln3rdEnquiryVisited = False
-        
+        '
         CheckEnableNBMPanel()
-        
+        'Service log enhancement
         ' Since 1st Enquiry is the default selected tab, mark it as visited
         bln1stEnquiryVisited = True
         
         ' Manage enquiry tab controls on form load
         ManageEnquiryTabControls()
+        '
     End Sub
 
     'oliver 2023-12-25 added for ITSR5061 Retention Offer Campaign 
@@ -2434,7 +2456,7 @@ Public Class uclServiceLog_Asur
             If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("EventSourceMedium") Then
                 dsSrvLog.Tables("ServiceEventDetail").Columns.Add("EventSourceMedium", GetType(String))
             End If
-
+            'Service log enhancement
             ' Add new columns for enquiry tabs
             If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("1stEventCategoryCode") Then
                 dsSrvLog.Tables("ServiceEventDetail").Columns.Add("1stEventCategoryCode", GetType(String))
@@ -2483,6 +2505,7 @@ Public Class uclServiceLog_Asur
             If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdAlternative") Then
                 dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdAlternative", GetType(String))
             End If
+            '
         Catch ex As Exception
             Throw
         End Try
@@ -2627,6 +2650,7 @@ Public Class uclServiceLog_Asur
             If dtPiAuth.Rows.Count > 0 Then
                 dtPiAuth.Columns("CustomerID").ColumnName = "PI ID"
                 dtPiAuth.Columns("EmailAddr").ColumnName = "Email"
+                dtPiAuth.Columns("SA_EmailAddr").ColumnName = "Broker Email"
                 dtPiAuth.Columns("LastUpdateDate").ColumnName = "Auth Date"
                 dtPiAuth.Columns("Enable").ColumnName = "Auth"
                 dgvAuthPi.DataSource = dtPiAuth
@@ -2662,7 +2686,7 @@ Public Class uclServiceLog_Asur
         cbEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cbEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cbEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
+        'Service Log enhancement
         ' Set data sources for new enquiry tab controls
         cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb1stEventCat.DisplayMember = "cswecc_desc"
@@ -2699,6 +2723,7 @@ Public Class uclServiceLog_Asur
         cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        '
     End Sub
 
     Private Sub InitPartialcbWithOutIWS()
@@ -2723,7 +2748,8 @@ Public Class uclServiceLog_Asur
         cbEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cbEventCat.DisplayMember = "cswecc_desc"
         cbEventCat.ValueMember = "cswecc_code"
-        
+        blnIsWithOutIWS = False
+        'Service log enhancement
         ' Set data sources for new enquiry tab controls (without IWS)
         cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb1stEventCat.DisplayMember = "cswecc_desc"
@@ -2760,8 +2786,7 @@ Public Class uclServiceLog_Asur
         cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        
-        blnIsWithOutIWS = False
+        '
     End Sub
 
     Private Sub InitForm()
@@ -2799,7 +2824,8 @@ Public Class uclServiceLog_Asur
         cbEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeCode")
         cbEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeDetailCode")
         cbReceiver.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "SecondaryCSRID")
-        
+        'dtInitial.DataBindings.Add("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
+        'Service log enhancement
         ' Bind new enquiry tab controls
         cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb1stEventCat.DisplayMember = "cswecc_desc"
@@ -2856,7 +2882,7 @@ Public Class uclServiceLog_Asur
         
         txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
         txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
-        'dtInitial.DataBindings.Add("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
+        '
         b = New Binding("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
         AddHandler b.Format, AddressOf DTFormatter
         AddHandler b.Parse, AddressOf DTParser
@@ -3062,7 +3088,7 @@ Public Class uclServiceLog_Asur
         dsSrvLog.Tables("EventStatusCodes").DefaultView.Sort = "sort_order"
     End Sub
     'VHIS end - Add SetStatus
-    
+    'Service log enhancement
     ' New enquiry tab cascade functionality
     Private Sub cb1stEventCat_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb1stEventCat.SelectedIndexChanged
         If blnIsWithOutIWS Then
@@ -3074,7 +3100,100 @@ Public Class uclServiceLog_Asur
             Set1stTypeDetail()
         End If
     End Sub
+    'Service Log enhancement
+    Private Sub tabEnquiry_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles tabEnquiry.SelectedIndexChanged
+        ' Handle tab switching to clear/preserve data appropriately
+        Select Case tabEnquiry.SelectedIndex
+            Case 0 ' 1st Enquiry
+                If Not bln1stEnquiryVisited Then
+                    ' First time visiting 1st Enquiry - clear all fields
+                    Clear1stEnquiryFields()
+                    bln1stEnquiryVisited = True
+                End If
+            Case 1 ' 2nd Enquiry
+                If Not bln2ndEnquiryVisited Then
+                    ' First time visiting 2nd Enquiry - clear all fields
+                    Clear2ndEnquiryFields()
+                    bln2ndEnquiryVisited = True
+                End If
+            Case 2 ' 3rd Enquiry
+                If Not bln3rdEnquiryVisited Then
+                    ' First time visiting 3rd Enquiry - clear all fields
+                    Clear3rdEnquiryFields()
+                    bln3rdEnquiryVisited = True
+                End If
+        End Select
+    End Sub
+    ' Helper functions to clear enquiry fields
+    Private Sub Clear1stEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb1stEventCat.DataBindings.Clear()
+        cb1stEventDetail.DataBindings.Clear()
+        cb1stEventTypeDetail.DataBindings.Clear()
+        txt1stReason.DataBindings.Clear()
+        txt1stAlternative.DataBindings.Clear()
 
+        ' Clear the fields
+        cb1stEventCat.SelectedIndex = -1
+        cb1stEventDetail.SelectedIndex = -1
+        cb1stEventTypeDetail.SelectedIndex = -1
+        txt1stReason.Text = ""
+        txt1stAlternative.Text = ""
+
+        ' Re-establish data bindings
+        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+    End Sub
+
+    Private Sub Clear2ndEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb2ndEventCat.DataBindings.Clear()
+        cb2ndEventDetail.DataBindings.Clear()
+        cb2ndEventTypeDetail.DataBindings.Clear()
+        txt2ndReason.DataBindings.Clear()
+        txt2ndAlternative.DataBindings.Clear()
+
+        ' Clear the fields
+        cb2ndEventCat.SelectedIndex = -1
+        cb2ndEventDetail.SelectedIndex = -1
+        cb2ndEventTypeDetail.SelectedIndex = -1
+        txt2ndReason.Text = ""
+        txt2ndAlternative.Text = ""
+
+        ' Re-establish data bindings
+        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+    End Sub
+
+    Private Sub Clear3rdEnquiryFields()
+        ' Temporarily remove data bindings to clear fields
+        cb3rdEventCat.DataBindings.Clear()
+        cb3rdEventDetail.DataBindings.Clear()
+        cb3rdEventTypeDetail.DataBindings.Clear()
+        txt3rdReason.DataBindings.Clear()
+        txt3rdAlternative.DataBindings.Clear()
+
+        ' Clear the fields
+        cb3rdEventCat.SelectedIndex = -1
+        cb3rdEventDetail.SelectedIndex = -1
+        cb3rdEventTypeDetail.SelectedIndex = -1
+        txt3rdReason.Text = ""
+        txt3rdAlternative.Text = ""
+
+        ' Re-establish data bindings
+        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+    End Sub
+    '
     Private Sub cb1stEventDetail_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb1stEventDetail.SelectedIndexChanged
         If blnIsWithOutIWS Then
             Exit Sub
@@ -3125,30 +3244,6 @@ Public Class uclServiceLog_Asur
         If TypeOf (cb3rdEventCat.SelectedValue) Is String And TypeOf (cb3rdEventDetail.SelectedValue) Is String Then
             Set3rdTypeDetail()
         End If
-    End Sub
-
-    Private Sub tabEnquiry_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles tabEnquiry.SelectedIndexChanged
-        ' Handle tab switching to clear/preserve data appropriately
-        Select Case tabEnquiry.SelectedIndex
-            Case 0 ' 1st Enquiry
-                If Not bln1stEnquiryVisited Then
-                    ' First time visiting 1st Enquiry - clear all fields
-                    Clear1stEnquiryFields()
-                    bln1stEnquiryVisited = True
-                End If
-            Case 1 ' 2nd Enquiry
-                If Not bln2ndEnquiryVisited Then
-                    ' First time visiting 2nd Enquiry - clear all fields
-                    Clear2ndEnquiryFields()
-                    bln2ndEnquiryVisited = True
-                End If
-            Case 2 ' 3rd Enquiry
-                If Not bln3rdEnquiryVisited Then
-                    ' First time visiting 3rd Enquiry - clear all fields
-                    Clear3rdEnquiryFields()
-                    bln3rdEnquiryVisited = True
-                End If
-        End Select
     End Sub
 
     Private Sub Set1stType()
@@ -3273,83 +3368,7 @@ Public Class uclServiceLog_Asur
             cb3rdEventTypeDetail.SelectedIndex = 0
         End If
     End Sub
-
-    ' Helper functions to clear enquiry fields
-    Private Sub Clear1stEnquiryFields()
-        ' Temporarily remove data bindings to clear fields
-        cb1stEventCat.DataBindings.Clear()
-        cb1stEventDetail.DataBindings.Clear()
-        cb1stEventTypeDetail.DataBindings.Clear()
-        txt1stReason.DataBindings.Clear()
-        txt1stAlternative.DataBindings.Clear()
-        
-        ' Clear the fields
-        cb1stEventCat.SelectedIndex = -1
-        cb1stEventDetail.SelectedIndex = -1
-        cb1stEventTypeDetail.SelectedIndex = -1
-        txt1stReason.Text = ""
-        txt1stAlternative.Text = ""
-        
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-            cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-            cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-        End If
-    End Sub
-
-    Private Sub Clear2ndEnquiryFields()
-        ' Temporarily remove data bindings to clear fields
-        cb2ndEventCat.DataBindings.Clear()
-        cb2ndEventDetail.DataBindings.Clear()
-        cb2ndEventTypeDetail.DataBindings.Clear()
-        txt2ndReason.DataBindings.Clear()
-        txt2ndAlternative.DataBindings.Clear()
-        
-        ' Clear the fields
-        cb2ndEventCat.SelectedIndex = -1
-        cb2ndEventDetail.SelectedIndex = -1
-        cb2ndEventTypeDetail.SelectedIndex = -1
-        txt2ndReason.Text = ""
-        txt2ndAlternative.Text = ""
-        
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-            cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-            cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-        End If
-    End Sub
-
-    Private Sub Clear3rdEnquiryFields()
-        ' Temporarily remove data bindings to clear fields
-        cb3rdEventCat.DataBindings.Clear()
-        cb3rdEventDetail.DataBindings.Clear()
-        cb3rdEventTypeDetail.DataBindings.Clear()
-        txt3rdReason.DataBindings.Clear()
-        txt3rdAlternative.DataBindings.Clear()
-        
-        ' Clear the fields
-        cb3rdEventCat.SelectedIndex = -1
-        cb3rdEventDetail.SelectedIndex = -1
-        cb3rdEventTypeDetail.SelectedIndex = -1
-        txt3rdReason.Text = ""
-        txt3rdAlternative.Text = ""
-        
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-            cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-            cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-            txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-            txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
-        End If
-    End Sub
-
+    '
     Private Sub dtReminder_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtReminder.ValueChanged
         If DateTime.Equals(dtReminder.Value, #1/1/1800#) Then
             chkReminder.Checked = False
@@ -3459,18 +3478,12 @@ Public Class uclServiceLog_Asur
 
         'default enable for new Service Log
         chkFCR.Checked = True
-        
-        ' Enable enquiry tab controls for new mode
-        ManageEnquiryTabControls()
     End Sub
 
     'btnCancel_Click() - Cancel the modifications since last acceptchanges() 
     Private Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         blnIsNewMode = False
         CancelServiceLog()
-        
-        ' Disable enquiry tab controls when exiting new mode
-        ManageEnquiryTabControls()
     End Sub
 
     'btnSave_Click() - Synchronize the SQL table with modifications in dataset
@@ -3725,76 +3738,6 @@ Public Class uclServiceLog_Asur
             'C001 - End
         End If
 
-        ' Manage enquiry tab controls based on new mode
-        ManageEnquiryTabControls()
-    End Sub
-
-    ' Manage enquiry tab controls - enable only in new mode
-    Private Sub ManageEnquiryTabControls()
-        ' Enable enquiry tab controls only when in new mode
-        Dim enableEnquiryControls As Boolean = blnIsNewMode
-        
-        ' 1st Enquiry controls
-        cb1stEventCat.Enabled = enableEnquiryControls
-        cb1stEventDetail.Enabled = enableEnquiryControls
-        cb1stEventTypeDetail.Enabled = enableEnquiryControls
-        txt1stReason.Enabled = enableEnquiryControls
-        txt1stAlternative.Enabled = enableEnquiryControls
-        
-        ' 2nd Enquiry controls
-        cb2ndEventCat.Enabled = enableEnquiryControls
-        cb2ndEventDetail.Enabled = enableEnquiryControls
-        cb2ndEventTypeDetail.Enabled = enableEnquiryControls
-        txt2ndReason.Enabled = enableEnquiryControls
-        txt2ndAlternative.Enabled = enableEnquiryControls
-        
-        ' 3rd Enquiry controls
-        cb3rdEventCat.Enabled = enableEnquiryControls
-        cb3rdEventDetail.Enabled = enableEnquiryControls
-        cb3rdEventTypeDetail.Enabled = enableEnquiryControls
-        txt3rdReason.Enabled = enableEnquiryControls
-        txt3rdAlternative.Enabled = enableEnquiryControls
-        
-        ' Set visual appearance for disabled state
-        If Not enableEnquiryControls Then
-            ' Make disabled controls appear readonly
-            cb1stEventCat.BackColor = System.Drawing.Color.LightGray
-            cb1stEventDetail.BackColor = System.Drawing.Color.LightGray
-            cb1stEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt1stReason.BackColor = System.Drawing.Color.LightGray
-            txt1stAlternative.BackColor = System.Drawing.Color.LightGray
-            
-            cb2ndEventCat.BackColor = System.Drawing.Color.LightGray
-            cb2ndEventDetail.BackColor = System.Drawing.Color.LightGray
-            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt2ndReason.BackColor = System.Drawing.Color.LightGray
-            txt2ndAlternative.BackColor = System.Drawing.Color.LightGray
-            
-            cb3rdEventCat.BackColor = System.Drawing.Color.LightGray
-            cb3rdEventDetail.BackColor = System.Drawing.Color.LightGray
-            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt3rdReason.BackColor = System.Drawing.Color.LightGray
-            txt3rdAlternative.BackColor = System.Drawing.Color.LightGray
-        Else
-            ' Reset to normal appearance for enabled state
-            cb1stEventCat.BackColor = System.Drawing.Color.White
-            cb1stEventDetail.BackColor = System.Drawing.Color.White
-            cb1stEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt1stReason.BackColor = System.Drawing.Color.White
-            txt1stAlternative.BackColor = System.Drawing.Color.White
-            
-            cb2ndEventCat.BackColor = System.Drawing.Color.White
-            cb2ndEventDetail.BackColor = System.Drawing.Color.White
-            cb2ndEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt2ndReason.BackColor = System.Drawing.Color.White
-            txt2ndAlternative.BackColor = System.Drawing.Color.White
-            
-            cb3rdEventCat.BackColor = System.Drawing.Color.White
-            cb3rdEventDetail.BackColor = System.Drawing.Color.White
-            cb3rdEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt3rdReason.BackColor = System.Drawing.Color.White
-            txt3rdAlternative.BackColor = System.Drawing.Color.White
-        End If
     End Sub
 
     'CheckTransferAES() - Check whether the case should be transferred to AES
@@ -4093,22 +4036,7 @@ Public Class uclServiceLog_Asur
                                 {"IsPolicyAlert", IIf(Not String.IsNullOrEmpty(dr.Item("IsPolicyAlert").ToString()), dr.Item("IsPolicyAlert").ToString(), " ")},
                                 {"AlertNotes", IIf(Not String.IsNullOrEmpty(dr.Item("AlertNotes").ToString()), dr.Item("AlertNotes").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
-                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
-                                {"1stEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventCategoryCode").ToString()), dr.Item("1stEventCategoryCode").ToString(), " ")},
-                                {"1stEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeCode").ToString()), dr.Item("1stEventTypeCode").ToString(), " ")},
-                                {"1stEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeDetailCode").ToString()), dr.Item("1stEventTypeDetailCode").ToString(), " ")},
-                                {"1stReason", IIf(Not String.IsNullOrEmpty(dr.Item("1stReason").ToString()), dr.Item("1stReason").ToString(), " ")},
-                                {"1stAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("1stAlternative").ToString()), dr.Item("1stAlternative").ToString(), " ")},
-                                {"2ndEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventCategoryCode").ToString()), dr.Item("2ndEventCategoryCode").ToString(), " ")},
-                                {"2ndEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeCode").ToString()), dr.Item("2ndEventTypeCode").ToString(), " ")},
-                                {"2ndEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeDetailCode").ToString()), dr.Item("2ndEventTypeDetailCode").ToString(), " ")},
-                                {"2ndReason", IIf(Not String.IsNullOrEmpty(dr.Item("2ndReason").ToString()), dr.Item("2ndReason").ToString(), " ")},
-                                {"2ndAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("2ndAlternative").ToString()), dr.Item("2ndAlternative").ToString(), " ")},
-                                {"3rdEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventCategoryCode").ToString()), dr.Item("3rdEventCategoryCode").ToString(), " ")},
-                                {"3rdEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeCode").ToString()), dr.Item("3rdEventTypeCode").ToString(), " ")},
-                                {"3rdEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeDetailCode").ToString()), dr.Item("3rdEventTypeDetailCode").ToString(), " ")},
-                                {"3rdReason", IIf(Not String.IsNullOrEmpty(dr.Item("3rdReason").ToString()), dr.Item("3rdReason").ToString(), " ")},
-                                {"3rdAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("3rdAlternative").ToString()), dr.Item("3rdAlternative").ToString(), " ")}
+                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")}
                                 })
             'MsgBox("Insert Data Success !", , "Insert Data Success")
         Catch ex As Exception
@@ -4209,22 +4137,7 @@ Public Class uclServiceLog_Asur
                                 {"PolicyAccountID", IIf(Not String.IsNullOrEmpty(dr.Item("PolicyAccountID").ToString()), dr.Item("PolicyAccountID").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
                                 {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
-                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")},
-                                {"1stEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventCategoryCode").ToString()), dr.Item("1stEventCategoryCode").ToString(), " ")},
-                                {"1stEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeCode").ToString()), dr.Item("1stEventTypeCode").ToString(), " ")},
-                                {"1stEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("1stEventTypeDetailCode").ToString()), dr.Item("1stEventTypeDetailCode").ToString(), " ")},
-                                {"1stReason", IIf(Not String.IsNullOrEmpty(dr.Item("1stReason").ToString()), dr.Item("1stReason").ToString(), " ")},
-                                {"1stAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("1stAlternative").ToString()), dr.Item("1stAlternative").ToString(), " ")},
-                                {"2ndEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventCategoryCode").ToString()), dr.Item("2ndEventCategoryCode").ToString(), " ")},
-                                {"2ndEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeCode").ToString()), dr.Item("2ndEventTypeCode").ToString(), " ")},
-                                {"2ndEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("2ndEventTypeDetailCode").ToString()), dr.Item("2ndEventTypeDetailCode").ToString(), " ")},
-                                {"2ndReason", IIf(Not String.IsNullOrEmpty(dr.Item("2ndReason").ToString()), dr.Item("2ndReason").ToString(), " ")},
-                                {"2ndAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("2ndAlternative").ToString()), dr.Item("2ndAlternative").ToString(), " ")},
-                                {"3rdEventCategoryCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventCategoryCode").ToString()), dr.Item("3rdEventCategoryCode").ToString(), " ")},
-                                {"3rdEventTypeCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeCode").ToString()), dr.Item("3rdEventTypeCode").ToString(), " ")},
-                                {"3rdEventTypeDetailCode", IIf(Not String.IsNullOrEmpty(dr.Item("3rdEventTypeDetailCode").ToString()), dr.Item("3rdEventTypeDetailCode").ToString(), " ")},
-                                {"3rdReason", IIf(Not String.IsNullOrEmpty(dr.Item("3rdReason").ToString()), dr.Item("3rdReason").ToString(), " ")},
-                                {"3rdAlternative", IIf(Not String.IsNullOrEmpty(dr.Item("3rdAlternative").ToString()), dr.Item("3rdAlternative").ToString(), " ")}
+                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")}
                                 })
             MsgBox("Update Data Success !", , "Update Data Success")
         Catch ex As Exception
@@ -4391,7 +4304,7 @@ Public Class uclServiceLog_Asur
                 serviceEventNumber = dr.Item("ServiceEventNumber").ToString()
             Else
                 serviceEventNumber = (CInt(maxServiceEventNumber) + 1).ToString
-            End If/
+            End If
             If Not String.IsNullOrEmpty(serviceEventNumber) Then
                 CheckNBMPolicyRadioButton(policyAccountID, serviceEventNumber, customerID)
             End If
@@ -4469,12 +4382,12 @@ Public Class uclServiceLog_Asur
 
     'updated at 2023-9-22 by oliver for Customer Level Search Issue
     Public Sub Refresh_ServiceLog()
-
+        'Service Log enhancement
         ' Reset enquiry tab visited flags when refreshing service log
         bln1stEnquiryVisited = False
         bln2ndEnquiryVisited = False
         bln3rdEnquiryVisited = False
-
+        '
         dsSrvLog.Tables("ServiceEventDetail").Clear()
         If blnIsParallelMode AndAlso blnIsBothComp AndAlso Not String.IsNullOrEmpty(strIDNumber) AndAlso Not strIDNumber.ToUpper.StartsWith("XXX") Then
             GetParallelModeServiceLogByAPI()
@@ -4496,7 +4409,7 @@ Public Class uclServiceLog_Asur
         cbEventDetail.DataBindings.Remove(cbEventDetail.DataBindings.Item("SelectedValue"))
         cbEventTypeDetail.DataBindings.Remove(cbEventTypeDetail.DataBindings.Item("SelectedValue"))
         cbReceiver.DataBindings.Remove(cbReceiver.DataBindings.Item("SelectedValue"))
-
+        'Service Log enhancement
         ' Remove data bindings for new enquiry controls
         cb1stEventCat.DataBindings.Remove(cb1stEventCat.DataBindings.Item("SelectedValue"))
         cb1stEventDetail.DataBindings.Remove(cb1stEventDetail.DataBindings.Item("SelectedValue"))
@@ -4515,7 +4428,7 @@ Public Class uclServiceLog_Asur
         cb3rdEventTypeDetail.DataBindings.Remove(cb3rdEventTypeDetail.DataBindings.Item("SelectedValue"))
         txt3rdReason.DataBindings.Remove(txt3rdReason.DataBindings.Item("Text"))
         txt3rdAlternative.DataBindings.Remove(txt3rdAlternative.DataBindings.Item("Text"))
-
+        '
         dtInitial.DataBindings.Remove(dtInitial.DataBindings.Item("Value"))
 
         txtPolicyAlert.DataBindings.Remove(txtPolicyAlert.DataBindings.Item("Text"))
@@ -4536,9 +4449,6 @@ Public Class uclServiceLog_Asur
         dtReminder.DataBindings.Remove(dtReminder.DataBindings.Item("Value"))
         InitForm()
         CheckEnableNBMPanel()
-        
-        ' Manage enquiry tab controls after refresh
-        ManageEnquiryTabControls()
 
     End Sub
 
@@ -5307,6 +5217,28 @@ Public Class uclServiceLog_Asur
                 Me.txtCampaignDetails.Text = If(Not IsDBNull(dataTableReturnRetentionCampaignEnquiry.Rows(0).Item("RetentionCampaignDetails")), dataTableReturnRetentionCampaignEnquiry.Rows(0).Item("RetentionCampaignDetails").ToString(), "")
             End If
         End If
+    End Sub
+
+    Private Sub LogOTPInfo(otpDict As Dictionary(Of String, String), toEmail As String, ccEmail As String, brokerEmail As String, brokerCcEmail As String)
+        Dim sb As New StringBuilder()
+        sb.AppendLine("Send Auth Email:")
+        sb.AppendLine("PH_FirstName : " + otpDict("PH_FirstName"))
+        sb.AppendLine("PH_NameSuffix : " + otpDict("PH_NameSuffix"))
+        sb.AppendLine("PI_FirstName : " + otpDict("PI_FirstName"))
+        sb.AppendLine("PI_NameSuffix : " + otpDict("PI_NameSuffix"))
+        sb.AppendLine("Product : " + otpDict("Product"))
+        sb.AppendLine("ProductChi : " + otpDict("ProductChi"))
+        sb.AppendLine("otp : " + otpDict("otp"))
+        sb.AppendLine("expiry : " + otpDict("expiry"))
+        sb.AppendLine("expiryY : " + otpDict("expiryY"))
+        sb.AppendLine("expiryM : " + otpDict("expiryM"))
+        sb.AppendLine("expiryD : " + otpDict("expiryD"))
+        sb.AppendLine("ToMail : " + toEmail)
+        sb.AppendLine("BccMail : " + ccEmail)
+        sb.AppendLine("BrokerMail : " + brokerEmail)
+        sb.AppendLine("BrokerCcMail : " + brokerCcEmail)
+
+        AsyncDbLogger.LogInfo(gsUser, "Service Log", sb.ToString())
     End Sub
 
 End Class
