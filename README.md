@@ -349,6 +349,23 @@ This project involves enhancing the Service Event functionality in the CS2005 sy
   - [x] Integrate control management with CheckStatus, btnNew, btnCancel, and Refresh_ServiceLog
   - [x] Fix data binding issues in Clear functions to prevent interference with existing records
 
+### **Pending Status Enhancement (Sep 16)**
+- [x] **Pending Status Implementation (Sep 16)**
+  - [x] Modify ManageEnquiryTabControls to enable enquiry tabs when Status = "Pending" (EventStatusCode = "P")
+  - [x] Add Status change event handler to update enquiry tab controls when Status changes
+  - [x] Ensure enquiry tabs are enabled for both new records and existing records with "Pending" status
+  - [x] Maintain readonly behavior for completed records (Status ≠ "Pending")
+  - [x] Fix data binding issues when clicking "New" and selecting values in service events
+
+### **Data Grid Display Enhancement (Sep 17)**
+- [x] **Data Grid Column Addition (Sep 17)**
+  - [x] Add new columns to dgSrvLog DataGridView for enquiry fields
+  - [x] Display "Event Category 1", "Event Type 1", "Event Type Detail 1", "Event Type Reason 1", "Alternative 1"
+  - [x] Display "Event Category 2", "Event Type 2", "Event Type Detail 2", "Event Type Reason 2", "Alternative 2"
+  - [x] Display "Event Category 3", "Event Type 3", "Event Type Detail 3", "Event Type Reason 3", "Alternative 3"
+  - [x] Configure appropriate column widths and headers
+  - [x] Ensure proper data binding to ServiceEventDetail DataTable columns
+
 ### **Testing & Validation (Sep 17-22)**
 - [ ] **Unit Testing (Sep 17-18)**
   - [ ] Test individual control functionality
