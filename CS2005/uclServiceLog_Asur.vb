@@ -2942,21 +2942,21 @@ Public Class uclServiceLog_Asur
         Try
             ' Check if required data tables exist
             If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
                 cb1stEventCat.DisplayMember = "cswecc_desc"
                 cb1stEventCat.ValueMember = "cswecc_code"
                 cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
             End If
 
             If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
                 cb1stEventDetail.DisplayMember = "EventTypeDesc"
                 cb1stEventDetail.ValueMember = "EventTypeCode"
                 cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
             End If
 
             If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
                 cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
                 cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
                 cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
@@ -2967,21 +2967,21 @@ Public Class uclServiceLog_Asur
 
             ' 2nd Enquiry
             If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
                 cb2ndEventCat.DisplayMember = "cswecc_desc"
                 cb2ndEventCat.ValueMember = "cswecc_code"
                 cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
             End If
 
             If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
                 cb2ndEventDetail.DisplayMember = "EventTypeDesc"
                 cb2ndEventDetail.ValueMember = "EventTypeCode"
                 cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
             End If
 
             If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
                 cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
                 cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
                 cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
@@ -2992,21 +2992,21 @@ Public Class uclServiceLog_Asur
 
             ' 3rd Enquiry
             If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
                 cb3rdEventCat.DisplayMember = "cswecc_desc"
                 cb3rdEventCat.ValueMember = "cswecc_code"
                 cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
             End If
 
             If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
                 cb3rdEventDetail.DisplayMember = "EventTypeDesc"
                 cb3rdEventDetail.ValueMember = "EventTypeCode"
                 cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
             End If
 
             If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
                 cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
                 cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
                 cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
