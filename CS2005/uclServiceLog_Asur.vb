@@ -2797,39 +2797,39 @@ Public Class uclServiceLog_Asur
         cbEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         'Service Log enhancement
         ' Set data sources for new enquiry tab controls
-        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
 
-        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
 
-        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
 
-        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
 
-        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
 
-        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
 
-        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+        cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
 
-        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+        cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
 
-        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+        cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         '
@@ -2860,39 +2860,40 @@ Public Class uclServiceLog_Asur
         blnIsWithOutIWS = False
         'Service log enhancement
         ' Set data sources for new enquiry tab controls (without IWS)
-        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        'cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
 
-        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
 
-        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
 
-        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
 
-        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
 
-        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
 
-        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
+        cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
 
-        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
+        cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
 
-        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
+        cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         '
