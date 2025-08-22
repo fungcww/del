@@ -956,7 +956,7 @@ Public Class uclServiceLog_Asur
         'Me.grpServiceEvent.Controls.Add(Me.cbEventCat)
         'Me.grpServiceEvent.Controls.Add(Me.cbEventDetail)
         'Me.grpServiceEvent.Controls.Add(Me.cbEventTypeDetail)
-        'Me.grpServiceEvent.Controls.Add(Me.cbMedium)
+        Me.grpServiceEvent.Controls.Add(Me.cbMedium)
         'Me.grpServiceEvent.Controls.Add(Me.Label7)
         'Me.grpServiceEvent.Controls.Add(Me.Label9)
         Me.grpServiceEvent.Location = New System.Drawing.Point(7, 184)
@@ -1980,6 +1980,7 @@ Public Class uclServiceLog_Asur
         Me.cbRejectReason.SelectedIndex = 0
         Me.cbRejectReason.Enabled = False
     End Sub
+
     'oliver 2024-3-1 added for ITSR5061 Retention Offer Campaign 
     Private Function CheckNBMPolicyIsInsertRetentionOfferCampaignRecord() As Boolean
         Try
@@ -2166,6 +2167,7 @@ Public Class uclServiceLog_Asur
             busiId = "INSERT_HK_SERLOG_INFO"
         End If
     End Sub
+
     ''' <summary>
     ''' Customer Level Search Issue
     ''' Set CompanyName and BusiId as a parameter to request the SearchBusiAPI 
@@ -2419,6 +2421,7 @@ Public Class uclServiceLog_Asur
             Throw
         End Try
     End Sub
+
     ''' <summary>
     ''' Customer Level Search Issue
     ''' Add Service EventDetail Relations
@@ -2527,6 +2530,7 @@ Public Class uclServiceLog_Asur
             MsgBox("Exception: " & Err.Description, MsgBoxStyle.Critical)
             Exit Sub
         End Try
+
         Try
             'added at 2023-9-18 by oliver for Customer Level Search Issue
             AddServiceEventDetailRelations()
@@ -2724,6 +2728,7 @@ Public Class uclServiceLog_Asur
                 cs.NullText = gNULLText
                 tsSrvLog.GridColumnStyles.Add(cs)
             End If
+
             'added at 2023-9-18 by oliver for Customer Level Search Issue
             If blnIsParallelMode Then
                 cs = New DataGridTextBoxColumn
@@ -2792,59 +2797,41 @@ Public Class uclServiceLog_Asur
         cbEventTypeDetail.ValueMember = "csw_event_typedtl_code"
         'Service Log enhancement
         ' Set data sources for new enquiry tab controls
-        cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
+        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
-        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
 
-        cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
+        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
-        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
 
-        cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
+        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
 
-        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-
-        cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
+        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
-        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
 
-        cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
+        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
-        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
 
-        cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
+        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
 
-        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-
-        cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
+        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
-        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
 
-        cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
+        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
-        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
 
-        cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
+        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-
-        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
         '
     End Sub
 
@@ -2873,58 +2860,237 @@ Public Class uclServiceLog_Asur
         blnIsWithOutIWS = False
         'Service log enhancement
         ' Set data sources for new enquiry tab controls (without IWS)
-        cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
+        cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb1stEventCat.DisplayMember = "cswecc_desc"
         cb1stEventCat.ValueMember = "cswecc_code"
-        cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
 
-        cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
+        cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb1stEventDetail.DisplayMember = "EventTypeDesc"
         cb1stEventDetail.ValueMember = "EventTypeCode"
-        cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
 
-        cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
+        cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
 
-        txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-        txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-
-        cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
+        cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb2ndEventCat.DisplayMember = "cswecc_desc"
         cb2ndEventCat.ValueMember = "cswecc_code"
-        cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
 
-        cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
+        cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb2ndEventDetail.DisplayMember = "EventTypeDesc"
         cb2ndEventDetail.ValueMember = "EventTypeCode"
-        cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
 
-        cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
+        cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
 
-        txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-        txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-
-        cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
+        cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code_wo_iws")
         cb3rdEventCat.DisplayMember = "cswecc_desc"
         cb3rdEventCat.ValueMember = "cswecc_code"
-        cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
 
-        cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
+        cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws")
         cb3rdEventDetail.DisplayMember = "EventTypeDesc"
         cb3rdEventDetail.ValueMember = "EventTypeCode"
-        cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
 
-        cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
+        cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code_wo_iws")
         cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
         cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-        txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-        txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+        '
+    End Sub
+
+    Private Sub InitForm()
+        Dim b As Binding
+
+        'Fill the Medium Combo Box
+        InitPartialcb()
+
+        'Fill the Status Combo Box
+        cbStatus.DataSource = dsSrvLog.Tables("EventStatusCodes")
+        cbStatus.DisplayMember = "EventStatus"
+        cbStatus.ValueMember = "EventStatusCode"
+        'Fill the Receiver Comb Box, but it will only be enabled in Handoff cases
+        cbReceiver.DataSource = dsSrvLog.Tables("csr")
+        cbReceiver.DisplayMember = "Name"
+        cbReceiver.ValueMember = "CSRID"
+
+        'Transfer to AES
+        b = New Binding("Checked", dsSrvLog.Tables("ServiceEventDetail"), "IsTransferToAES")
+        AddHandler b.Format, AddressOf YNtoTF
+        AddHandler b.Parse, AddressOf TFtoYN
+        chkAES.DataBindings.Add(b)
+
+        'Add databindings to hidden text fields
+        hidSrvEvtNo.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "ServiceEventNumber")
+        hidPolicy.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "PolicyAccountID")
+        hidCustID.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "CustomerID")
+        hidSender.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "MasterCSRID")
+
+        'Bind Comboboxes to ServiceEventDetail
+        cbMedium.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventSourceMediumCode")
+        cbStatus.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventStatusCode")
+        cbInitiator.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventSourceInitiatorCode")
+        cbEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventCategoryCode")
+        cbEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeCode")
+        cbEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "EventTypeDetailCode")
+        cbReceiver.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "SecondaryCSRID")
+        'dtInitial.DataBindings.Add("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
+        
+        'Service log enhancement
+        ' Ensure new columns exist before binding
+        AddServiceEventDetailRelations()
+        
+        ' Bind new enquiry tab controls with error handling
+        Try
+            ' Check if required data tables exist
+            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
+                cb1stEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb1stEventCat.DisplayMember = "cswecc_desc"
+                cb1stEventCat.ValueMember = "cswecc_code"
+                cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
+                cb1stEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb1stEventDetail.DisplayMember = "EventTypeDesc"
+                cb1stEventDetail.ValueMember = "EventTypeCode"
+                cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
+                cb1stEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+                cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+                cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+            End If
+
+            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+
+            ' 2nd Enquiry
+            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
+                cb2ndEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb2ndEventCat.DisplayMember = "cswecc_desc"
+                cb2ndEventCat.ValueMember = "cswecc_code"
+                cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
+                cb2ndEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb2ndEventDetail.DisplayMember = "EventTypeDesc"
+                cb2ndEventDetail.ValueMember = "EventTypeCode"
+                cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
+                cb2ndEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+                cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+                cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+            End If
+
+            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+
+            ' 3rd Enquiry
+            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
+                cb3rdEventCat.DataSource = dsSrvLog.Tables("csw_event_category_code")
+                cb3rdEventCat.DisplayMember = "cswecc_desc"
+                cb3rdEventCat.ValueMember = "cswecc_code"
+                cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
+                cb3rdEventDetail.DataSource = dsSrvLog.Tables("ServiceEventTypeCodes")
+                cb3rdEventDetail.DisplayMember = "EventTypeDesc"
+                cb3rdEventDetail.ValueMember = "EventTypeCode"
+                cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+            End If
+
+            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
+                cb3rdEventTypeDetail.DataSource = dsSrvLog.Tables("csw_event_typedtl_code")
+                cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+                cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+                cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+            End If
+
+            txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+            txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+        Catch ex As Exception
+            ' Log error or handle gracefully - enquiry fields may not be available for all records
+            System.Diagnostics.Debug.WriteLine("Error binding enquiry fields: " & ex.Message)
+        End Try
+        '
+        b = New Binding("Value", dsSrvLog.Tables("ServiceEventDetail"), "EventInitialDateTime")
+        AddHandler b.Format, AddressOf DTFormatter
+        AddHandler b.Parse, AddressOf DTParser
+        dtInitial.DataBindings.Add(b)
+
+        'Alert text
+        txtPolicyAlert.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "AlertNotes")
+        txtReminder.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "ReminderNotes")
+        txtNotes.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "EventNotes")
+        b = New Binding("Checked", dsSrvLog.Tables("ServiceEventDetail"), "IsPolicyAlert")
+        AddHandler b.Format, AddressOf YNtoTF
+        AddHandler b.Parse, AddressOf TFtoYN
+        chkPolicyAlert.DataBindings.Add(b)
+
+        'ID Verify
+        b = New Binding("Checked", dsSrvLog.Tables("ServiceEventDetail"), "IsIdVerify")
+        AddHandler b.Format, AddressOf YNtoTF
+        AddHandler b.Parse, AddressOf TFtoYN
+        chkIdVerify.DataBindings.Add(b)
+
+        'Allow user to input policy ID in customer service log 
+        If strPolicy <> "" Then
+            gboPolicy.Visible = False
+            dgSrvLog.Width = 850
+        Else
+            gboPolicy.Visible = True
+            txtPolicyNo.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "PolicyAccountNo")
+            dgSrvLog.Width = 900
+
+        End If
+
+        'Display Customer groupbox when entry point from customer search
+        'updated at 2023-9-18 by oliver for Customer Level Search Issue
+        If blnIsCustLevel Then
+            gboCustomer.Visible = True
+            txtCustomerID.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "CustomerID")
+            If dsSrvLog.Tables("Customer").Rows.Count > 0 Then
+                txtCustomerName.Text = dsSrvLog.Tables("Customer").Rows(0).Item("NameSuffix").ToString() & " " & dsSrvLog.Tables("Customer").Rows(0).Item("FirstName").ToString()
+            End If
+        Else
+            gboCustomer.Visible = False
+        End If
+
+        b = New Binding("Value", dsSrvLog.Tables("ServiceEventDetail"), "ReminderDate")
+        AddHandler b.Format, AddressOf DTFormatter
+        AddHandler b.Parse, AddressOf DTParser
+        dtReminder.DataBindings.Add(b)
+        dtReminder.Format = DateTimePickerFormat.Custom
+        dtReminder.CustomFormat = gDateFormat
+        'Check status
+        CheckStatus()
+        strNewFlag = "N"
+
+
+        'Me.lbl_InforceDate.Text = ""
+        Me.lbl_PostCallStatus.Text = "loading.."
+        'Me.lbl_PostCallCount.Text = ""
+
+        'Me.rad_NVCWelcomeCall.Checked = False
+        'Me.rad_VCPostSalesCall.Checked = False
+        'Me.rad_ILASPostSalseCall.Checked = False
+        'Me.rad_SuitabilityMisMatch.Checked = False
+        Me.lbl_InforceDate.Visible = False
+        'Me.lbl_PostCallStatus.Visible = False
+        Me.lbl_PostCallCount.Visible = False
+
+        Me.rad_NVCWelcomeCall.Visible = False
+        Me.rad_VCPostSalesCall.Visible = False
+        Me.rad_ILASPostSalseCall.Visible = False
+        Me.rad_SuitabilityMisMatch.Visible = False
+
         Me.Label5.Visible = False
         Me.Label15.Visible = False
         Me.Label17.Visible = False
@@ -3222,6 +3388,7 @@ Public Class uclServiceLog_Asur
             txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
         End If
     End Sub
+
     Private Sub Clear3rdEnquiryFields()
         ' Temporarily remove data bindings to clear fields
         cb3rdEventCat.DataBindings.Clear()
@@ -3298,6 +3465,7 @@ Public Class uclServiceLog_Asur
             Set3rdTypeDetail()
         End If
     End Sub
+
     Private Sub Set1stType()
         Dim strCat As String
         strCat = cb1stEventCat.SelectedValue.ToString
@@ -3468,6 +3636,7 @@ Public Class uclServiceLog_Asur
     End Sub
 
 #End Region
+
 #Region " Button Click Events "
 
     'btnNew_Click() - Create a new row in datatable and bind the controls to it
@@ -3668,6 +3837,7 @@ Public Class uclServiceLog_Asur
         'SaveServiceLog(dr)
         'bm.Position = iPrevPosition
     End Sub
+
 #End Region
     'Service Log checking
     Private Function CheckIsPolicyExist(policyNo As String, strPolicy As String, companyId As String) As Boolean
@@ -3691,6 +3861,150 @@ Public Class uclServiceLog_Asur
         End Try
         Return False
     End Function
+    '
+    'CheckStatus() - Enable/disable the input controls according to the status of service event
+    Private Sub CheckStatus()
+        Dim strStatus As String
+        Dim strAppAes As String
+
+        If dsSrvLog.Tables("ServiceEventDetail").Rows.Count > 0 Then
+            'strStatus = dsSrvLog.Tables("ServiceEventDetail").Rows(dgSrvLog.CurrentRowIndex).Item("EventStatusCode")
+            bm = Me.BindingContext(dsSrvLog.Tables("ServiceEventDetail"))
+            Dim dr As DataRow = CType(bm.Current, DataRowView).Row()
+            strStatus = dr.Item("EventStatusCode")
+
+            'Enable/disable comboboxes
+            If strStatus = "C" Then
+                'Record is non-editable when status is "Completed"
+                cbMedium.Enabled = False
+                cbEventCat.Enabled = False
+                cbEventDetail.Enabled = False
+                cbEventTypeDetail.Enabled = False
+                cbStatus.Enabled = False
+                cbInitiator.Enabled = False
+                dtInitial.Enabled = False
+                'chkFCR.Enabled = False  'FCR
+                chkFCR.Enabled = True  'FCR
+                chkACC.Enabled = True  'ACC
+                'C001 - Start
+                chkMCV.Enabled = True
+                'C001 - End
+            Else
+                cbMedium.Enabled = True
+                cbEventCat.Enabled = True
+                cbEventDetail.Enabled = True
+                cbEventTypeDetail.Enabled = True
+                cbStatus.Enabled = True
+                cbInitiator.Enabled = True
+                dtInitial.Enabled = True
+            End If
+
+            'Status=Handoff - enable receiver
+            If strStatus = "C" Or strStatus = "P" Then
+                cbReceiver.Enabled = False
+                lbReceiver.Enabled = False
+                cbReceiver.BackColor = System.Drawing.Color.LightGray
+            Else
+                cbReceiver.Enabled = True
+                lbReceiver.Enabled = True
+                cbReceiver.BackColor = System.Drawing.Color.White
+            End If
+
+            'Enable/disable chkAes
+            If IsDBNull(dr.Item("IsAppearedInAES")) Then
+                chkAES.Enabled = False
+            ElseIf dr.Item("IsAppearedInAES") = "Y" Then
+                chkAES.Enabled = True
+            Else
+                chkAES.Enabled = False
+            End If
+
+            btnNew.Enabled = True
+            btnCancel.Enabled = True
+            btnSave.Enabled = True
+            btnSaveC.Enabled = True
+
+            ' **** FCR start ****
+            'chkFCR.Enabled = False
+            chkFCR.Enabled = True
+            If Not IsDBNull(dr.Item("EventCloseoutCode")) AndAlso dr.Item("EventCloseoutCode") = "Y" Then
+                chkFCR.Checked = True
+            Else
+                chkFCR.Checked = False
+            End If
+            ' **** FCR end ****
+
+            ' **** ACC start ****
+            chkACC.Enabled = True
+            If Not IsDBNull(dr.Item("caseno")) AndAlso dr.Item("caseno") = "Y" Then
+                chkACC.Checked = True
+            Else
+                chkACC.Checked = False
+            End If
+            ' **** ACC end ****
+
+            If IsDBNull(dr.Item("PolicyType")) Then
+                rbBer.Checked = True
+            ElseIf dr.Item("PolicyType") = "LIFEB" Then
+                rbBer.Checked = True
+            ElseIf dr.Item("PolicyType") = "LIFEA" Then
+                rbAsur.Checked = True
+            ElseIf dr.Item("PolicyType") = "EB" Then
+                rbEB.Checked = True
+            ElseIf dr.Item("PolicyType") = "GI" Then
+                rbGI.Checked = True
+            End If
+            'C001 - Start
+            chkMCV.Enabled = True
+            If (Not IsDBNull(dr.Item("MCV"))) AndAlso dr.Item("MCV") = "Y" Then
+                chkMCV.Checked = True
+            Else
+                chkMCV.Checked = False
+            End If
+            'C001 - End
+        Else
+            cbMedium.SelectedValue = ""
+            cbMedium.Enabled = False
+            cbEventCat.Enabled = False
+            cbEventDetail.Enabled = False
+            cbEventTypeDetail.Enabled = False
+            cbStatus.Enabled = False
+            cbInitiator.Enabled = False
+            dtInitial.Enabled = False
+            cbReceiver.Enabled = False
+            lbReceiver.Enabled = False
+            cbReceiver.BackColor = System.Drawing.Color.LightGray
+            txtPolicyAlert.Enabled = False
+            chkPolicyAlert.Checked = False
+            chkPolicyAlert.Enabled = False
+            chkReminder.Checked = False
+            chkReminder.Enabled = False
+            dtReminder.Enabled = False
+            txtReminder.Enabled = False
+            txtNotes.Enabled = False
+            chkIdVerify.Checked = False
+            chkIdVerify.Enabled = False
+
+            btnNew.Enabled = True
+            btnSave.Enabled = False
+            btnSaveC.Enabled = False
+            btnCancel.Enabled = False
+            chkFCR.Enabled = False      ' FCR
+            chkACC.Enabled = False      ' ACC
+
+            txtPolicyNo.Enabled = False
+
+            rbBer.Checked = True
+            'C001 - Start
+            chkMCV.Enabled = False
+            'C001 - End
+        End If
+        
+        ' Service log enhancement - Manage enquiry tab controls
+        ManageEnquiryTabControls()
+
+    End Sub
+
     'CheckTransferAES() - Check whether the case should be transferred to AES
     'Called while the first save of the service log
     Private Function CheckTransferAES() As Boolean
@@ -3870,6 +4184,7 @@ Public Class uclServiceLog_Asur
 
         Return isSaved
     End Function
+
     'oliver 2024-01-11 added for ITSR5061 Retention Offer Campaign 
     Private Function InitPolicyNotesDataTable(ByVal policyNo As String, ByVal customerId As String, ByVal type As String, ByVal subtype As String, ByVal hiclCode As String, ByVal userID As String, ByVal entryDate As DateTime, ByVal followupDate As DateTime, ByVal followupUserId As String, ByVal description As String, ByVal seqNo As String) As DataTable
         Dim dtPolicyNotes As New DataTable
@@ -4006,6 +4321,7 @@ Public Class uclServiceLog_Asur
         Refresh_ServiceLog()
 
     End Sub
+
     ''' <summary>
     ''' Customer Level Search Issue
     ''' Update ServiceLog to Bermuda or Assurance by using ExecuteBusiAPI in CRS_API
@@ -4058,6 +4374,7 @@ Public Class uclServiceLog_Asur
                 SetCompanyNameAndBusiIdToInsertSerLog(COMPANY_NAME_BERMUDA, companyName, busiId)
             End If
         End If
+
         Try
             APIServiceBL.ExecAPIBusi(companyName, busiId,
                                 New Dictionary(Of String, String) From {
@@ -4235,6 +4552,7 @@ Public Class uclServiceLog_Asur
             Throw
         End Try
     End Function
+
     'oliver 2024-3-7 added for ITSR5061 Retention Offer Campaign 
     Private Sub CheckSaveNBMPolicy(ByVal dr As DataRow, ByVal maxServiceEventNumber As String)
         Try
@@ -4412,6 +4730,7 @@ Public Class uclServiceLog_Asur
         End If
 
     End Sub
+
     'updated by oliver for Customer Level Search Issue
     Private Sub btnSaveC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveC.Click
 
@@ -4495,6 +4814,7 @@ Public Class uclServiceLog_Asur
         End Try
 
     End Sub
+
     'added by ITDYMH 20150229 Post-Sales Call
     Private Sub doRefreshPostCallInfo()
 
@@ -4613,6 +4933,181 @@ Public Class uclServiceLog_Asur
         End If
     End Sub
 #End Region
+
+
+    Private Function isInForce() As Boolean
+        Dim bReturn As Boolean = False
+        If Not sqlConn2.State = ConnectionState.Open Then
+            sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
+            sqlConn2.Open()
+        End If
+        daTmp = New SqlDataAdapter("select AccountStatusCode from PolicyAccount nolock where PolicyAccountID = @policyNo", sqlConn2)
+        daTmp.SelectCommand.Parameters.Add("@policyNo", SqlDbType.VarChar, 16).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+        dsTmp = New DataSet
+        daTmp.Fill(dsTmp)
+        If dsTmp.Tables(0).Rows.Count > 0 Then
+            If "1,2,3,4,V,X,Z".Contains(dsTmp.Tables(0).Rows(0)(0)) Then
+                bReturn = True
+            Else
+                bReturn = False
+            End If
+        Else
+            bReturn = False
+        End If
+        sqlConn2.Close()
+        Return bReturn
+    End Function
+    Private Function isCooling() As Boolean
+        Dim bReturn As Boolean = False
+        If Not sqlConn2.State = ConnectionState.Open Then
+            sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
+            sqlConn2.Open()
+        End If
+        daTmp = New SqlDataAdapter("select iif(cswpuw_flook_dline > '1900-01-01 00:00:00',1,0) from csw_policy_uw nolock where cswpuw_poli_id = @policyNo", sqlConn2)
+        daTmp.SelectCommand.Parameters.Add("@policyNo", SqlDbType.VarChar, 16).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+        dsTmp = New DataSet
+        daTmp.Fill(dsTmp)
+        If dsTmp.Tables(0).Rows.Count > 0 Then
+            If dsTmp.Tables(0).Rows(0)(0) > 0 Then
+                bReturn = True
+            Else
+                bReturn = False
+            End If
+        Else
+            bReturn = False
+        End If
+        sqlConn2.Close()
+        Return bReturn
+    End Function
+
+    'oliver 2024-4-24 added for Table_Relocate_Sprint13
+    Private Function GetPiAuth(ByVal strPolicy As String) As DataTable
+        Try
+            Dim ds As DataSet = APIServiceBL.CallAPIBusi(getCompanyCode(strCompany), "GET_PI_AUTH", New Dictionary(Of String, String) From {
+                {"strPolicyNo", strPolicy}
+            })
+            If ds.Tables.Count > 0 Then
+                Return ds.Tables(0).Copy()
+            End If
+        Catch ex As Exception
+            HandleGlobalException(ex, "CRSAPI Retrieve Error." & vbCrLf & ex.Message)
+        End Try
+
+        Return New DataTable()
+    End Function
+
+    'oliver 2024-4-24 added for Table_Relocate_Sprint13
+    Private Function UpdatePiAuth(ByVal policyAccountID As String, ByVal piCustID As String, ByVal enable As String, ByVal usr As String) As Boolean
+        Try
+            APIServiceBL.ExecAPIBusi(getCompanyCode(strCompany), "UPDATE_PI_AUTH",
+                                New Dictionary(Of String, String) From {
+                                {"PolicyAccountID", Trim(policyAccountID)},
+                                {"PICustID", Trim(piCustID)},
+                                {"Enable", enable},
+                                {"usr", usr}
+                                })
+            Return True
+        Catch ex As Exception
+            HandleGlobalException(ex, "Error occurs when updating the comments. Error:  " & ex.Message)
+        End Try
+        Return False
+    End Function
+
+    Private Function GetPiAuthOtp(customerID As String) As Dictionary(Of String, String)
+        Dim returnObj As New Dictionary(Of String, String)
+
+        Try
+            Dim objclsPiAuthResponse As CRS_Util.clsJSONBusinessObj.clsPiAuthResponse = CRS_Util.clsJSONTool.CallPiAuthGenKey(customerID, gsUser)
+            If objclsPiAuthResponse IsNot Nothing Then
+                If objclsPiAuthResponse.status.Equals("error") Then
+                    MessageBox.Show("Fail to gen OTP with following error:" & objclsPiAuthResponse.error.message)
+                End If
+                If objclsPiAuthResponse.status.Equals("success") Then
+                    returnObj.Add("otp", objclsPiAuthResponse.data.unlocKey)
+                    returnObj.Add("expiry", objclsPiAuthResponse.data.expiry.Substring(0, 10))
+                    returnObj.Add("expiryY", objclsPiAuthResponse.data.expiry.Substring(0, 4))
+                    returnObj.Add("expiryM", objclsPiAuthResponse.data.expiry.Substring(5, 2))
+                    returnObj.Add("expiryD", objclsPiAuthResponse.data.expiry.Substring(8, 2))
+                    Dim sPhNamePrefix As String = ""
+                    Dim sPhFirstName As String = ""
+                    Dim sPhNameSuffix As String = ""
+                    Dim sPhChiFstNm As String = ""
+                    Dim sPiNamePrefix As String = ""
+                    Dim sPiFirstName As String = ""
+                    Dim sPiNameSuffix As String = ""
+                    Dim sPiChiFstNm As String = ""
+                    Dim sProduct As String = ""
+                    Dim sProductChi As String = ""
+
+                    Dim dsReturn As New DataSet
+                    If Not sqlConn2.State = ConnectionState.Open Then
+                        sqlConn2.ConnectionString = GetConnectionStringByCompanyID(strCompany)
+                        sqlConn2.Open()
+                    End If
+                    daTmp = New SqlDataAdapter("select NamePrefix, FirstName, NameSuffix, ChiFstNm from Customer with (nolock) inner join csw_poli_rel with (nolock) on Customer.CustomerID = csw_poli_rel.CustomerID where csw_poli_rel.PolicyRelateCode = @Type and csw_poli_rel.PolicyAccountID = @PolicyAccountID", sqlConn2)
+                    daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+                    daTmp.SelectCommand.Parameters.Add("@Type", SqlDbType.VarChar, 20).Value = "PH"
+                    dsReturn = New DataSet
+                    daTmp.Fill(dsReturn)
+                    If dsReturn.Tables(0).Rows.Count > 0 Then
+                        sPhNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
+                        sPhFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
+                        sPhNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
+                        sPhChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
+                    End If
+
+                    daTmp.SelectCommand.Parameters("@Type").Value = "PI"
+                    dsReturn = New DataSet
+                    daTmp.Fill(dsReturn)
+                    If dsReturn.Tables(0).Rows.Count > 0 Then
+                        sPiNamePrefix = dsReturn.Tables(0).Rows(0)("NamePrefix").ToString
+                        sPiFirstName = dsReturn.Tables(0).Rows(0)("FirstName").ToString
+                        sPiNameSuffix = dsReturn.Tables(0).Rows(0)("NameSuffix").ToString
+                        sPiChiFstNm = dsReturn.Tables(0).Rows(0)("ChiFstNm").ToString
+                    End If
+
+                    daTmp = New SqlDataAdapter($"select [Product].[Description], [Product_Chi].ChineseDescription from [PolicyAccount] with (nolock) inner join [Product] with (nolock) on [PolicyAccount].ProductID = [Product].ProductID inner join {gcNBSDB}[Product_Chi] with (nolock) on [PolicyAccount].ProductID = [Product_Chi].ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
+                    daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+                    dsReturn = New DataSet
+                    daTmp.Fill(dsReturn)
+                    If dsReturn.Tables(0).Rows.Count > 0 Then
+                        sProduct = dsReturn.Tables(0).Rows(0)("Description").ToString
+                        sProductChi = dsReturn.Tables(0).Rows(0)("ChineseDescription").ToString
+                    Else
+                        daTmp = New SqlDataAdapter("select ProductName, ProductNameCHI from [PolicyAccount] with (nolock) inner join GI_Product with (nolock) on [PolicyAccount].ProductID = GI_Product.ProductID where [PolicyAccount].PolicyAccountID = @PolicyAccountID", sqlConn2)
+                        daTmp.SelectCommand.Parameters.Add("@PolicyAccountID", SqlDbType.VarChar, 20).Value = IIf(strPolicy Is Nothing, "", strPolicy)
+                        dsReturn = New DataSet
+                        daTmp.Fill(dsReturn)
+                        If dsReturn.Tables(0).Rows.Count > 0 Then
+                            sProduct = dsReturn.Tables(0).Rows(0)("ProductName").ToString
+                            sProductChi = dsReturn.Tables(0).Rows(0)("ProductNameCHI").ToString
+                        End If
+                    End If
+
+                    sqlConn2.Close()
+
+                    returnObj.Add("PH_NamePrefix", sPhNamePrefix)
+                    returnObj.Add("PH_FirstName", sPhFirstName)
+                    returnObj.Add("PH_NameSuffix", sPhNameSuffix)
+                    returnObj.Add("PH_ChiFstNm", sPhChiFstNm)
+                    returnObj.Add("PI_NamePrefix", sPiNamePrefix)
+                    returnObj.Add("PI_FirstName", sPiFirstName)
+                    returnObj.Add("PI_NameSuffix", sPiNameSuffix)
+                    returnObj.Add("PI_ChiFstNm", sPiChiFstNm)
+                    returnObj.Add("Product", sProduct)
+                    returnObj.Add("ProductChi", sProductChi)
+                    Return returnObj
+                End If
+            Else
+                MessageBox.Show("Fail to gen OTP")
+            End If
+        Catch ex As Exception
+            HandleGlobalException(ex, ex.Message)
+        End Try
+
+        Return returnObj
+    End Function
+
     Private Function SendPiMail(dOtp As Dictionary(Of String, String), toEmail As String, ccEmail As String) As Boolean
         Try
             Dim strToMail As String = toEmail
@@ -4781,6 +5276,7 @@ Public Class uclServiceLog_Asur
         ws.DBSOAPHeaderValue = header
         Return ws
     End Function
+
     Private Sub btnAuthToPi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAuthToPi.Click
         Dim bDo As Boolean = True
         Dim bPiMail As Boolean = False
@@ -4948,127 +5444,5 @@ Public Class uclServiceLog_Asur
         AsyncDbLogger.LogInfo(gsUser, "Service Log", sb.ToString())
     End Sub
 
-    Private Sub InitForm_wo_iws()
-        'Service log enhancement
-        ' Set data sources for new enquiry tab controls (without IWS)
-        ' Use separate DataViews to ensure ComboBoxes are independent
-        cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
-        cb1stEventCat.DisplayMember = "cswecc_desc"
-        cb1stEventCat.ValueMember = "cswecc_code"
-
-        cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
-        cb1stEventDetail.DisplayMember = "EventTypeDesc"
-        cb1stEventDetail.ValueMember = "EventTypeCode"
-
-        cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
-        cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-        cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-
-        cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
-        cb2ndEventCat.DisplayMember = "cswecc_desc"
-        cb2ndEventCat.ValueMember = "cswecc_code"
-
-        cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
-        cb2ndEventDetail.DisplayMember = "EventTypeDesc"
-        cb2ndEventDetail.ValueMember = "EventTypeCode"
-
-        cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
-        cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-        cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-
-        cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code_wo_iws"))
-        cb3rdEventCat.DisplayMember = "cswecc_desc"
-        cb3rdEventCat.ValueMember = "cswecc_code"
-
-        cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes_wo_iws"))
-        cb3rdEventDetail.DisplayMember = "EventTypeDesc"
-        cb3rdEventDetail.ValueMember = "EventTypeCode"
-
-        cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code_wo_iws"))
-        cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-        cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-        '
-    End Sub
-
-    Private Sub InitForm()
-        ' Bind new enquiry tab controls with error handling
-        Try
-            ' Check if required data tables exist
-            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                ' Use separate DataViews to ensure ComboBoxes are independent
-                cb1stEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
-                cb1stEventCat.DisplayMember = "cswecc_desc"
-                cb1stEventCat.ValueMember = "cswecc_code"
-                cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb1stEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
-                cb1stEventDetail.DisplayMember = "EventTypeDesc"
-                cb1stEventDetail.ValueMember = "EventTypeCode"
-                cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb1stEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
-                cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-                cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-                cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-            End If
-
-            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-
-            ' 2nd Enquiry
-            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                cb2ndEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
-                cb2ndEventCat.DisplayMember = "cswecc_desc"
-                cb2ndEventCat.ValueMember = "cswecc_code"
-                cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb2ndEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
-                cb2ndEventDetail.DisplayMember = "EventTypeDesc"
-                cb2ndEventDetail.ValueMember = "EventTypeCode"
-                cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb2ndEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
-                cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-                cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-                cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-            End If
-
-            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-
-            ' 3rd Enquiry
-            If dsSrvLog.Tables.Contains("csw_event_category_code") Then
-                cb3rdEventCat.DataSource = New DataView(dsSrvLog.Tables("csw_event_category_code"))
-                cb3rdEventCat.DisplayMember = "cswecc_desc"
-                cb3rdEventCat.ValueMember = "cswecc_code"
-                cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("ServiceEventTypeCodes") Then
-                cb3rdEventDetail.DataSource = New DataView(dsSrvLog.Tables("ServiceEventTypeCodes"))
-                cb3rdEventDetail.DisplayMember = "EventTypeDesc"
-                cb3rdEventDetail.ValueMember = "EventTypeCode"
-                cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-            End If
-
-            If dsSrvLog.Tables.Contains("csw_event_typedtl_code") Then
-                cb3rdEventTypeDetail.DataSource = New DataView(dsSrvLog.Tables("csw_event_typedtl_code"))
-                cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
-                cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
-                cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-            End If
-        Catch ex As Exception
-            ' Handle case where bindings don't exist yet
-            System.Diagnostics.Debug.WriteLine("Error binding enquiry controls: " & ex.Message)
-        End Try
-    End Sub
-
 End Class
+
