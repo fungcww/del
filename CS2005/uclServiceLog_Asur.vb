@@ -1,6 +1,4 @@
-﻿'C001 - Add MCV Indicator in HK & Macau Service Log Screen - Gopu Kalaimani.
-
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Imports System.Globalization
 Imports System.Text
 
@@ -3325,17 +3323,41 @@ Public Class uclServiceLog_Asur
                     Clear1stEnquiryFields()
                     bln1stEnquiryVisited = True
                 End If
+                ' Re-establish data bindings for 1st enquiry if in new mode
+                If blnIsNewMode Then
+                    cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+                    cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+                    cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+                    txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+                    txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+                End If
             Case 1 ' 2nd Enquiry
                 If Not bln2ndEnquiryVisited Then
                     ' First time visiting 2nd Enquiry - clear all fields
                     Clear2ndEnquiryFields()
                     bln2ndEnquiryVisited = True
                 End If
+                ' Re-establish data bindings for 2nd enquiry if in new mode
+                If blnIsNewMode Then
+                    cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+                    cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+                    cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+                    txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+                    txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+                End If
             Case 2 ' 3rd Enquiry
                 If Not bln3rdEnquiryVisited Then
                     ' First time visiting 3rd Enquiry - clear all fields
                     Clear3rdEnquiryFields()
                     bln3rdEnquiryVisited = True
+                End If
+                ' Re-establish data bindings for 3rd enquiry if in new mode
+                If blnIsNewMode Then
+                    cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+                    cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+                    cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+                    txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+                    txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
                 End If
         End Select
     End Sub
@@ -3355,14 +3377,8 @@ Public Class uclServiceLog_Asur
         txt1stReason.Text = ""
         txt1stAlternative.Text = ""
 
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-            cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-            cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
-        End If
+        ' Do NOT re-establish data bindings here - let the tab switching handle it
+        ' This prevents linking between tabs
     End Sub
 
     Private Sub Clear2ndEnquiryFields()
@@ -3380,14 +3396,8 @@ Public Class uclServiceLog_Asur
         txt2ndReason.Text = ""
         txt2ndAlternative.Text = ""
 
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-            cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-            cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
-        End If
+        ' Do NOT re-establish data bindings here - let the tab switching handle it
+        ' This prevents linking between tabs
     End Sub
 
     Private Sub Clear3rdEnquiryFields()
@@ -3405,14 +3415,8 @@ Public Class uclServiceLog_Asur
         txt3rdReason.Text = ""
         txt3rdAlternative.Text = ""
 
-        ' Re-establish data bindings only if in new mode
-        If blnIsNewMode Then
-            cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-            cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-            cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-            txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-            txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
-        End If
+        ' Do NOT re-establish data bindings here - let the tab switching handle it
+        ' This prevents linking between tabs
     End Sub
     '
     Private Sub cb1stEventDetail_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cb1stEventDetail.SelectedIndexChanged
