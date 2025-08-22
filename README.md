@@ -366,6 +366,14 @@ This project involves enhancing the Service Event functionality in the CS2005 sy
   - [x] Configure appropriate column widths and headers
   - [x] Ensure proper data binding to ServiceEventDetail DataTable columns
 
+### **Data Independence Fix (Sep 17)**
+- [x] **Tab Data Isolation (Sep 17)**
+  - [x] Fix data overlap issue between 1st, 2nd, and 3rd enquiry tabs
+  - [x] Create separate DataViews for each enquiry tab to prevent shared filtering
+  - [x] Ensure Set1stType(), Set2ndType(), Set3rdType() functions use independent DataViews
+  - [x] Ensure Set1stTypeDetail(), Set2ndTypeDetail(), Set3rdTypeDetail() functions use independent DataViews
+  - [x] Prevent ComboBox filtering in one tab from affecting other tabs' data
+
 ### **Testing & Validation (Sep 17-22)**
 - [ ] **Unit Testing (Sep 17-18)**
   - [ ] Test individual control functionality

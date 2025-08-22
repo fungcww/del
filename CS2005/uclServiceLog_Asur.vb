@@ -3476,8 +3476,14 @@ Public Class uclServiceLog_Asur
             tableName = "ServiceEventTypeCodes"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        ' Create a separate DataView for 1st enquiry to avoid affecting other tabs
+        Dim dv1st As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv1st.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dv1st.Sort = "SortOrder"
+        cb1stEventDetail.DataSource = dv1st
+        cb1stEventDetail.DisplayMember = "EventTypeDesc"
+        cb1stEventDetail.ValueMember = "EventTypeCode"
+        
         If cb1stEventDetail.Items.Count > 0 Then
             cb1stEventDetail.SelectedIndex = -1
             cb1stEventDetail.SelectedIndex = 0
@@ -3499,8 +3505,14 @@ Public Class uclServiceLog_Asur
             tableName = "csw_event_typedtl_code"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        ' Create a separate DataView for 1st enquiry to avoid affecting other tabs
+        Dim dv1st As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv1st.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dv1st.Sort = "cswetd_sort_order"
+        cb1stEventTypeDetail.DataSource = dv1st
+        cb1stEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb1stEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
         If cb1stEventTypeDetail.Items.Count > 0 Then
             cb1stEventTypeDetail.SelectedIndex = -1
             cb1stEventTypeDetail.SelectedIndex = 0
@@ -3517,8 +3529,14 @@ Public Class uclServiceLog_Asur
             tableName = "ServiceEventTypeCodes"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        ' Create a separate DataView for 2nd enquiry to avoid affecting other tabs
+        Dim dv2nd As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv2nd.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dv2nd.Sort = "SortOrder"
+        cb2ndEventDetail.DataSource = dv2nd
+        cb2ndEventDetail.DisplayMember = "EventTypeDesc"
+        cb2ndEventDetail.ValueMember = "EventTypeCode"
+        
         If cb2ndEventDetail.Items.Count > 0 Then
             cb2ndEventDetail.SelectedIndex = -1
             cb2ndEventDetail.SelectedIndex = 0
@@ -3540,8 +3558,14 @@ Public Class uclServiceLog_Asur
             tableName = "csw_event_typedtl_code"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        ' Create a separate DataView for 2nd enquiry to avoid affecting other tabs
+        Dim dv2nd As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv2nd.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dv2nd.Sort = "cswetd_sort_order"
+        cb2ndEventTypeDetail.DataSource = dv2nd
+        cb2ndEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb2ndEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
         If cb2ndEventTypeDetail.Items.Count > 0 Then
             cb2ndEventTypeDetail.SelectedIndex = -1
             cb2ndEventTypeDetail.SelectedIndex = 0
@@ -3558,8 +3582,14 @@ Public Class uclServiceLog_Asur
             tableName = "ServiceEventTypeCodes"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "EventCategoryCode = '" & strCat & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "SortOrder"
+        ' Create a separate DataView for 3rd enquiry to avoid affecting other tabs
+        Dim dv3rd As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv3rd.RowFilter = "EventCategoryCode = '" & strCat & "'"
+        dv3rd.Sort = "SortOrder"
+        cb3rdEventDetail.DataSource = dv3rd
+        cb3rdEventDetail.DisplayMember = "EventTypeDesc"
+        cb3rdEventDetail.ValueMember = "EventTypeCode"
+        
         If cb3rdEventDetail.Items.Count > 0 Then
             cb3rdEventDetail.SelectedIndex = -1
             cb3rdEventDetail.SelectedIndex = 0
@@ -3581,8 +3611,14 @@ Public Class uclServiceLog_Asur
             tableName = "csw_event_typedtl_code"
         End If
 
-        dsSrvLog.Tables(tableName).DefaultView.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
-        dsSrvLog.Tables(tableName).DefaultView.Sort = "cswetd_sort_order"
+        ' Create a separate DataView for 3rd enquiry to avoid affecting other tabs
+        Dim dv3rd As DataView = New DataView(dsSrvLog.Tables(tableName))
+        dv3rd.RowFilter = "csw_event_category_code = '" & strCat & "' and csw_event_type_code = '" & strType & "'"
+        dv3rd.Sort = "cswetd_sort_order"
+        cb3rdEventTypeDetail.DataSource = dv3rd
+        cb3rdEventTypeDetail.DisplayMember = "csw_event_typedtl_desc"
+        cb3rdEventTypeDetail.ValueMember = "csw_event_typedtl_code"
+        
         If cb3rdEventTypeDetail.Items.Count > 0 Then
             cb3rdEventTypeDetail.SelectedIndex = -1
             cb3rdEventTypeDetail.SelectedIndex = 0
