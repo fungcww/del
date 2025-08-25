@@ -849,7 +849,7 @@ Public Class uclServiceLog_Asur
         Me.lblCICGenesysCallID.Location = New System.Drawing.Point(18, 171)
         Me.lblCICGenesysCallID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCICGenesysCallID.Name = "lblCICGenesysCallID"
-        Me.lblCICGenesysCallID.Size = New System.Drawing.Size(90, 25)
+        Me.lblCICGenesysCallID.Size = New System.Drawing.Size(150, 25)
         Me.lblCICGenesysCallID.TabIndex = 16
         Me.lblCICGenesysCallID.Text = "CIC/ Genesys Cloud Call ID"
         '
