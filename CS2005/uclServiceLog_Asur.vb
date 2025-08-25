@@ -45,6 +45,8 @@ Public Class uclServiceLog_Asur
     Private blnIsEnableNBMPolicyPanel As Boolean = False
     Private rejectReasonDropDownListDataTable As DataTable
     Private dataTableReturnRetentionCampaignEnquiry As DataTable
+    Private reasonOptionsDataTable As DataTable
+    Private alternativeOptionsDataTable As DataTable
 
     Dim sqlConn As New SqlConnection
     Dim sqlConn2 As New SqlConnection 'AL20210201 eService PI Access
@@ -175,12 +177,12 @@ Public Class uclServiceLog_Asur
     Friend WithEvents cb3rdEventCat As ComboBox
     Friend WithEvents cb3rdEventDetail As ComboBox
     Friend WithEvents cb3rdEventTypeDetail As ComboBox
-    Friend WithEvents txt1stReason As TextBox
-    Friend WithEvents txt1stAlternative As TextBox
-    Friend WithEvents txt2ndReason As TextBox
-    Friend WithEvents txt2ndAlternative As TextBox
-    Friend WithEvents txt3rdReason As TextBox
-    Friend WithEvents txt3rdAlternative As TextBox
+    Friend WithEvents cb1stReason As ComboBox
+    Friend WithEvents cb1stAlternative As ComboBox
+    Friend WithEvents cb2ndReason As ComboBox
+    Friend WithEvents cb2ndAlternative As ComboBox
+    Friend WithEvents cb3rdReason As ComboBox
+    Friend WithEvents cb3rdAlternative As ComboBox
     Friend WithEvents lbl1stEventCat As Label
     Friend WithEvents lbl1stEventDetail As Label
     Friend WithEvents lbl1stEventTypeDetail As Label
@@ -345,12 +347,12 @@ Public Class uclServiceLog_Asur
         Me.cb3rdEventCat = New System.Windows.Forms.ComboBox()
         Me.cb3rdEventDetail = New System.Windows.Forms.ComboBox()
         Me.cb3rdEventTypeDetail = New System.Windows.Forms.ComboBox()
-        Me.txt1stReason = New System.Windows.Forms.TextBox()
-        Me.txt1stAlternative = New System.Windows.Forms.TextBox()
-        Me.txt2ndReason = New System.Windows.Forms.TextBox()
-        Me.txt2ndAlternative = New System.Windows.Forms.TextBox()
-        Me.txt3rdReason = New System.Windows.Forms.TextBox()
-        Me.txt3rdAlternative = New System.Windows.Forms.TextBox()
+        Me.cb1stReason = New System.Windows.Forms.ComboBox()
+        Me.cb1stAlternative = New System.Windows.Forms.ComboBox()
+        Me.cb2ndReason = New System.Windows.Forms.ComboBox()
+        Me.cb2ndAlternative = New System.Windows.Forms.ComboBox()
+        Me.cb3rdReason = New System.Windows.Forms.ComboBox()
+        Me.cb3rdAlternative = New System.Windows.Forms.ComboBox()
         Me.lbl1stEventCat = New System.Windows.Forms.Label()
         Me.lbl1stEventDetail = New System.Windows.Forms.Label()
         Me.lbl1stEventTypeDetail = New System.Windows.Forms.Label()
@@ -1066,9 +1068,9 @@ Public Class uclServiceLog_Asur
         Me.tab1stEnquiry.Controls.Add(Me.lbl1stEventTypeDetail)
         Me.tab1stEnquiry.Controls.Add(Me.cb1stEventTypeDetail)
         Me.tab1stEnquiry.Controls.Add(Me.lbl1stReason)
-        Me.tab1stEnquiry.Controls.Add(Me.txt1stReason)
+        Me.tab1stEnquiry.Controls.Add(Me.cb1stReason)
         Me.tab1stEnquiry.Controls.Add(Me.lbl1stAlternative)
-        Me.tab1stEnquiry.Controls.Add(Me.txt1stAlternative)
+        Me.tab1stEnquiry.Controls.Add(Me.cb1stAlternative)
         Me.tab1stEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab1stEnquiry.Name = "tab1stEnquiry"
         Me.tab1stEnquiry.Padding = New System.Windows.Forms.Padding(3)
@@ -1137,12 +1139,13 @@ Public Class uclServiceLog_Asur
         Me.lbl1stReason.TabIndex = 6
         Me.lbl1stReason.Text = "Reason"
         '
-        'txt1stReason
+        'cb1stReason
         '
-        Me.txt1stReason.Location = New System.Drawing.Point(120, 94)
-        Me.txt1stReason.Name = "txt1stReason"
-        Me.txt1stReason.Size = New System.Drawing.Size(395, 20)
-        Me.txt1stReason.TabIndex = 7
+        Me.cb1stReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb1stReason.Location = New System.Drawing.Point(120, 94)
+        Me.cb1stReason.Name = "cb1stReason"
+        Me.cb1stReason.Size = New System.Drawing.Size(395, 21)
+        Me.cb1stReason.TabIndex = 7
         '
         'lbl1stAlternative
         '
@@ -1152,12 +1155,13 @@ Public Class uclServiceLog_Asur
         Me.lbl1stAlternative.TabIndex = 8
         Me.lbl1stAlternative.Text = "Alternative"
         '
-        'txt1stAlternative
+        'cb1stAlternative
         '
-        Me.txt1stAlternative.Location = New System.Drawing.Point(120, 121)
-        Me.txt1stAlternative.Name = "txt1stAlternative"
-        Me.txt1stAlternative.Size = New System.Drawing.Size(395, 20)
-        Me.txt1stAlternative.TabIndex = 9
+        Me.cb1stAlternative.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb1stAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.cb1stAlternative.Name = "cb1stAlternative"
+        Me.cb1stAlternative.Size = New System.Drawing.Size(395, 21)
+        Me.cb1stAlternative.TabIndex = 9
         '
         'tab2ndEnquiry
         '
@@ -1168,9 +1172,9 @@ Public Class uclServiceLog_Asur
         Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndEventTypeDetail)
         Me.tab2ndEnquiry.Controls.Add(Me.cb2ndEventTypeDetail)
         Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndReason)
-        Me.tab2ndEnquiry.Controls.Add(Me.txt2ndReason)
+        Me.tab2ndEnquiry.Controls.Add(Me.cb2ndReason)
         Me.tab2ndEnquiry.Controls.Add(Me.lbl2ndAlternative)
-        Me.tab2ndEnquiry.Controls.Add(Me.txt2ndAlternative)
+        Me.tab2ndEnquiry.Controls.Add(Me.cb2ndAlternative)
         Me.tab2ndEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab2ndEnquiry.Name = "tab2ndEnquiry"
         Me.tab2ndEnquiry.Padding = New System.Windows.Forms.Padding(3)
@@ -1239,12 +1243,13 @@ Public Class uclServiceLog_Asur
         Me.lbl2ndReason.TabIndex = 6
         Me.lbl2ndReason.Text = "Reason"
         '
-        'txt2ndReason
+        'cb2ndReason
         '
-        Me.txt2ndReason.Location = New System.Drawing.Point(120, 94)
-        Me.txt2ndReason.Name = "txt2ndReason"
-        Me.txt2ndReason.Size = New System.Drawing.Size(395, 20)
-        Me.txt2ndReason.TabIndex = 7
+        Me.cb2ndReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb2ndReason.Location = New System.Drawing.Point(120, 94)
+        Me.cb2ndReason.Name = "cb2ndReason"
+        Me.cb2ndReason.Size = New System.Drawing.Size(395, 21)
+        Me.cb2ndReason.TabIndex = 7
         '
         'lbl2ndAlternative
         '
@@ -1254,12 +1259,13 @@ Public Class uclServiceLog_Asur
         Me.lbl2ndAlternative.TabIndex = 8
         Me.lbl2ndAlternative.Text = "Alternative"
         '
-        'txt2ndAlternative
+        'cb2ndAlternative
         '
-        Me.txt2ndAlternative.Location = New System.Drawing.Point(120, 121)
-        Me.txt2ndAlternative.Name = "txt2ndAlternative"
-        Me.txt2ndAlternative.Size = New System.Drawing.Size(395, 20)
-        Me.txt2ndAlternative.TabIndex = 9
+        Me.cb2ndAlternative.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb2ndAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.cb2ndAlternative.Name = "cb2ndAlternative"
+        Me.cb2ndAlternative.Size = New System.Drawing.Size(395, 21)
+        Me.cb2ndAlternative.TabIndex = 9
         '
         'tab3rdEnquiry
         '
@@ -1270,9 +1276,9 @@ Public Class uclServiceLog_Asur
         Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdEventTypeDetail)
         Me.tab3rdEnquiry.Controls.Add(Me.cb3rdEventTypeDetail)
         Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdReason)
-        Me.tab3rdEnquiry.Controls.Add(Me.txt3rdReason)
+        Me.tab3rdEnquiry.Controls.Add(Me.cb3rdReason)
         Me.tab3rdEnquiry.Controls.Add(Me.lbl3rdAlternative)
-        Me.tab3rdEnquiry.Controls.Add(Me.txt3rdAlternative)
+        Me.tab3rdEnquiry.Controls.Add(Me.cb3rdAlternative)
         Me.tab3rdEnquiry.Location = New System.Drawing.Point(4, 22)
         Me.tab3rdEnquiry.Name = "tab3rdEnquiry"
         Me.tab3rdEnquiry.Padding = New System.Windows.Forms.Padding(3)
@@ -1341,12 +1347,13 @@ Public Class uclServiceLog_Asur
         Me.lbl3rdReason.TabIndex = 6
         Me.lbl3rdReason.Text = "Reason"
         '
-        'txt3rdReason
+        'cb3rdReason
         '
-        Me.txt3rdReason.Location = New System.Drawing.Point(120, 94)
-        Me.txt3rdReason.Name = "txt3rdReason"
-        Me.txt3rdReason.Size = New System.Drawing.Size(395, 20)
-        Me.txt3rdReason.TabIndex = 7
+        Me.cb3rdReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb3rdReason.Location = New System.Drawing.Point(120, 94)
+        Me.cb3rdReason.Name = "cb3rdReason"
+        Me.cb3rdReason.Size = New System.Drawing.Size(395, 21)
+        Me.cb3rdReason.TabIndex = 7
         '
         'lbl3rdAlternative
         '
@@ -1356,12 +1363,13 @@ Public Class uclServiceLog_Asur
         Me.lbl3rdAlternative.TabIndex = 8
         Me.lbl3rdAlternative.Text = "Alternative"
         '
-        'txt3rdAlternative
+        'cb3rdAlternative
         '
-        Me.txt3rdAlternative.Location = New System.Drawing.Point(120, 121)
-        Me.txt3rdAlternative.Name = "txt3rdAlternative"
-        Me.txt3rdAlternative.Size = New System.Drawing.Size(395, 20)
-        Me.txt3rdAlternative.TabIndex = 9
+        Me.cb3rdAlternative.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb3rdAlternative.Location = New System.Drawing.Point(120, 121)
+        Me.cb3rdAlternative.Name = "cb3rdAlternative"
+        Me.cb3rdAlternative.Size = New System.Drawing.Size(395, 21)
+        Me.cb3rdAlternative.TabIndex = 9
         '
         '
         'GroupBox1
@@ -1860,20 +1868,20 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.DataBindings.Clear()
         cb1stEventDetail.DataBindings.Clear()
         cb1stEventTypeDetail.DataBindings.Clear()
-        txt1stReason.DataBindings.Clear()
-        txt1stAlternative.DataBindings.Clear()
+        cb1stReason.DataBindings.Clear()
+        cb1stAlternative.DataBindings.Clear()
 
         cb2ndEventCat.DataBindings.Clear()
         cb2ndEventDetail.DataBindings.Clear()
         cb2ndEventTypeDetail.DataBindings.Clear()
-        txt2ndReason.DataBindings.Clear()
-        txt2ndAlternative.DataBindings.Clear()
+        cb2ndReason.DataBindings.Clear()
+        cb2ndAlternative.DataBindings.Clear()
 
         cb3rdEventCat.DataBindings.Clear()
         cb3rdEventDetail.DataBindings.Clear()
         cb3rdEventTypeDetail.DataBindings.Clear()
-        txt3rdReason.DataBindings.Clear()
-        txt3rdAlternative.DataBindings.Clear()
+        cb3rdReason.DataBindings.Clear()
+        cb3rdAlternative.DataBindings.Clear()
         '
     End Function
 
@@ -2962,8 +2970,11 @@ Public Class uclServiceLog_Asur
                 cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
             End If
 
-            txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-            txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+            ' Set up Reason and Alternative dropdown data sources
+            SetupReasonAndAlternativeDataSources()
+            
+            cb1stReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+            cb1stAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
 
             ' 2nd Enquiry
             If dsSrvLog.Tables.Contains("csw_event_category_code") Then
@@ -2987,8 +2998,8 @@ Public Class uclServiceLog_Asur
                 cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
             End If
 
-            txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-            txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+            cb2ndReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+            cb2ndAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
 
             ' 3rd Enquiry
             If dsSrvLog.Tables.Contains("csw_event_category_code") Then
@@ -3012,8 +3023,8 @@ Public Class uclServiceLog_Asur
                 cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
             End If
 
-            txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-            txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+            cb3rdReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+            cb3rdAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
         Catch ex As Exception
             ' Log error or handle gracefully - enquiry fields may not be available for all records
             System.Diagnostics.Debug.WriteLine("Error binding enquiry fields: " & ex.Message)
@@ -3245,60 +3256,60 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.Enabled = enableEnquiryControls
         cb1stEventDetail.Enabled = enableEnquiryControls
         cb1stEventTypeDetail.Enabled = enableEnquiryControls
-        txt1stReason.Enabled = enableEnquiryControls
-        txt1stAlternative.Enabled = enableEnquiryControls
+                    cb1stReason.Enabled = enableEnquiryControls
+            cb1stAlternative.Enabled = enableEnquiryControls
         
         ' 2nd Enquiry controls
         cb2ndEventCat.Enabled = enableEnquiryControls
         cb2ndEventDetail.Enabled = enableEnquiryControls
         cb2ndEventTypeDetail.Enabled = enableEnquiryControls
-        txt2ndReason.Enabled = enableEnquiryControls
-        txt2ndAlternative.Enabled = enableEnquiryControls
+                    cb2ndReason.Enabled = enableEnquiryControls
+            cb2ndAlternative.Enabled = enableEnquiryControls
         
         ' 3rd Enquiry controls
         cb3rdEventCat.Enabled = enableEnquiryControls
         cb3rdEventDetail.Enabled = enableEnquiryControls
         cb3rdEventTypeDetail.Enabled = enableEnquiryControls
-        txt3rdReason.Enabled = enableEnquiryControls
-        txt3rdAlternative.Enabled = enableEnquiryControls
+                    cb3rdReason.Enabled = enableEnquiryControls
+            cb3rdAlternative.Enabled = enableEnquiryControls
         
         ' Set visual appearance for disabled state
         If Not enableEnquiryControls Then
             cb1stEventCat.BackColor = System.Drawing.Color.LightGray
             cb1stEventDetail.BackColor = System.Drawing.Color.LightGray
             cb1stEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt1stReason.BackColor = System.Drawing.Color.LightGray
-            txt1stAlternative.BackColor = System.Drawing.Color.LightGray
+            cb1stReason.BackColor = System.Drawing.Color.LightGray
+            cb1stAlternative.BackColor = System.Drawing.Color.LightGray
             
             cb2ndEventCat.BackColor = System.Drawing.Color.LightGray
             cb2ndEventDetail.BackColor = System.Drawing.Color.LightGray
             cb2ndEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt2ndReason.BackColor = System.Drawing.Color.LightGray
-            txt2ndAlternative.BackColor = System.Drawing.Color.LightGray
+            cb2ndReason.BackColor = System.Drawing.Color.LightGray
+            cb2ndAlternative.BackColor = System.Drawing.Color.LightGray
             
             cb3rdEventCat.BackColor = System.Drawing.Color.LightGray
             cb3rdEventDetail.BackColor = System.Drawing.Color.LightGray
             cb3rdEventTypeDetail.BackColor = System.Drawing.Color.LightGray
-            txt3rdReason.BackColor = System.Drawing.Color.LightGray
-            txt3rdAlternative.BackColor = System.Drawing.Color.LightGray
+            cb3rdReason.BackColor = System.Drawing.Color.LightGray
+            cb3rdAlternative.BackColor = System.Drawing.Color.LightGray
         Else
             cb1stEventCat.BackColor = System.Drawing.Color.White
             cb1stEventDetail.BackColor = System.Drawing.Color.White
             cb1stEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt1stReason.BackColor = System.Drawing.Color.White
-            txt1stAlternative.BackColor = System.Drawing.Color.White
+            cb1stReason.BackColor = System.Drawing.Color.White
+            cb1stAlternative.BackColor = System.Drawing.Color.White
             
             cb2ndEventCat.BackColor = System.Drawing.Color.White
             cb2ndEventDetail.BackColor = System.Drawing.Color.White
             cb2ndEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt2ndReason.BackColor = System.Drawing.Color.White
-            txt2ndAlternative.BackColor = System.Drawing.Color.White
+            cb2ndReason.BackColor = System.Drawing.Color.White
+            cb2ndAlternative.BackColor = System.Drawing.Color.White
             
             cb3rdEventCat.BackColor = System.Drawing.Color.White
             cb3rdEventDetail.BackColor = System.Drawing.Color.White
             cb3rdEventTypeDetail.BackColor = System.Drawing.Color.White
-            txt3rdReason.BackColor = System.Drawing.Color.White
-            txt3rdAlternative.BackColor = System.Drawing.Color.White
+            cb3rdReason.BackColor = System.Drawing.Color.White
+            cb3rdAlternative.BackColor = System.Drawing.Color.White
         End If
     End Sub
 
@@ -3325,11 +3336,11 @@ Public Class uclServiceLog_Asur
                 End If
                 ' Re-establish data bindings for 1st enquiry if in new mode
                 If blnIsNewMode Then
-                    cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
-                    cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
-                    cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
-                    txt1stReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
-                    txt1stAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
+                                    cb1stEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventCategoryCode")
+                cb1stEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeCode")
+                cb1stEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stEventTypeDetailCode")
+                cb1stReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stReason")
+                cb1stAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "1stAlternative")
                 End If
             Case 1 ' 2nd Enquiry
                 If Not bln2ndEnquiryVisited Then
@@ -3339,11 +3350,11 @@ Public Class uclServiceLog_Asur
                 End If
                 ' Re-establish data bindings for 2nd enquiry if in new mode
                 If blnIsNewMode Then
-                    cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
-                    cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
-                    cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
-                    txt2ndReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
-                    txt2ndAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
+                                    cb2ndEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventCategoryCode")
+                cb2ndEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeCode")
+                cb2ndEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndEventTypeDetailCode")
+                cb2ndReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndReason")
+                cb2ndAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "2ndAlternative")
                 End If
             Case 2 ' 3rd Enquiry
                 If Not bln3rdEnquiryVisited Then
@@ -3353,11 +3364,11 @@ Public Class uclServiceLog_Asur
                 End If
                 ' Re-establish data bindings for 3rd enquiry if in new mode
                 If blnIsNewMode Then
-                    cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
-                    cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
-                    cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
-                    txt3rdReason.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
-                    txt3rdAlternative.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
+                                    cb3rdEventCat.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventCategoryCode")
+                cb3rdEventDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeCode")
+                cb3rdEventTypeDetail.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdEventTypeDetailCode")
+                cb3rdReason.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdReason")
+                cb3rdAlternative.DataBindings.Add("SelectedValue", dsSrvLog.Tables("ServiceEventDetail"), "3rdAlternative")
                 End If
         End Select
     End Sub
@@ -3367,15 +3378,15 @@ Public Class uclServiceLog_Asur
         cb1stEventCat.DataBindings.Clear()
         cb1stEventDetail.DataBindings.Clear()
         cb1stEventTypeDetail.DataBindings.Clear()
-        txt1stReason.DataBindings.Clear()
-        txt1stAlternative.DataBindings.Clear()
+        cb1stReason.DataBindings.Clear()
+        cb1stAlternative.DataBindings.Clear()
 
         ' Clear the fields
         cb1stEventCat.SelectedIndex = -1
         cb1stEventDetail.SelectedIndex = -1
         cb1stEventTypeDetail.SelectedIndex = -1
-        txt1stReason.Text = ""
-        txt1stAlternative.Text = ""
+        cb1stReason.SelectedIndex = -1
+        cb1stAlternative.SelectedIndex = -1
 
         ' Do NOT re-establish data bindings here - let the tab switching handle it
         ' This prevents linking between tabs
@@ -3386,15 +3397,15 @@ Public Class uclServiceLog_Asur
         cb2ndEventCat.DataBindings.Clear()
         cb2ndEventDetail.DataBindings.Clear()
         cb2ndEventTypeDetail.DataBindings.Clear()
-        txt2ndReason.DataBindings.Clear()
-        txt2ndAlternative.DataBindings.Clear()
+        cb2ndReason.DataBindings.Clear()
+        cb2ndAlternative.DataBindings.Clear()
 
         ' Clear the fields
         cb2ndEventCat.SelectedIndex = -1
         cb2ndEventDetail.SelectedIndex = -1
         cb2ndEventTypeDetail.SelectedIndex = -1
-        txt2ndReason.Text = ""
-        txt2ndAlternative.Text = ""
+        cb2ndReason.SelectedIndex = -1
+        cb2ndAlternative.SelectedIndex = -1
 
         ' Do NOT re-establish data bindings here - let the tab switching handle it
         ' This prevents linking between tabs
@@ -3405,15 +3416,15 @@ Public Class uclServiceLog_Asur
         cb3rdEventCat.DataBindings.Clear()
         cb3rdEventDetail.DataBindings.Clear()
         cb3rdEventTypeDetail.DataBindings.Clear()
-        txt3rdReason.DataBindings.Clear()
-        txt3rdAlternative.DataBindings.Clear()
+        cb3rdReason.DataBindings.Clear()
+        cb3rdAlternative.DataBindings.Clear()
 
         ' Clear the fields
         cb3rdEventCat.SelectedIndex = -1
         cb3rdEventDetail.SelectedIndex = -1
         cb3rdEventTypeDetail.SelectedIndex = -1
-        txt3rdReason.Text = ""
-        txt3rdAlternative.Text = ""
+        cb3rdReason.SelectedIndex = -1
+        cb3rdAlternative.SelectedIndex = -1
 
         ' Do NOT re-establish data bindings here - let the tab switching handle it
         ' This prevents linking between tabs
@@ -5447,6 +5458,74 @@ Public Class uclServiceLog_Asur
         sb.AppendLine("BrokerCcMail : " + brokerCcEmail)
 
         AsyncDbLogger.LogInfo(gsUser, "Service Log", sb.ToString())
+    End Sub
+
+    ' Setup data sources for Reason and Alternative dropdowns
+    Private Sub SetupReasonAndAlternativeDataSources()
+        Try
+            ' Create Reason options data table
+            reasonOptionsDataTable = New DataTable()
+            reasonOptionsDataTable.Columns.Add("ReasonCode", GetType(String))
+            reasonOptionsDataTable.Columns.Add("ReasonDesc", GetType(String))
+            
+            ' Add sample reason options - you can modify these as needed
+            reasonOptionsDataTable.Rows.Add("", "")
+            reasonOptionsDataTable.Rows.Add("R001", "Customer Request")
+            reasonOptionsDataTable.Rows.Add("R002", "System Issue")
+            reasonOptionsDataTable.Rows.Add("R003", "Policy Change")
+            reasonOptionsDataTable.Rows.Add("R004", "Documentation Required")
+            reasonOptionsDataTable.Rows.Add("R005", "Technical Problem")
+            reasonOptionsDataTable.Rows.Add("R006", "Billing Issue")
+            reasonOptionsDataTable.Rows.Add("R007", "Claim Related")
+            reasonOptionsDataTable.Rows.Add("R008", "Other")
+            
+            ' Create Alternative options data table
+            alternativeOptionsDataTable = New DataTable()
+            alternativeOptionsDataTable.Columns.Add("AlternativeCode", GetType(String))
+            alternativeOptionsDataTable.Columns.Add("AlternativeDesc", GetType(String))
+            
+            ' Add sample alternative options - you can modify these as needed
+            alternativeOptionsDataTable.Rows.Add("", "")
+            alternativeOptionsDataTable.Rows.Add("A001", "Phone Call")
+            alternativeOptionsDataTable.Rows.Add("A002", "Email")
+            alternativeOptionsDataTable.Rows.Add("A003", "SMS")
+            alternativeOptionsDataTable.Rows.Add("A004", "Letter")
+            alternativeOptionsDataTable.Rows.Add("A005", "Visit")
+            alternativeOptionsDataTable.Rows.Add("A006", "Online Portal")
+            alternativeOptionsDataTable.Rows.Add("A007", "Mobile App")
+            alternativeOptionsDataTable.Rows.Add("A008", "Other")
+            
+            ' Set up data sources for all Reason and Alternative ComboBoxes
+            ' 1st Enquiry
+            cb1stReason.DataSource = New DataView(reasonOptionsDataTable)
+            cb1stReason.DisplayMember = "ReasonDesc"
+            cb1stReason.ValueMember = "ReasonCode"
+            
+            cb1stAlternative.DataSource = New DataView(alternativeOptionsDataTable)
+            cb1stAlternative.DisplayMember = "AlternativeDesc"
+            cb1stAlternative.ValueMember = "AlternativeCode"
+            
+            ' 2nd Enquiry
+            cb2ndReason.DataSource = New DataView(reasonOptionsDataTable)
+            cb2ndReason.DisplayMember = "ReasonDesc"
+            cb2ndReason.ValueMember = "ReasonCode"
+            
+            cb2ndAlternative.DataSource = New DataView(alternativeOptionsDataTable)
+            cb2ndAlternative.DisplayMember = "AlternativeDesc"
+            cb2ndAlternative.ValueMember = "AlternativeCode"
+            
+            ' 3rd Enquiry
+            cb3rdReason.DataSource = New DataView(reasonOptionsDataTable)
+            cb3rdReason.DisplayMember = "ReasonDesc"
+            cb3rdReason.ValueMember = "ReasonCode"
+            
+            cb3rdAlternative.DataSource = New DataView(alternativeOptionsDataTable)
+            cb3rdAlternative.DisplayMember = "AlternativeDesc"
+            cb3rdAlternative.ValueMember = "AlternativeCode"
+            
+        Catch ex As Exception
+            System.Diagnostics.Debug.WriteLine("Error setting up Reason and Alternative data sources: " & ex.Message)
+        End Try
     End Sub
 
 End Class
