@@ -4697,20 +4697,20 @@ Public Class uclServiceLog_Asur
             cb1stEventCat.DataBindings.Remove(cb1stEventCat.DataBindings.Item("SelectedValue"))
             cb1stEventDetail.DataBindings.Remove(cb1stEventDetail.DataBindings.Item("SelectedValue"))
             cb1stEventTypeDetail.DataBindings.Remove(cb1stEventTypeDetail.DataBindings.Item("SelectedValue"))
-            txt1stReason.DataBindings.Remove(txt1stReason.DataBindings.Item("Text"))
-            txt1stAlternative.DataBindings.Remove(txt1stAlternative.DataBindings.Item("Text"))
+            cb1stReason.DataBindings.Remove(cb1stReason.DataBindings.Item("SelectedValue"))
+            cb1stAlternative.DataBindings.Remove(cb1stAlternative.DataBindings.Item("SelectedValue"))
 
             cb2ndEventCat.DataBindings.Remove(cb2ndEventCat.DataBindings.Item("SelectedValue"))
             cb2ndEventDetail.DataBindings.Remove(cb2ndEventDetail.DataBindings.Item("SelectedValue"))
             cb2ndEventTypeDetail.DataBindings.Remove(cb2ndEventTypeDetail.DataBindings.Item("SelectedValue"))
-            txt2ndReason.DataBindings.Remove(txt2ndReason.DataBindings.Item("Text"))
-            txt2ndAlternative.DataBindings.Remove(txt2ndAlternative.DataBindings.Item("Text"))
+            cb2ndReason.DataBindings.Remove(cb2ndReason.DataBindings.Item("SelectedValue"))
+            cb2ndAlternative.DataBindings.Remove(cb2ndAlternative.DataBindings.Item("SelectedValue"))
 
             cb3rdEventCat.DataBindings.Remove(cb3rdEventCat.DataBindings.Item("SelectedValue"))
             cb3rdEventDetail.DataBindings.Remove(cb3rdEventDetail.DataBindings.Item("SelectedValue"))
             cb3rdEventTypeDetail.DataBindings.Remove(cb3rdEventTypeDetail.DataBindings.Item("SelectedValue"))
-            txt3rdReason.DataBindings.Remove(txt3rdReason.DataBindings.Item("Text"))
-            txt3rdAlternative.DataBindings.Remove(txt3rdAlternative.DataBindings.Item("Text"))
+            cb3rdReason.DataBindings.Remove(cb3rdReason.DataBindings.Item("SelectedValue"))
+            cb3rdAlternative.DataBindings.Remove(cb3rdAlternative.DataBindings.Item("SelectedValue"))
         Catch ex As Exception
             ' Handle case where bindings don't exist yet
             System.Diagnostics.Debug.WriteLine("Error removing enquiry bindings: " & ex.Message)
