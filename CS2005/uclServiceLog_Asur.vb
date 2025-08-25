@@ -838,10 +838,10 @@ Public Class uclServiceLog_Asur
         '
         'txtCICGenesysCallID
         '
-        Me.txtCICGenesysCallID.Location = New System.Drawing.Point(108, 165)
+        Me.txtCICGenesysCallID.Location = New System.Drawing.Point(175, 165)
         Me.txtCICGenesysCallID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCICGenesysCallID.Name = "txtCICGenesysCallID"
-        Me.txtCICGenesysCallID.Size = New System.Drawing.Size(443, 20)
+        Me.txtCICGenesysCallID.Size = New System.Drawing.Size(376, 20)
         Me.txtCICGenesysCallID.TabIndex = 9
         '
         'lblCICGenesysCallID
