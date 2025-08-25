@@ -115,6 +115,8 @@ Public Class uclServiceLog_Asur
     Friend WithEvents cbStatus As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents dtInitial As DateTimePicker
+    Friend WithEvents txtCICGenesysCallID As TextBox
+    Friend WithEvents lblCICGenesysCallID As Label
     Friend WithEvents cbReceiver As ComboBox
     Friend WithEvents cbInitiator As ComboBox
     Friend WithEvents Label12 As Label
@@ -273,6 +275,8 @@ Public Class uclServiceLog_Asur
         Me.cbStatus = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dtInitial = New System.Windows.Forms.DateTimePicker()
+        Me.txtCICGenesysCallID = New System.Windows.Forms.TextBox()
+        Me.lblCICGenesysCallID = New System.Windows.Forms.Label()
         Me.cbReceiver = New System.Windows.Forms.ComboBox()
         Me.cbInitiator = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -786,6 +790,8 @@ Public Class uclServiceLog_Asur
         Me.GroupBox2.Controls.Add(Me.cbStatus)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.dtInitial)
+        Me.GroupBox2.Controls.Add(Me.txtCICGenesysCallID)
+        Me.GroupBox2.Controls.Add(Me.lblCICGenesysCallID)
         Me.GroupBox2.Controls.Add(Me.cbReceiver)
         Me.GroupBox2.Controls.Add(Me.cbInitiator)
         Me.GroupBox2.Controls.Add(Me.Label12)
@@ -797,7 +803,7 @@ Public Class uclServiceLog_Asur
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox2.Size = New System.Drawing.Size(559, 172)
+        Me.GroupBox2.Size = New System.Drawing.Size(559, 200)
         Me.GroupBox2.TabIndex = 83
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Status"
@@ -829,6 +835,23 @@ Public Class uclServiceLog_Asur
         Me.dtInitial.Name = "dtInitial"
         Me.dtInitial.Size = New System.Drawing.Size(244, 20)
         Me.dtInitial.TabIndex = 8
+        '
+        'txtCICGenesysCallID
+        '
+        Me.txtCICGenesysCallID.Location = New System.Drawing.Point(108, 165)
+        Me.txtCICGenesysCallID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCICGenesysCallID.Name = "txtCICGenesysCallID"
+        Me.txtCICGenesysCallID.Size = New System.Drawing.Size(443, 20)
+        Me.txtCICGenesysCallID.TabIndex = 9
+        '
+        'lblCICGenesysCallID
+        '
+        Me.lblCICGenesysCallID.Location = New System.Drawing.Point(18, 171)
+        Me.lblCICGenesysCallID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCICGenesysCallID.Name = "lblCICGenesysCallID"
+        Me.lblCICGenesysCallID.Size = New System.Drawing.Size(90, 25)
+        Me.lblCICGenesysCallID.TabIndex = 16
+        Me.lblCICGenesysCallID.Text = "CIC/ Genesys Cloud Call ID"
         '
         'cbReceiver
         '
@@ -2511,6 +2534,9 @@ Public Class uclServiceLog_Asur
             If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("3rdAlternative") Then
                 dsSrvLog.Tables("ServiceEventDetail").Columns.Add("3rdAlternative", GetType(String))
             End If
+            If Not dsSrvLog.Tables("ServiceEventDetail").Columns.Contains("CICGenesysCallID") Then
+                dsSrvLog.Tables("ServiceEventDetail").Columns.Add("CICGenesysCallID", GetType(String))
+            End If
             '
         Catch ex As Exception
             Throw
@@ -3034,6 +3060,9 @@ Public Class uclServiceLog_Asur
         AddHandler b.Format, AddressOf DTFormatter
         AddHandler b.Parse, AddressOf DTParser
         dtInitial.DataBindings.Add(b)
+
+        'CIC/ Genesys Cloud Call ID
+        txtCICGenesysCallID.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "CICGenesysCallID")
 
         'Alert text
         txtPolicyAlert.DataBindings.Add("Text", dsSrvLog.Tables("ServiceEventDetail"), "AlertNotes")
@@ -4317,7 +4346,8 @@ Public Class uclServiceLog_Asur
                                 {"IsPolicyAlert", IIf(Not String.IsNullOrEmpty(dr.Item("IsPolicyAlert").ToString()), dr.Item("IsPolicyAlert").ToString(), " ")},
                                 {"AlertNotes", IIf(Not String.IsNullOrEmpty(dr.Item("AlertNotes").ToString()), dr.Item("AlertNotes").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
-                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")}
+                                {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
+                                {"CICGenesysCallID", IIf(Not String.IsNullOrEmpty(dr.Item("CICGenesysCallID").ToString()), dr.Item("CICGenesysCallID").ToString(), " ")}
                                 })
             'MsgBox("Insert Data Success !", , "Insert Data Success")
         Catch ex As Exception
@@ -4418,7 +4448,8 @@ Public Class uclServiceLog_Asur
                                 {"PolicyAccountID", IIf(Not String.IsNullOrEmpty(dr.Item("PolicyAccountID").ToString()), dr.Item("PolicyAccountID").ToString(), " ")},
                                 {"IsIdVerify", IIf(Not String.IsNullOrEmpty(dr.Item("IsIdVerify").ToString()), dr.Item("IsIdVerify").ToString(), " ")},
                                 {"chkMCV", IIf(chkMCV.Checked, "Y", "N")},
-                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")}
+                                {"ServiceEventNumber", IIf(Not String.IsNullOrEmpty(dr.Item("ServiceEventNumber").ToString()), dr.Item("ServiceEventNumber").ToString(), " ")},
+                                {"CICGenesysCallID", IIf(Not String.IsNullOrEmpty(dr.Item("CICGenesysCallID").ToString()), dr.Item("CICGenesysCallID").ToString(), " ")}
                                 })
             MsgBox("Update Data Success !", , "Update Data Success")
         Catch ex As Exception
@@ -4717,6 +4748,8 @@ Public Class uclServiceLog_Asur
         End Try
         '
         dtInitial.DataBindings.Remove(dtInitial.DataBindings.Item("Value"))
+
+        txtCICGenesysCallID.DataBindings.Remove(txtCICGenesysCallID.DataBindings.Item("Text"))
 
         txtPolicyAlert.DataBindings.Remove(txtPolicyAlert.DataBindings.Item("Text"))
         txtReminder.DataBindings.Remove(txtReminder.DataBindings.Item("Text"))
